@@ -4,7 +4,8 @@
 > Blueprint 1.0.0 using the `high-assurance` profile on 2026-08-31, then
 > reconciled with project-specific sources, boundaries, commands, and a
 > completed local foundation task. Local adoption is complete under
-> `TASK-0001`; publication remains separately bounded by `TASK-0002`.
+> `TASK-0001`; bounded publication is complete under `TASK-0002`, with its
+> closure-commit equality retained as direct post-commit handoff evidence.
 
 ## Reading order
 
@@ -45,5 +46,6 @@ before using status or planning claims.
 
 Generated integrity is expected to be stale during authorized source edits.
 Use the packet and harness refresh commands only after source work is frozen,
-then finish with the read-only harness check. `TASK-0002` is the only active
-publication task and cannot authorize implementation or later pushes.
+then finish with the read-only harness check. No publication task is active;
+the consumed `TASK-0002` authority cannot authorize implementation or later
+pushes.

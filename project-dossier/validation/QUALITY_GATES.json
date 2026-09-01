@@ -4,7 +4,7 @@
   "permission_grant": false,
   "project_slug": "plectarium-family",
   "last_reviewed": "2026-08-31",
-  "readiness": "local_foundation_validated_publication_pending",
+  "readiness": "repository_foundation_complete_with_direct_closure_verification",
   "gates": [
     {
       "id": "GATE-0001",
@@ -18,7 +18,7 @@
     {
       "id": "GATE-0002",
       "title": "Exact private remote and publication safety",
-      "status": "pending",
+      "status": "passed_with_post_commit_verification",
       "owner_role": "foundation_task_owner",
       "required_evidence": ["exact_name_absence", "private_empty_remote", "reviewed_staged_content", "normal_pushes_only", "final_ref_equality"],
       "approval_source": "authority:current-operator-plectarium-portfolio-setup-v2",

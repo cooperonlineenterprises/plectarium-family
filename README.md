@@ -58,8 +58,8 @@ not a portability guarantee.
 
 ## Current readiness
 
-The local high-assurance repository foundation is adopted and validated under
-`.agent/tasks/TASK-0001-family-repository-foundation.md`. Exact private initial
-publication is separately bounded by `TASK-0002`; it is not implementation
-authority. This setup does not establish product, security, compliance,
-release, or production readiness.
+The high-assurance repository foundation is adopted and validated under
+`.agent/tasks/TASK-0001-family-repository-foundation.md`; exact private initial
+publication is completed under `TASK-0002`. The closure commit's own equality
+is verified as direct post-commit evidence. This setup does not establish
+product, security, compliance, release, or production readiness.

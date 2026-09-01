@@ -4,24 +4,18 @@
   "updated_at": "2026-08-31",
   "authority": "Compact operational view derived from authoritative task, decision, and evidence records. This file does not grant permission.",
   "adoption_status": "adopted_local_foundation",
-  "active_tasks": ["TASK-0002"],
+  "active_tasks": [],
   "accepted_decisions": ["DEC-0001"],
-  "fresh_evidence": ["EVD-0001", "EVD-0002"],
+  "fresh_evidence": ["EVD-0001", "EVD-0002", "EVD-0003"],
   "blocked_by": [],
-  "pending_gates": [
-    "post_git_init_integrity_refresh_and_validation",
-    "fresh_exact_remote_collision_check",
-    "authorized_initial_and_closure_publication",
-    "final_ref_equality_and_clean_worktree"
-  ],
-  "next_action": "refresh integrity after Git initialization, revalidate, then inspect and commit the exact staged foundation",
+  "pending_gates": [],
+  "next_action": "consume the published family commit as an immutable provenance pin in Plectarium and capability packet generation",
   "external_effects_authorized": true,
   "external_effect_scope": "TASK-0002 records the exact consumable private GitHub creation and two-push limit from the current operator request; this state record does not grant authority",
-  "external_effects_observed": "none_to_date",
+  "external_effects_observed": "exact private remote created; foundation push verified; closure push and final equality verified directly after the closure commit",
   "limitations": [
-    "family_repository_has_no_commit_or_remote_yet",
     "packet_validator_uses_a_host_specific_preconfigured_python_runtime",
-    "remote_publication_pending",
+    "closure_commit_cannot_attest_its_own_push_and_final_equality_is_direct_handoff_evidence",
     "structural_foundation_does_not_establish_product_readiness"
   ]
 }

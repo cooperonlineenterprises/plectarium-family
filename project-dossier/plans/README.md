@@ -3,8 +3,8 @@
 Planning material does not authorize work or external actions.
 
 `PLAN-0001` in `../machine-readable/plan.json` records the completed local
-foundation sequence. `PLAN-0002` owns the still-active publication sequence
-and links `TASK-0002`, current findings, and remote gates.
+foundation sequence. `PLAN-0002` records the completed bounded publication
+sequence and links `TASK-0002`, current findings, and remote gates.
 
 Current sequence:
 

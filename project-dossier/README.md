@@ -5,8 +5,8 @@
 
 Generated from Project Blueprint 1.0.0 with the `high-assurance` profile on
 2026-08-31 and reconciled under completed local task `TASK-0001`. Exact
-private initial publication remains active under `TASK-0002`; this dossier
-records project information but grants no authority.
+private initial publication completed under `TASK-0002`; this dossier records
+project information but grants no authority.
 
 ## Start here
 
@@ -26,10 +26,9 @@ records project information but grants no authority.
 - Authoritative family packet: `standalone-capability-family-packet-v1/`
 - Current implementation: intentionally absent; this is an authority/spec repo
 - Harness/dossier adoption: locally complete under `TASK-0001`
-- Conformance: packet, harness, provenance, and local foundation requirements
-  are validated; GitHub publication requirements remain transitional
-- Readiness: local foundation validated; publication incomplete; product
-  readiness not assessed
+- Conformance: packet, harness, provenance, local foundation, and bounded
+  publication requirements conform at the recorded evidence boundary
+- Readiness: repository foundation complete; product readiness not assessed
 - External authority: none created by this dossier
 
 ## Major layers

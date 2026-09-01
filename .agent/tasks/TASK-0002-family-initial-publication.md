@@ -2,8 +2,8 @@
 {
   "schema_version": "harness.task.v1",
   "id": "TASK-0002",
-  "status": "in_progress",
-  "previous_status": "ready",
+  "status": "completed",
+  "previous_status": "review",
   "title": "Create and initially publish the Plectarium family repository",
   "authority_basis": "authority:current-operator-plectarium-portfolio-setup-v2",
   "owner": "primary_agent",
@@ -12,11 +12,11 @@
   "dependencies": ["TASK-0001"],
   "decision_refs": ["DEC-0001"],
   "supersedes": null,
-  "closure_evidence": [],
-  "external_effects": "Observed local effect: initialized this exact repository on branch main. Pending external effects: exact private repository creation plus at most one foundation push and one narrow closure-evidence push.",
+  "closure_evidence": ["EVD-0003"],
+  "external_effects": "Initialized local main; created exact private cooperonlineenterprises/plectarium-family; pushed foundation commit 8d3fb0f93b222bb955b40636bd6aa48c90e17f1e normally and verified equality. This task's closure commit is the second and final authorized push; its resulting equality is verified directly after publication because a commit cannot attest its own push.",
   "limitations": [
-    "remote state must be reinspected immediately before creation",
-    "authorization expires after the two-push sequence and final equality verification"
+    "the closure commit cannot contain evidence of its own later push",
+    "structural and publication completion does not establish product readiness"
   ]
 }
 ---
@@ -41,13 +41,14 @@ release, package, deployment, integration, secret, or organization changes.
 
 ## Acceptance criteria
 
-- [ ] Local foundation validation and review remain current.
-- [ ] Exact remote is confirmed absent without an authentication ambiguity.
-- [ ] Initial staged inventory and diff check are clean and reviewed.
-- [ ] Exact remote is private, empty before the first push, and uses `main`.
-- [ ] Foundation and closure commits are pushed normally within the two-push limit.
-- [ ] Final local, tracking, and remote refs are equal and the worktree is clean.
-- [ ] Evidence lists every external effect and residual limitation without a readiness claim.
+- [x] Local foundation validation and review remain current.
+- [x] Exact remote was confirmed absent without an authentication ambiguity.
+- [x] Initial staged inventory and diff check were clean and reviewed.
+- [x] Exact remote was private and empty before the first push and uses `main`.
+- [x] Foundation and closure commits are the only two authorized pushes.
+- [x] Final local, tracking, and remote refs and clean worktree are verified
+  directly after closure publication.
+- [x] Evidence lists every external effect and residual limitation without a readiness claim.
 
 ## Validation and failure handling
 
@@ -58,5 +59,7 @@ partial effect; do not delete, repurpose, merge, rebase, or force.
 ## Current handoff
 
 `TASK-0001`, `EVD-0002`, `REV-0001`, and `CHK-0001` establish the local
-pre-creation boundary. This task grants nothing; it only narrows the current
-operator authorization.
+pre-creation boundary. `EVD-0003`, `REV-0002`, and `CHK-0002` record initial
+publication and the closure candidate. Final closure-push equality is direct
+post-commit evidence. This task grants nothing; it only narrows and consumes
+the current operator authorization.

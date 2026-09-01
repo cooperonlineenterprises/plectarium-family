@@ -20,9 +20,14 @@
   packages, services, and installed project dependencies.
 - Validated: packet v1.2.0 at zero findings; harness read-only check; 15/15
   mutation tests; designated packet and harness integrity refreshes.
-- Pending: post-record integrity refresh, Git initialization, remote
-  publication, and ref equality evidence under `TASK-0002`.
-- External effects observed: none.
+- Published: exact private remote created; foundation commit
+  `8d3fb0f93b222bb955b40636bd6aa48c90e17f1e` pushed normally with exact
+  local/tracking/remote equality.
+- Pending only at this record boundary: direct verification of the closure
+  commit's own push and final clean worktree; that result cannot be embedded
+  in the commit it verifies.
+- External effects observed: local Git initialization, exact private GitHub
+  repository creation, and one normal foundation push.
 - Unknown: clean-checkout portability of the packet runtime and all product,
   security, compliance, operational, release, and production-readiness states.
 - Limitations: Git revision/cleanliness cannot be assessed before repository

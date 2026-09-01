@@ -1,7 +1,7 @@
 {
   "authority": "generated_non_authoritative_point_in_time",
-  "generated_at": "2026-09-01T02:09:12.693048+00:00",
-  "generation_id": "467443ff3257a7831f268df5abfb7bea",
+  "generated_at": "2026-09-01T02:13:58.160732+00:00",
+  "generation_id": "7b64a835558386f82eb4c3ce47971589",
   "generator_version": "1.0.0",
   "limitations": [
     "Fingerprint proves declared byte identity, not correctness or authority.",
@@ -12,6 +12,7 @@
     ".agent/artifacts/registry.json",
     ".agent/checklists/task-closure.md",
     ".agent/checkpoints/CHK-0001-family-local-foundation.md",
+    ".agent/checkpoints/CHK-0002-family-initial-publication.md",
     ".agent/checkpoints/README.md",
     ".agent/context.json",
     ".agent/decisions/DEC-0001-family-authority-and-harness-posture.md",
@@ -20,6 +21,7 @@
     ".agent/events/events.jsonl",
     ".agent/evidence/EVD-0001-family-foundation-inventory.md",
     ".agent/evidence/EVD-0002-family-local-validation.md",
+    ".agent/evidence/EVD-0003-family-publication.md",
     ".agent/evidence/README.md",
     ".agent/extensions/README.md",
     ".agent/extensions/registry.json",
@@ -31,6 +33,7 @@
     ".agent/project.json",
     ".agent/reviews/README.md",
     ".agent/reviews/REV-0001-family-local-foundation-review.md",
+    ".agent/reviews/REV-0002-family-publication-review.md",
     ".agent/schema.json",
     ".agent/schemas/artifact-catalog.schema.json",
     ".agent/schemas/dossier-records.schema.json",
@@ -371,5 +374,5 @@
     "standalone-capability-family-packet-v1/spec/terminology.md"
   ],
   "schema_version": "harness.generated-manifest.v1",
-  "source_fingerprint": "7c30f715a91e4452e7540bc47c5100f57bd0fb433cd77a229601f245136d54c3"
+  "source_fingerprint": "b153b807ae92b777b916f8396e4bcdd2a5b1ce9ba7553a98a531073069992981"
 }

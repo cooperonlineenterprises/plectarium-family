@@ -24,5 +24,6 @@ limitation.
 
 `EVD-0001` records the adoption inventory, runtime observations, and
 identity-source comparison. `EVD-0002` records the final local packet,
-harness, mutation, and integrity validation. Publication evidence does not yet
-exist and must be recorded by `TASK-0002`.
+harness, mutation, and integrity validation. `EVD-0003` records exact private
+creation, foundation publication, first-push equality, and the closure
+commit's direct-verification boundary.

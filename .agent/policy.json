@@ -71,6 +71,7 @@
   },
   "task_scoped_external_constraints": {
     "task": "TASK-0002",
+    "status": "consumed_after_final_direct_equality_verification",
     "authority_source": "authority:current-operator-plectarium-portfolio-setup-v2",
     "authority_effect": "records_and_narrows_current_operator_authority_only",
     "exact_repository": "cooperonlineenterprises/plectarium-family",
@@ -96,8 +97,6 @@
       "family_boundary_threat_model",
       "project_validation_commands"
     ],
-    "remaining": [
-      "separately_bounded_remote_publication_and_equality_verification"
-    ]
+    "remaining": []
   }
 }

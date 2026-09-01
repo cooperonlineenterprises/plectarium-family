@@ -29,9 +29,9 @@ record is criteria, not approval or permission.
 
 ## Readiness model
 
-Local repository-foundation readiness is `validated`; remote publication is
-`in_progress`. Product and operational readiness remain `not_assessed`. A
-future claim must identify:
+Repository-foundation and bounded-publication readiness is `complete` at the
+recorded evidence boundary. Product and operational readiness remain
+`not_assessed`. A future claim must identify:
 
 - exact subject version;
 - applicable requirements and gates;

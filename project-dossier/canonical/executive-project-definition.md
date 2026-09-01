@@ -4,8 +4,8 @@
 
 - Name: Plectarium Capability Family
 - Slug: `plectarium-family`
-- Repository: `cooperonlineenterprises/plectarium-family` (authorized target;
-  remote creation is not yet observed)
+- Repository: `cooperonlineenterprises/plectarium-family` (private, published
+  on `main` under completed `TASK-0002`)
 - Definition status: adopted for repository foundation under `DEC-0001`
 
 ## Problem

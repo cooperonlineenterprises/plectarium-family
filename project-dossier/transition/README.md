@@ -24,8 +24,8 @@ to a project-specific family repository under `TASK-0001` and `DEC-0001`.
 - Reconciliation rule: edit the generated snapshot deliberately; never
   scaffold over the nonempty target or transfer Verity/project-blueprint
   facts, permissions, evidence, endpoints, or readiness.
-- Current status: local adoption, validation, integrity, and review complete;
-  Git initialization and exact private publication remain pending under
-  `TASK-0002`.
+- Current status: local adoption, validation, integrity, review, exact private
+  repository creation, and bounded publication complete under `TASK-0001` and
+  `TASK-0002`; final closure equality is direct post-commit evidence.
 - Rollback: preserve source/provenance and record successor decisions; do not
   silently restore a generic baseline over accepted project content.
