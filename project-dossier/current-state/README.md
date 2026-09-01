@@ -4,7 +4,7 @@
 > evidence.
 
 - Observation date: 2026-08-31
-- Subject version: validated pre-Git local foundation under `TASK-0001`
+- Subject version: published family foundation plus checkpoint v1/v2 candidate
 - Inspection method: filesystem inventory, Project Blueprint adoption planner,
   SHA-256 comparison, direct runtime dependency import, and instruction/source
   inspection; see `EVD-0001`
@@ -20,15 +20,24 @@
   packages, services, and installed project dependencies.
 - Validated: packet v1.2.0 at zero findings; harness read-only check; 15/15
   mutation tests; designated packet and harness integrity refreshes.
-- Published: exact private remote created; foundation commit
-  `8d3fb0f93b222bb955b40636bd6aa48c90e17f1e` pushed normally with exact
-  local/tracking/remote equality.
-- Pending only at this record boundary: direct verification of the closure
-  commit's own push and final clean worktree; that result cannot be embedded
-  in the commit it verifies.
-- External effects observed: local Git initialization, exact private GitHub
-  repository creation, and one normal foundation push.
+- Published foundation: initial commit
+  `8d3fb0f93b222bb955b40636bd6aa48c90e17f1e` and closure commit
+  `0b6c476682e416bd4fb770622c56758f5a380f09` with direct final equality.
+- Published checkpoint: v1/v2 records in one additional authorized normal
+  commit/push, with final equality and cleanliness verified directly because
+  that commit cannot attest its own later push.
+- External effects observed: exact private repository creation and the bounded
+  foundation, closure, and one additional checkpoint pushes only.
 - Unknown: clean-checkout portability of the packet runtime and all product,
   security, compliance, operational, release, and production-readiness states.
-- Limitations: Git revision/cleanliness cannot be assessed before repository
-  initialization; packet validation currently uses a host-specific runtime.
+- Limitations: packet validation currently uses a host-specific runtime;
+  repository-foundation evidence is not product readiness.
+
+## Three-capability checkpoint
+
+- Checkpoint v1: preserved historical `INCOMPLETE` stabilization view.
+- Successor checkpoint v2: `PASS_WITH_PROVISIONAL_DIVERGENCE` for sequencing.
+- Second-wave generation: Genea through Atlas may proceed; Sibyl remains last.
+- Shared SDK/runtime: remains deferred; none was created.
+- Publication: `TASK-0004` completed using the exact single-use additional
+  commit/push authority; no later family push is authorized.

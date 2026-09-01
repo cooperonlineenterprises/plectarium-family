@@ -5,5 +5,76 @@
   "project_slug": "plectarium-family",
   "live_harness_evidence_store": ".agent/evidence/",
   "indexing_rule": "Do not duplicate a live harness evidence ID here; link to the owning record from findings, plans, tasks, and handoff.",
-  "evidence": []
+  "evidence": [
+    {
+      "id": "EVD-0401",
+      "title": "Published three-capability input validation",
+      "type": "immutable_input_and_validation_evidence",
+      "subject_version": "Verity 271dde6; Titra 58cfe83; Ortha daeaa7e",
+      "produced_at": "2026-08-31",
+      "method": "Local clean Git/ref/digest checks and declared packet/harness/test commands without network",
+      "scope": "Verity, Titra, and Ortha published roots and packet bytes",
+      "result": "PASS with Verity default-runtime limitation",
+      "artifact_path": ".agent/evidence/EVD-0004-three-capability-input-validation.md",
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0005"],
+      "finding_refs": ["FIND-0003"],
+      "limitations": ["No live remote query or product execution."]
+    },
+    {
+      "id": "EVD-0501",
+      "title": "Three-capability conventions comparison",
+      "type": "contract_comparison_and_divergence_evidence",
+      "subject_version": "three-capability-conventions-v1",
+      "produced_at": "2026-08-31",
+      "method": "Thirty-row structural/family-status matrix and thirteen-divergence review",
+      "scope": "Published packet conventions only",
+      "result": "INCOMPLETE with three second-wave blockers",
+      "artifact_path": ".agent/evidence/EVD-0005-three-capability-comparison.md",
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0003", "FIND-0004"],
+      "limitations": ["No implementation equivalence or contract promotion."]
+    },
+    {
+      "id": "EVD-0601",
+      "title": "Checkpoint v1 preservation and successor inputs",
+      "type": "preservation_and_immutable_input_evidence",
+      "subject_version": "three-capability-conventions-v1 preserved; v2 input locks",
+      "produced_at": "2026-08-31",
+      "method": "Byte comparison of all v1 artifacts and exact published input locks",
+      "scope": "Family-owned successor-checkpoint preparation",
+      "result": "PASS",
+      "artifact_path": ".agent/evidence/EVD-0006-v1-preservation-and-inputs.md",
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0005"],
+      "finding_refs": ["FIND-0005"],
+      "limitations": ["No capability or family-packet mutation."]
+    },
+    {
+      "id": "EVD-0701",
+      "title": "Profile-qualified successor comparison",
+      "type": "successor_contract_comparison_evidence",
+      "subject_version": "three-capability-conventions-v2",
+      "produced_at": "2026-08-31",
+      "method": "Profile-qualified schema, import, completion, security, and sequencing comparison",
+      "scope": "Second-wave packet-generation sequencing only",
+      "result": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+      "artifact_path": ".agent/evidence/EVD-0007-successor-comparison.md",
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0005"],
+      "limitations": ["Shared contracts remain provisional/unresolved; SDK/runtime remains deferred; Sibyl remains last."]
+    },
+    {
+      "id": "EVD-0801",
+      "title": "Authorized family checkpoint publication candidate",
+      "type": "publication_candidate_and_authority_evidence",
+      "subject_version": "parent git 0b6c476682e416bd4fb770622c56758f5a380f09; checkpoint v1/v2 candidate",
+      "produced_at": "2026-09-01",
+      "method": "Operator authority inspection, exact scope review, validation, and one-push boundary",
+      "scope": "One family checkpoint commit and one normal push only",
+      "result": "PASS with direct post-commit verification required",
+      "artifact_path": ".agent/evidence/EVD-0008-checkpoint-publication-candidate.md",
+      "requirement_refs": ["REQ-0001", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0004", "FIND-0005"],
+      "limitations": ["The commit cannot attest its own later push; no later push is authorized."]
+    }
+  ]
 }

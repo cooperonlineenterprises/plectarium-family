@@ -5,16 +5,17 @@
   "authority": "Compact operational view derived from authoritative task, decision, and evidence records. This file does not grant permission.",
   "adoption_status": "adopted_local_foundation",
   "active_tasks": [],
-  "accepted_decisions": ["DEC-0001"],
-  "fresh_evidence": ["EVD-0001", "EVD-0002", "EVD-0003"],
+  "accepted_decisions": ["DEC-0001", "DEC-0002", "DEC-0003"],
+  "fresh_evidence": ["EVD-0001", "EVD-0002", "EVD-0003", "EVD-0004", "EVD-0005", "EVD-0006", "EVD-0007", "EVD-0008"],
   "blocked_by": [],
   "pending_gates": [],
-  "next_action": "consume the published family commit as an immutable provenance pin in Plectarium and capability packet generation",
-  "external_effects_authorized": true,
-  "external_effect_scope": "TASK-0002 records the exact consumable private GitHub creation and two-push limit from the current operator request; this state record does not grant authority",
-  "external_effects_observed": "exact private remote created; foundation push verified; closure push and final equality verified directly after the closure commit",
+  "next_action": "proceed with Genea Echo Harmia Iris Janus and Atlas packets under checkpoint v2; keep Sibyl last",
+  "external_effects_authorized": false,
+  "external_effect_scope": "TASK-0004 single-use checkpoint commit/push authority is consumed after direct final equality verification; no later push is authorized",
+  "external_effects_observed": "exact private remote created; foundation and closure pushes verified; one additional checkpoint push verified directly with final equality and clean worktree",
   "limitations": [
     "packet_validator_uses_a_host_specific_preconfigured_python_runtime",
+    "checkpoint_commit_cannot_attest_its_own_push_and_final_equality_is_direct_handoff_evidence",
     "closure_commit_cannot_attest_its_own_push_and_final_equality_is_direct_handoff_evidence",
     "structural_foundation_does_not_establish_product_readiness"
   ]

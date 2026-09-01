@@ -88,6 +88,16 @@
     ],
     "expiry": "after_the_authorized_publication_sequence_and_final_equality_verification_or_task_termination"
   },
+  "checkpoint_publication_constraint": {
+    "task": "TASK-0004",
+    "status": "authorized_single_use_then_consumed",
+    "authority_source": "SRC-0006 current operator authorization on 2026-09-01",
+    "required_effect": "exactly_one_checkpoint_commit_and_one_normal_fast_forward_push_to_origin_main",
+    "exact_repository": "cooperonlineenterprises/plectarium-family",
+    "reason": "operator supplied the additional bounded authority after TASK-0002 consumed the original pushes",
+    "expiry": "after_one_commit_one_push_and_direct_final_equality_verification",
+    "non_authorization_rule": "This single-use record cannot authorize a later push or any effect outside the exact operator grant."
+  },
   "project_specific_adoption": {
     "status": "adopted_local_foundation",
     "assessed": [

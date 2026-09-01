@@ -1,0 +1,107 @@
+{
+  "schema_version": "plectarium-family.three-capability-divergences.v2",
+  "document_role": "family_owned_successor_checkpoint_divergence_register",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v2",
+  "supersedes_for_sequencing": "three-capability-conventions-v1",
+  "outcome": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+  "divergences": [
+    {
+      "id": "V2-DIV-001",
+      "title": "Verity legacy pre-family-1.2 profile lacks packet-local family tuple/lock",
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "blocks_sibyl_last_gate": false,
+      "disposition": "Use exact repo/commit/packet digests and deny family-schema conformance claims; future Verity migration remains owner-scoped.",
+      "status": "profiled_no_automatic_promotion"
+    },
+    {
+      "id": "V2-DIV-002",
+      "title": "Packet-specific capability manifests do not conform to one family manifest schema",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "severity": "low",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "blocks_sibyl_last_gate": false,
+      "disposition": "Keep packet-specific profiles; do not advertise family manifest conformance.",
+      "status": "profiled_no_automatic_promotion"
+    },
+    {
+      "id": "V2-DIV-003",
+      "title": "Relative schema IDs collide when stripped of repository context",
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "blocks_sibyl_last_gate": false,
+      "disposition": "Qualify by repository+commit+packet path+schema path+digest; prohibit cross-packet bare-$id registries.",
+      "status": "profiled_no_automatic_promotion"
+    },
+    {
+      "id": "V2-DIV-004",
+      "title": "Native result references require consumer-owned enrichment before import",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "blocks_sibyl_last_gate": false,
+      "disposition": "Resolve immutable bundle, verify it, then create a consumer-owned imported-result transformation; compatibility stays unknown until implemented.",
+      "status": "profiled_no_automatic_promotion"
+    },
+    {
+      "id": "V2-DIV-005",
+      "title": "Permission and evidence vocabularies differ",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "blocks_sibyl_last_gate": false,
+      "disposition": "Use explicit profile mapping only in a consumer; never silently alias or widen authority.",
+      "status": "profiled_no_automatic_promotion"
+    },
+    {
+      "id": "V2-DIV-006",
+      "title": "Packet writer/readiness/runtime mechanisms differ",
+      "structural_classification": "provisional_experiment",
+      "family_status": "UNRESOLVED",
+      "severity": "low",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "blocks_sibyl_last_gate": false,
+      "disposition": "Treat as repository-specific tooling; no common writer/runtime contract is claimed.",
+      "status": "profiled_no_automatic_promotion"
+    },
+    {
+      "id": "V2-DIV-007",
+      "title": "Completion payload refinements differ",
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "PROVISIONAL",
+      "severity": "none",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "blocks_sibyl_last_gate": false,
+      "disposition": "Preserve capability-specific coverage/details while retaining common truthful top-level states.",
+      "status": "profiled_no_automatic_promotion"
+    }
+  ],
+  "summary": {
+    "hard_failures": 0,
+    "second_wave_blockers": 0,
+    "shared_contract_stabilization_blockers": 7,
+    "sibyl_last_gate": "unchanged_and_not_satisfied_by_this_checkpoint"
+  },
+  "prohibited_conclusions": [
+    "No shared contract is stabilized.",
+    "No compatibility is implemented or proven.",
+    "No SDK/runtime extraction is authorized.",
+    "Sibyl may not be generated early."
+  ]
+}
+

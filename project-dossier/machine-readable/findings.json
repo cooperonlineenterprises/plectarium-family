@@ -35,6 +35,29 @@
       "inspected_evidence": ["EVD-0001"],
       "rationale": "The archive and current packet projection are byte-identical, and provenance records preserve the exact former locator and limitations.",
       "owner_role": "source_curator"
-    }
+    },
+    {
+      "id": "FIND-0003",
+      "title": "Three-capability conventions checkpoint is incomplete",
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0005"],
+      "status": "nonconformant",
+      "assessed_on": "2026-08-31",
+      "subject_version": "Verity 271dde6; Titra 58cfe83; Ortha daeaa7e",
+      "inspected_evidence": ["EVD-0004", "EVD-0005"],
+      "rationale": "Verity lacks the FAM-036 packet identity/family lock, relative schema IDs collide across Titra/Ortha, and reference-to-import interoperability is unproven; second-wave generation remains blocked.",
+      "owner_role": "family_contract_maintainer"
+    },
+    {
+      "id": "FIND-0004",
+      "title": "Checkpoint publication completed under single-use authority",
+      "requirement_refs": ["REQ-0001", "REQ-0004", "REQ-0005"],
+      "status": "conformant",
+      "assessed_on": "2026-08-31",
+      "subject_version": "three-capability checkpoint v1/v2 publication candidate",
+      "inspected_evidence": ["EVD-0005", "EVD-0007", "EVD-0008"],
+      "rationale": "The operator granted one additional checkpoint commit/push; the reviewed v1/v2 candidate is published once normally and final equality/cleanliness are verified directly.",
+      "owner_role": "primary_agent"
+    },
+    {"id":"FIND-0005","title":"Profile-qualified successor checkpoint permits second-wave packet sequencing","requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"status":"conformant","assessed_on":"2026-08-31","subject_version":"three-capability-conventions-v2","inspected_evidence":["EVD-0006","EVD-0007"],"rationale":"Legacy Verity and packet-specific Titra/Ortha are explicitly profiled; schema IDs are fully qualified; imports use consumer-owned transformation; no shared contract is promoted; six second-wave packets may proceed while Sibyl remains last.","owner_role":"family_contract_maintainer"}
   ]
 }

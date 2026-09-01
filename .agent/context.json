@@ -66,7 +66,7 @@
     "dependency_installation": "prohibited",
     "product_execution": "prohibited",
     "generated_integrity": "refresh_only_after_all_source_and_packet_edits_complete",
-    "external_effects": "only_the_exact_consumable_scope_recorded_in_TASK-0002_and_the_current_operator_request"
+    "external_effects": "TASK-0004 has single-use operator authority for one checkpoint commit and one normal family push only; authority is consumed after direct final equality verification"
   },
   "known_runtime_context": {
     "harness_runtime": "python3_version_3.11_or_newer_standard_library_only",

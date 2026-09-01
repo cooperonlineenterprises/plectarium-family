@@ -1,0 +1,160 @@
+{
+  "schema_version": "plectarium-family.three-capability-divergences.v1",
+  "document_role": "family_owned_checkpoint_divergence_register",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v1",
+  "outcome": "INCOMPLETE",
+  "divergences": [
+    {
+      "id": "DIV-001",
+      "title": "Verity packet lacks the family 1.2.0 namespace/source lock",
+      "structural_classification": "missing_evidence",
+      "family_status": "ESTABLISHED",
+      "severity": "high",
+      "blocks_second_wave_generation": true,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Add a future non-semantic Verity family provenance projection through Verity change control; do not rewrite its accepted packet here.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-002",
+      "title": "Capability manifest and discovery shapes are not one shared contract",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "severity": "low",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain packet-specific forms and compare actual consumer needs after implementation.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-003",
+      "title": "Permission vocabularies differ across the legacy and current packets",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Define an explicit legacy mapping only when a consumer needs it; never infer credentials or action permissions.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-004",
+      "title": "Verity uses heuristic_static while current family packets use heuristic",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Require a versioned evidence-class migration/compatibility decision before cross-packet normalization.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-005",
+      "title": "Completion payload shapes differ despite matching top-level states",
+      "structural_classification": "potential_family_conflict",
+      "family_status": "PROVISIONAL",
+      "severity": "high",
+      "blocks_second_wave_generation": true,
+      "blocks_shared_contract_stabilization": false,
+      "disposition": "Keep common top-level meaning and capability-specific details.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-006",
+      "title": "Verity result-reference contract is prose, while Titra and Ortha have schemas",
+      "structural_classification": "missing_evidence",
+      "family_status": "PROVISIONAL",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Exercise a Verity projection with a real consumer before any shared result-reference stabilization.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-007",
+      "title": "Schema IDs use absolute Verity IDs versus local relative Titra/Ortha IDs",
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "UNRESOLVED",
+      "severity": "low",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Titra and Ortha reuse relative schema IDs for different bytes; establish collision-free retrieval identities before shared interchange.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-008",
+      "title": "Verity safe wrapper default runtime lacks PyYAML",
+      "structural_classification": "missing_evidence",
+      "family_status": "UNRESOLVED",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": false,
+      "disposition": "Preserve the exact safe preflight and documented preconfigured runtime; resolve portable bootstrap separately without installation here.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-009",
+      "title": "Security profiles differ among read-heavy audit, execution verification, and read-heavy aggregation",
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "ACCEPTED",
+      "severity": "none",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": false,
+      "disposition": "Preserve operation-specific profiles; do not normalize permissions.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-010",
+      "title": "Domain payloads differ by design",
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "ACCEPTED",
+      "severity": "none",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": false,
+      "disposition": "Protect audit, verification, and conformance semantics from shared-domain abstraction.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-011",
+      "title": "Verity has no governed combined packet writer contract in repository validators",
+      "structural_classification": "missing_evidence",
+      "family_status": "UNRESOLVED",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Require a Verity-owned writer command and exact declared write set before writer conformance is claimed.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-012",
+      "title": "Verity task index has no machine readiness status",
+      "structural_classification": "missing_evidence",
+      "family_status": "UNRESOLVED",
+      "severity": "medium",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Do not equate FOUNDATION-001 dependency-root position with ready status.",
+      "status": "recorded_no_automatic_promotion"
+    },
+    {
+      "id": "DIV-013",
+      "title": "Native result references do not satisfy imported-result source requirements without enrichment",
+      "structural_classification": "missing_evidence",
+      "family_status": "PROVISIONAL",
+      "severity": "high",
+      "blocks_second_wave_generation": true,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Define and test explicit reference-to-import enrichment/transformation contracts, including Verity's missing projection.",
+      "status": "recorded_no_automatic_promotion"
+    }
+  ],
+  "summary": {
+    "hard_failures": 3,
+    "second_wave_blockers": 3,
+    "shared_contract_stabilization_blockers": 10,
+    "accepted_intentional_divergences": 2,
+    "unresolved_items": 6
+  },
+  "prohibited_conclusion": "This register does not authorize a shared SDK/runtime or imply implementation compatibility."
+}

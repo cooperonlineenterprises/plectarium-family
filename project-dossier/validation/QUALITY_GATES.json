@@ -32,6 +32,25 @@
       "required_evidence": ["review_record", "actionable_finding_dispositions", "limitations_and_external_effects"],
       "approval_source": "authority:current-operator-plectarium-portfolio-setup-v2",
       "limitations": ["Review does not approve external effects or product readiness."]
-    }
+    },
+    {
+      "id": "GATE-0004",
+      "title": "Three-capability conventions checkpoint",
+      "status": "passed_with_provisional_divergence",
+      "owner_role": "family_contract_maintainer",
+      "required_evidence": ["EVD-0004", "EVD-0005", "REV-0003", "CHK-0003"],
+      "approval_source": "current operator three-capability checkpoint instruction",
+      "limitations": ["Packet comparison is not implementation equivalence.", "No shared contract status was promoted.", "No SDK or runtime extraction is authorized."]
+    },
+    {
+      "id": "GATE-0005",
+      "title": "Checkpoint publication",
+      "status": "passed_with_direct_post_commit_verification",
+      "owner_role": "primary_agent",
+      "required_evidence": ["SRC-0006", "EVD-0008", "REV-0005", "CHK-0005", "direct post-push equality and clean worktree"],
+      "approval_source": "SRC-0006 current operator authorization",
+      "limitations": ["The checkpoint commit cannot attest its own later push; final equality is direct handoff evidence.", "No later push is authorized."]
+    },
+    {"id":"GATE-0006","title":"Profile-qualified successor checkpoint","status":"passed_with_provisional_divergence","owner_role":"family_contract_maintainer","required_evidence":["EVD-0006","EVD-0007","REV-0004","CHK-0004"],"approval_source":"current operator v2 successor instruction","limitations":["Shared contracts remain provisional/unresolved.","Sibyl remains last.","No SDK/runtime extraction."]}
   ]
 }

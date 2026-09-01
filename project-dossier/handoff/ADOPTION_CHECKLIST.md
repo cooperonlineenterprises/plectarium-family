@@ -21,3 +21,9 @@
       publication work began.
 - [x] Unknowns, skipped checks, limitations, and external effects were
       disclosed.
+- [x] Checkpoint v1 preserves its `INCOMPLETE` stabilization view; successor
+      v2 records `PASS_WITH_PROVISIONAL_DIVERGENCE` for sequencing without
+      contract promotion.
+- [x] Shared SDK/runtime extraction remains deferred and absent.
+- [x] Checkpoint v1/v2 publication used exactly one additional authorized
+      commit/push with direct final equality and cleanliness verification.

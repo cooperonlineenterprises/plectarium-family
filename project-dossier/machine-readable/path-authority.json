@@ -1,6 +1,16 @@
 {
   "document_role": "generated_from_artifact_catalog",
   "paths": [
+    {"artifact_id":"CVN-0001","authority":"successor_checkpoint_input_evidence","generated":false,"information_state":"evidence","path":"project-dossier/conformance/three-capability-conventions-v2/INPUT-LOCKS.json"},
+    {"artifact_id":"CVN-0002","authority":"successor_contract_surface_comparison","generated":false,"information_state":"conformance","path":"project-dossier/conformance/three-capability-conventions-v2/CONTRACT-SURFACE-MATRIX.json"},
+    {"artifact_id":"CVN-0003","authority":"successor_divergence_register","generated":false,"information_state":"conformance","path":"project-dossier/conformance/three-capability-conventions-v2/DIVERGENCES.json"},
+    {"artifact_id":"CVN-0004","authority":"successor_checkpoint_status","generated":false,"information_state":"conformance","path":"project-dossier/conformance/three-capability-conventions-v2/STATUS-REPORT.md"},
+    {"artifact_id":"CVN-0005","authority":"successor_validation_receipt","generated":false,"information_state":"evidence","path":"project-dossier/conformance/three-capability-conventions-v2/VALIDATION-RECEIPT.json"},
+    {"artifact_id":"CNV-0001","authority":"immutable_checkpoint_input_evidence","generated":false,"information_state":"evidence","path":"project-dossier/conformance/three-capability-conventions-v1/INPUT-LOCKS.json"},
+    {"artifact_id":"CNV-0002","authority":"contract_surface_comparison","generated":false,"information_state":"conformance","path":"project-dossier/conformance/three-capability-conventions-v1/CONTRACT-SURFACE-MATRIX.json"},
+    {"artifact_id":"CNV-0003","authority":"checkpoint_divergence_register","generated":false,"information_state":"conformance","path":"project-dossier/conformance/three-capability-conventions-v1/DIVERGENCES.json"},
+    {"artifact_id":"CNV-0004","authority":"checkpoint_status_summary","generated":false,"information_state":"conformance","path":"project-dossier/conformance/three-capability-conventions-v1/STATUS-REPORT.md"},
+    {"artifact_id":"CNV-0005","authority":"checkpoint_validation_receipt","generated":false,"information_state":"evidence","path":"project-dossier/conformance/three-capability-conventions-v1/VALIDATION-RECEIPT.json"},
     {
       "artifact_id": "DOS-0004",
       "authority": "artifact_metadata",

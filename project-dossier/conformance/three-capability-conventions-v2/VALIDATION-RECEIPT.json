@@ -1,0 +1,63 @@
+{
+  "schema_version": "plectarium-family.three-capability-validation-receipt.v2",
+  "document_role": "family_owned_successor_checkpoint_validation_receipt",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v2",
+  "recorded_at": "2026-08-31",
+  "outcome": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+  "v1_preservation": {
+    "verified": true,
+    "hashes": {
+      "CONTRACT-SURFACE-MATRIX.json": "e58fcd301dd165943a0ffe189c4150a1ce1628908c1dab6684e56ef11a43a611",
+      "DIVERGENCES.json": "71f2698382996034d03de8cfd10e0ca61d7260df3b93cf6a6dca66b7f665a1f3",
+      "INPUT-LOCKS.json": "b48e03106392f6010faf31a19e28125d698bc07bbdab9ddcabee9f9e70e98f33",
+      "STATUS-REPORT.md": "fd468f7c68114dc8011b45616afa609156389ea8cb67cac2b5ec40ccd83ee09d",
+      "VALIDATION-RECEIPT.json": "b88316735307624bd1955a072cb12f3cbaa3d689238927d65131be05853d307a"
+    }
+  },
+  "capability_roots": {
+    "verity": {
+      "commit": "271dde603f4c35ba4c0b051365ba66efdba7a370",
+      "clean_before": true,
+      "clean_after": true,
+      "mutated": false
+    },
+    "titra": {
+      "commit": "58cfe8388d267bb4d0c746aff8c7d6dfceb2e8bb",
+      "clean_before": true,
+      "clean_after": true,
+      "mutated": false
+    },
+    "ortha": {
+      "commit": "daeaa7ee8e32c64af6337d7e2f8701bb0727e16a",
+      "clean_before": true,
+      "clean_after": true,
+      "mutated": false
+    }
+  },
+  "audit_assertions": {
+    "verity_profile": "legacy_pre_family_1_2",
+    "family_schema_conformance_claims": false,
+    "qualified_schema_identity": true,
+    "bare_cross_packet_ids_prohibited": true,
+    "consumer_owned_import_transformation": true,
+    "compatibility_default": "unknown_until_implemented",
+    "shared_contract_promotion": false,
+    "sdk_runtime_extraction": false,
+    "second_wave_blockers": 0,
+    "sibyl_last_constraint_preserved": true
+  },
+  "family_final_validation": {
+    "status": "passed_after_designated_root_refresh",
+    "harness": "PASS",
+    "tests": "15 of 15 PASS",
+    "packet": "PASS unchanged family packet 1.2.0"
+  },
+  "external_effects": [],
+  "limitations": [
+    "No implemented interoperability was tested.",
+    "No live remote query was performed.",
+    "Publication remains blocked pending authority for one additional normal family commit/push."
+  ]
+}
+

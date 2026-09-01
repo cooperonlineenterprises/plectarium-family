@@ -52,6 +52,50 @@
       "sensitivity": "public_or_internal_tooling_metadata",
       "freshness_rule": "Pinned to the generated snapshot; upgrades require an explicit project-specific migration.",
       "accepted_as_project_authority": false
+    },
+    {
+      "id": "SRC-0004",
+      "name": "Three-capability conventions checkpoint operator instruction",
+      "location": "external:current-operator-request/three-capability-conventions-v1",
+      "classification": "current_operator_instruction",
+      "observed_on": "2026-08-31",
+      "intended_use": "Authorize local read-only comparison records and lifecycle updates while explicitly withholding Git commit, push, network, capability changes, and family packet changes.",
+      "limitations": [
+        "The instruction authorizes no shared runtime or SDK extraction.",
+        "The instruction authorizes no family checkpoint commit or push.",
+        "Repository records may record and narrow but cannot create publication authority."
+      ],
+      "sensitivity": "internal_project_instruction",
+      "freshness_rule": "Valid for TASK-0003 local work and TASK-0004 blocker recording; publication requires a new current instruction.",
+      "accepted_as_project_authority": true
+    },
+    {
+      "id": "SRC-0005",
+      "name": "Profile-qualified three-capability successor checkpoint instruction",
+      "location": "external:current-operator-request/three-capability-conventions-v2",
+      "classification": "current_operator_instruction",
+      "observed_on": "2026-08-31",
+      "intended_use": "Authorize local v2 successor records and sequencing correction while preserving v1 and withholding Git/network/capability/packet effects.",
+      "limitations": ["No shared contract promotion or SDK/runtime extraction.", "No commit or push authority.", "Sibyl remains last."],
+      "sensitivity": "internal_project_instruction",
+      "freshness_rule": "Valid for TASK-0005 local work; publication still requires new authority under TASK-0004.",
+      "accepted_as_project_authority": true
+    },
+    {
+      "id": "SRC-0006",
+      "name": "Additional family checkpoint publication authorization",
+      "location": "external:current-operator-request/family-checkpoint-single-push-2026-09-01",
+      "classification": "current_operator_instruction",
+      "observed_on": "2026-09-01",
+      "intended_use": "Authorize staging the validated checkpoint v1/v2 candidate, exactly one family checkpoint commit, exactly one normal fast-forward push to the existing private origin/main, and direct final equality/cleanliness verification.",
+      "limitations": [
+        "No family packet or capability edit is authorized.",
+        "No force push, later push, alternate branch/repository, tag, release, package, deployment, secret, integration, or GitHub setting change is authorized.",
+        "Authority expires after one commit, one push, and direct final equality verification."
+      ],
+      "sensitivity": "internal_project_instruction",
+      "freshness_rule": "Single-use and consumed after TASK-0004 final equality verification.",
+      "accepted_as_project_authority": true
     }
   ]
 }

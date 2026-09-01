@@ -1,0 +1,136 @@
+{
+  "schema_version": "plectarium-family.three-capability-validation-receipt.v1",
+  "document_role": "family_owned_checkpoint_validation_receipt",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v1",
+  "recorded_at": "2026-08-31",
+  "outcome": "INCOMPLETE",
+  "environment": {
+    "platform": "darwin",
+    "harness_python": "3.13.9",
+    "packet_python": "3.14.0",
+    "network_used": false,
+    "dependencies_installed": false,
+    "product_code_executed": false
+  },
+  "commands": [
+    {
+      "id": "LOCK-001",
+      "scope": "all_three",
+      "command": "git branch/rev-parse HEAD/rev-parse origin-main/remote get-url/status porcelain",
+      "exit_code": 0,
+      "result": "all exact clean published roots"
+    },
+    {
+      "id": "VERITY-PACKET-SAFE",
+      "scope": "verity",
+      "command": "python3 -I -B .agent/scripts/validate_packet_safe.py --check",
+      "exit_code": 1,
+      "result": "safe packet byte preflight passed; launched default runtime reported PyYAML unavailable",
+      "limitation": "Full validator rerun under existing Python 3.14."
+    },
+    {
+      "id": "VERITY-PACKET",
+      "scope": "verity",
+      "command": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3 -I -B verity-codebase-intelligence-build-packet-v1/scripts/validate-packet.py",
+      "exit_code": 0,
+      "result": "PASS 0 errors 0 warnings"
+    },
+    {
+      "id": "VERITY-SETUP",
+      "scope": "verity",
+      "command": "python3 -I -B .agent/scripts/validate_setup.py --check",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "VERITY-HARNESS",
+      "scope": "verity",
+      "command": "python3 -I -B .agent/scripts/validate.py --check",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "VERITY-TESTS",
+      "scope": "verity",
+      "command": "python3 -I -B .agent/scripts/run_tests_safe.py --check",
+      "exit_code": 0,
+      "result": "92 of 92 passed"
+    },
+    {
+      "id": "TITRA-HARNESS",
+      "scope": "titra",
+      "command": "python3 -B .agent/scripts/validate.py --check",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "TITRA-TESTS",
+      "scope": "titra",
+      "command": "python3 -B -m unittest discover -s .agent/tests -p test_*.py",
+      "exit_code": 0,
+      "result": "15 of 15 passed"
+    },
+    {
+      "id": "TITRA-PACKET",
+      "scope": "titra",
+      "command": "Python 3.14 validate-packet.py --family-root ../../family --plectarium-root ../../plectarium",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "ORTHA-HARNESS",
+      "scope": "ortha",
+      "command": "python3 -B .agent/scripts/validate.py --check",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "ORTHA-TESTS",
+      "scope": "ortha",
+      "command": "python3 -B -m unittest discover -s .agent/tests -p test_*.py",
+      "exit_code": 0,
+      "result": "15 of 15 passed"
+    },
+    {
+      "id": "ORTHA-PACKET",
+      "scope": "ortha",
+      "command": "Python 3.14 validate-packet.py --family-root ../../family --plectarium-root ../../plectarium --titra-root ../titra",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "CHECKPOINT-STRUCTURE",
+      "scope": "family_checkpoint",
+      "command": "strict JSON parse, 30-row classification vocabulary and divergence consistency assertions",
+      "exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "source_tree_digests": {
+    "verity": "b6f591267a132d19c690aa4025b963e6a793c8207242edc944ab11514516a65f",
+    "titra": "93055f8c57ceb3775604eb38c62643884913020eb68ed5443f243acfe6a79b3a",
+    "ortha": "41352c453337c140ea170bda7b5ce9a8f6ebc4fe7c234285f6edf4e31cb047bc"
+  },
+  "capability_mutations": [],
+  "checkpoint_artifacts": [
+    "INPUT-LOCKS.json",
+    "CONTRACT-SURFACE-MATRIX.json",
+    "DIVERGENCES.json",
+    "STATUS-REPORT.md",
+    "VALIDATION-RECEIPT.json"
+  ],
+  "family_final_validation": {
+    "status": "passed_after_designated_root_refresh",
+    "harness": "PASS",
+    "tests": "15 of 15 PASS",
+    "packet": "PASS; family packet unchanged at version 1.2.0",
+    "checkpoint_artifacts": "PASS; outcome INCOMPLETE with 30 rows and 13 divergences"
+  },
+  "limitations": [
+    "The default Verity safe-wrapper runtime lacks PyYAML after a successful exact-byte preflight.",
+    "Live remote refs were not queried; local tracking equality and existing closure evidence were used.",
+    "Ortha's cross-root validator is expected to report the family worktree dirty after local checkpoint edits; its published packet/root validation passed before family mutation.",
+    "Packet validation is not implementation or product readiness."
+  ]
+}

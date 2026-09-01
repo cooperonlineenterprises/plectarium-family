@@ -1,0 +1,106 @@
+{
+  "schema_version": "plectarium-family.three-capability-input-locks.v1",
+  "document_role": "family_owned_checkpoint_evidence",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v1",
+  "observed_at": "2026-08-31",
+  "network_used": false,
+  "remote_equality_basis": "Local published HEAD and origin/main equality plus existing closure evidence; live remote refs were not queried.",
+  "family_authority": {
+    "repository": "https://github.com/cooperonlineenterprises/plectarium-family.git",
+    "commit": "0b6c476682e416bd4fb770622c56758f5a380f09",
+    "family_id": "standalone-capability-family",
+    "packet_path": "standalone-capability-family-packet-v1",
+    "packet_version": "1.2.0",
+    "packet_manifest_sha256": "54116db0e4f518ffe793df3d3ebd2b87064f00aab10b373bf1909f9126b24867",
+    "packet_checksums_sha256": "e0134782dff26755d450f2aa2117d4a8d8afebbf53578e51c9dbbb809fabf4ee"
+  },
+  "capabilities": [
+    {
+      "repository_id": "verity",
+      "character_identity": "Verity",
+      "capability_id": "universal-code-audit",
+      "repository": "https://github.com/cooperonlineenterprises/verity.git",
+      "root": "capabilities/verity",
+      "branch": "main",
+      "commit": "271dde603f4c35ba4c0b051365ba66efdba7a370",
+      "tracking_commit": "271dde603f4c35ba4c0b051365ba66efdba7a370",
+      "worktree": "clean",
+      "packet_path": "verity-codebase-intelligence-build-packet-v1",
+      "packet_version": "1.1.0",
+      "packet_manifest_sha256": "66784a5840e6119cb9f46f1d1c98071b0d1dafb9ede0153212e50c654acbfdc8",
+      "packet_checksums_sha256": "7ccbcdfddffbbc4eb4676c3aa5ec2cd74d2eabf8451baec1a0f38e9d3b2480f4",
+      "root_tree_sha256": "b6f591267a132d19c690aa4025b963e6a793c8207242edc944ab11514516a65f",
+      "family_lock_status": "absent_in_legacy_packet",
+      "validation": {
+        "safe_preflight": "passed_exact_packet_bytes_then_default_runtime_reported_missing_PyYAML",
+        "packet_direct_pyenv_3_14": "passed_0_errors_0_warnings",
+        "setup": "passed",
+        "harness": "passed",
+        "tests": "92_of_92_passed"
+      },
+      "limitations": [
+        "Packet predates family packet 1.2.0 and does not contain a packet-local family source lock.",
+        "Default safe-wrapper runtime lacks PyYAML; full packet validation used the already configured Python 3.14 runtime after safe preflight."
+      ]
+    },
+    {
+      "repository_id": "titra",
+      "character_identity": "Titra",
+      "capability_id": "verification-assurance",
+      "repository": "https://github.com/cooperonlineenterprises/titra.git",
+      "root": "capabilities/titra",
+      "branch": "main",
+      "commit": "58cfe8388d267bb4d0c746aff8c7d6dfceb2e8bb",
+      "tracking_commit": "58cfe8388d267bb4d0c746aff8c7d6dfceb2e8bb",
+      "worktree": "clean",
+      "packet_path": "titra-verification-assurance-build-packet-v1",
+      "packet_version": "1.0.0",
+      "packet_manifest_sha256": "3a9b9c5004e67921b1ce0c56a66c93106696759cbcaa15a867cc115d60108e19",
+      "packet_checksums_sha256": "dee7c5b430b1a82bc7cf42949bab72e09d4e63e2b4c44b4fabe995613c524db0",
+      "root_tree_sha256": "93055f8c57ceb3775604eb38c62643884913020eb68ed5443f243acfe6a79b3a",
+      "family_lock_status": "resolved_exact_family_1_2_0",
+      "validation": {
+        "packet": "passed_exact_family_and_Plectarium_roots",
+        "harness": "passed",
+        "tests": "15_of_15_passed"
+      },
+      "limitations": [
+        "Product implementation and behavioral compatibility remain unassessed."
+      ]
+    },
+    {
+      "repository_id": "ortha",
+      "character_identity": "Ortha",
+      "capability_id": "specification-conformance",
+      "repository": "https://github.com/cooperonlineenterprises/ortha.git",
+      "root": "capabilities/ortha",
+      "branch": "main",
+      "commit": "daeaa7ee8e32c64af6337d7e2f8701bb0727e16a",
+      "tracking_commit": "daeaa7ee8e32c64af6337d7e2f8701bb0727e16a",
+      "worktree": "clean",
+      "packet_path": "ortha-specification-conformance-build-packet-v1",
+      "packet_version": "1.0.0",
+      "packet_manifest_sha256": "f2a7ada39ec4a00c46d9aa8913e528e7252469cc5156f2344e2502bb6e7d7078",
+      "packet_checksums_sha256": "12cd12c129f396ecc4ec05f0a0e7fb88f49da522dfd7c7191f5729b910779aaa",
+      "root_tree_sha256": "41352c453337c140ea170bda7b5ce9a8f6ebc4fe7c234285f6edf4e31cb047bc",
+      "family_lock_status": "resolved_exact_family_1_2_0",
+      "validation": {
+        "packet": "passed_exact_family_Plectarium_and_Titra_roots",
+        "harness": "passed",
+        "tests": "15_of_15_passed"
+      },
+      "limitations": [
+        "Product implementation and behavioral compatibility remain unassessed."
+      ]
+    }
+  ],
+  "invariants": [
+    "No capability source was changed.",
+    "No product code was executed.",
+    "No network was used.",
+    "Packet similarity does not promote a family contract.",
+    "No shared runtime or SDK is authorized."
+  ]
+}
+

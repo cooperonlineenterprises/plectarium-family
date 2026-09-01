@@ -29,18 +29,43 @@
     },
     {
       "layer": "agent_harness",
+      "path": ".agent/checkpoints/CHK-0003-three-capability-conventions.md",
+      "sha256": "c95cbb85e9d9cb706bc6ffd77d171a2fa9d8b4d698c12ed8a930c76dc40aa97b"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/checkpoints/CHK-0004-three-capability-successor.md",
+      "sha256": "d2a7eae385f0a4251ebfb5b561d0a16f25e2c778aeaf42a119338933a9b7a8d4"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/checkpoints/CHK-0005-checkpoint-publication.md",
+      "sha256": "9e3e24331d8e83b93fc964e82ac4abb1a5d24f6cb44acab13107fb4b7779afbc"
+    },
+    {
+      "layer": "agent_harness",
       "path": ".agent/checkpoints/README.md",
       "sha256": "c033c280aa2c09046e1a86f5910664486fcdb3000679041df4620b95a6c7b250"
     },
     {
       "layer": "agent_harness",
       "path": ".agent/context.json",
-      "sha256": "70fc49047a565fa11f0130272db2ff251725a0db9866eefc42d38443776fbee4"
+      "sha256": "a813a59172052f76b310b03d84b82ef804ccadd658326221b4c6c34e004c912c"
     },
     {
       "layer": "agent_harness",
       "path": ".agent/decisions/DEC-0001-family-authority-and-harness-posture.md",
       "sha256": "ed5f9bd8d7cf82a4bddd8efa0b6596fdd84e8175dd276578d0557910d215767b"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/decisions/DEC-0002-three-capability-no-promotion.md",
+      "sha256": "865302eb1cd7760e097c05663ba17e5222dbed08535918513917d4933bcc5752"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/decisions/DEC-0003-successor-sequencing-profile.md",
+      "sha256": "8888a3d1de06f44014d0d450603f97e5fbd65d43a4c40515f9e3e6b6d549aaa7"
     },
     {
       "layer": "agent_harness",
@@ -55,7 +80,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/events/events.jsonl",
-      "sha256": "5e4182b17b60a1a7cf6edac392af3559b26b5190216ac1f9efbdc5d92ddb613c"
+      "sha256": "a0a85734013545900bb509f1a912b1b3543734bec8f37051ede0e316cc54b34e"
     },
     {
       "layer": "agent_harness",
@@ -71,6 +96,31 @@
       "layer": "agent_harness",
       "path": ".agent/evidence/EVD-0003-family-publication.md",
       "sha256": "e7e40d65eba7a5ccd04739413711ac48874a3ce71b496849a538ef4221bc28ab"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0004-three-capability-input-validation.md",
+      "sha256": "9feeac84b0bd40a73baa34289694483103370682d592461f2c6f926b717e3a80"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0005-three-capability-comparison.md",
+      "sha256": "d490f16a04358b8be46eb0d0775da320d69007196350512d416d472faa8ba0f7"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0006-v1-preservation-and-inputs.md",
+      "sha256": "37249c7801b6a3497f78aa13330cc4c38921ef484b0a88fdf7290f98ed724f85"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0007-successor-comparison.md",
+      "sha256": "91ea304514208cadf7003a4267f3fe4b54172eb98705612b781ab19069caf059"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0008-checkpoint-publication-candidate.md",
+      "sha256": "ed5a16cb4a79b340fa738036ebb179e437098a4fa28edf296fc47f8d54f5fc94"
     },
     {
       "layer": "agent_harness",
@@ -110,7 +160,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/policy.json",
-      "sha256": "41af5352c4f167209cfa09a3c6a4756958c4719a93b0c3415cf7adfc3ed78111"
+      "sha256": "5c70b1b81aa8ecfd659a8a0eb4d68f2ec38523f6bf030f318821c4838a53c612"
     },
     {
       "layer": "agent_harness",
@@ -131,6 +181,21 @@
       "layer": "agent_harness",
       "path": ".agent/reviews/REV-0002-family-publication-review.md",
       "sha256": "e1627d90d4da4e616f69db833154e40869f0a501eeb8288afbe9f0de46671882"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/reviews/REV-0003-three-capability-conventions.md",
+      "sha256": "6927f67bac43d23e7e53875fdddfa1fbd6d2b758b45973f76cd90d6fee40fed5"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/reviews/REV-0004-successor-checkpoint.md",
+      "sha256": "7e4eec20cbb731d354c9efb17522c1cbdedc8137b3cd7a328d103332a121e2fa"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/reviews/REV-0005-checkpoint-publication.md",
+      "sha256": "9dbfa05e72608ae740af00d4e8888913f436b6083b7d038c74f3a41bb99df57d"
     },
     {
       "layer": "agent_harness",
@@ -180,7 +245,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/state/current.json",
-      "sha256": "c0176f2a3860c0cda2ef6775766984850f57bfbec5f6f4b8b9651f4d7f422644"
+      "sha256": "e62771384573902c72c9d046a037493fd29cdf6c4758083a7563a3397c5c397e"
     },
     {
       "layer": "agent_harness",
@@ -196,6 +261,21 @@
       "layer": "agent_harness",
       "path": ".agent/tasks/TASK-0002-family-initial-publication.md",
       "sha256": "2034bf8b68ecf3c0b863a05e4524a5644fa611ce2197b77fbf79b9ac3e5aea31"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0003-three-capability-conventions-checkpoint.md",
+      "sha256": "9b9c6b3a04fa30fabaefb059ad02bac03c9f1ab9e67cb3da2c989407365060e1"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0004-checkpoint-publication.md",
+      "sha256": "f022fa0e95ab0873f05dc7a276ae835a129ea1547bc7d2c04632996fce271f0f"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0005-three-capability-successor-checkpoint.md",
+      "sha256": "d9ccdeb72639761923221a3fbc557ece0fed8ae037aa38d079fc46fcc3b6f764"
     },
     {
       "layer": "agent_harness",
@@ -340,7 +420,7 @@
     {
       "layer": "project_dossier",
       "path": "project-dossier/ARTIFACT_CATALOG.json",
-      "sha256": "33149fe15d89e66c404ff11670964d168204a3af7ba8e3aa7000516e10b5a57f"
+      "sha256": "980735543f8ad6ef1e6e478df0e7726bd2d18a10237c1757c047b555cd4f105d"
     },
     {
       "layer": "project_dossier",
@@ -390,12 +470,62 @@
     {
       "layer": "project_dossier",
       "path": "project-dossier/conformance/README.md",
-      "sha256": "adfd0d3655a4b150b932c4ce38942287e195793fde26cedef44f8194c519f3b5"
+      "sha256": "25e9cb78ef7f469893c6a695631a40532e60e105bb54ec11ce0d761c4526a4e0"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v1/CONTRACT-SURFACE-MATRIX.json",
+      "sha256": "e58fcd301dd165943a0ffe189c4150a1ce1628908c1dab6684e56ef11a43a611"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v1/DIVERGENCES.json",
+      "sha256": "71f2698382996034d03de8cfd10e0ca61d7260df3b93cf6a6dca66b7f665a1f3"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v1/INPUT-LOCKS.json",
+      "sha256": "b48e03106392f6010faf31a19e28125d698bc07bbdab9ddcabee9f9e70e98f33"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v1/STATUS-REPORT.md",
+      "sha256": "fd468f7c68114dc8011b45616afa609156389ea8cb67cac2b5ec40ccd83ee09d"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v1/VALIDATION-RECEIPT.json",
+      "sha256": "b88316735307624bd1955a072cb12f3cbaa3d689238927d65131be05853d307a"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v2/CONTRACT-SURFACE-MATRIX.json",
+      "sha256": "68d3ff637fa9a3b14bb97ae34cfabd50b9af27b9b4f29bd5d9115ba95881c18d"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v2/DIVERGENCES.json",
+      "sha256": "d1ef232667078802bc4c8fe9daf14a6210db826fb847490bf21bea4b633bf6b2"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v2/INPUT-LOCKS.json",
+      "sha256": "7ae4a79cb13cf977dd58861c5ac64b75874ef8d640acb9f3457cf4f4e93cebe2"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v2/STATUS-REPORT.md",
+      "sha256": "54549f741304b37aece4fd5ef774e0c8ad8073751534ebdc53f41486961367c2"
+    },
+    {
+      "layer": "project_dossier",
+      "path": "project-dossier/conformance/three-capability-conventions-v2/VALIDATION-RECEIPT.json",
+      "sha256": "020d9fdb6f714d66d11ff797b43cbb58851d29ae82899f613d905182dcc02b2e"
     },
     {
       "layer": "project_dossier",
       "path": "project-dossier/current-state/README.md",
-      "sha256": "d2b5b59e45194d3001624a5f7d34933add1f65a9d413ffb826e31c6313b0db4b"
+      "sha256": "72bccc713d0e34aef653c91ea70f7a8a0d15ae4ceb4c1842f68809012820e5a8"
     },
     {
       "layer": "project_dossier",
@@ -405,12 +535,12 @@
     {
       "layer": "project_dossier",
       "path": "project-dossier/handoff/ADOPTION_CHECKLIST.md",
-      "sha256": "124d0207c53a896178e85b64df16bc77d8ac371121f9d739bf983555c1504c59"
+      "sha256": "0ea32003597d10448d1cab5d676ff6c6ec0cd85be7f43e52223cf5e126d16998"
     },
     {
       "layer": "project_dossier",
       "path": "project-dossier/handoff/START_HERE.md",
-      "sha256": "e198f88079498fc0a59f368cb7acda69b8859a33dab1fcf59b0a60232f953c4e"
+      "sha256": "7102447afbfeb668bc642cef6c07f5d86e57d98449834bdde052d919d0bcc86f"
     },
     {
       "layer": "project_dossier",
@@ -420,22 +550,22 @@
     {
       "layer": "project_dossier",
       "path": "project-dossier/machine-readable/evidence-index.json",
-      "sha256": "6947162eae3d2f0014c1f4a057ab993dade165500956dd656c79076d030f5fb9"
+      "sha256": "a0b29920be1fd950178a5baa797107e1f282f4fe680fa4e5e4d526c402aae7fd"
     },
     {
       "layer": "project_dossier",
       "path": "project-dossier/machine-readable/findings.json",
-      "sha256": "5e365c50235dc7562f089a4d385323f5efcab20ca169d44ada660fca8d19aacc"
+      "sha256": "45a42584a5db5de2e69f327bfc2c6f9aa2ddaa9a1fb0c3ef5e6d5ad1c7f20e0c"
     },
     {
       "layer": "project_dossier",
       "path": "project-dossier/machine-readable/path-authority.json",
-      "sha256": "c5de66e894aa44544b02884e19206753a2751ca6dfb7ba7b11b8340dcb45149e"
+      "sha256": "c2267dc40a8773eefef2e5a17d05a5835275595913321020c66facb86595ff4f"
     },
     {
       "layer": "project_dossier",
       "path": "project-dossier/machine-readable/plan.json",
-      "sha256": "91ec64476c6a42462eb59fe1adc16db686b2c1ca19ed18a92355172542ff1d0e"
+      "sha256": "d7b5979fba7d9fe936fa732dbddf5b034be5274d52a8b6ddd1c9f988aebf26f2"
     },
     {
       "layer": "project_dossier",
@@ -450,7 +580,7 @@
     {
       "layer": "project_dossier",
       "path": "project-dossier/machine-readable/sources.json",
-      "sha256": "4d3c2d656a1c8efb4848d7f5cc64b201576d2deb6170899e2e75eec151e123d9"
+      "sha256": "3dca7b04525c962b0bfd19e5d7fdf2d0a1f2bc780661b3cc60710dcc92cc971e"
     },
     {
       "layer": "project_dossier",
@@ -490,7 +620,7 @@
     {
       "layer": "project_dossier",
       "path": "project-dossier/validation/QUALITY_GATES.json",
-      "sha256": "a5c69363e2205178dbf76c2fffcc443932a5ce77b8c50cab267cee1867ed6a45"
+      "sha256": "77de352e4d0c2a663abc49944dcea0deb099aa523dbb299853369baf5d185d8e"
     },
     {
       "layer": "project_dossier",
@@ -1823,10 +1953,10 @@
       "sha256": "fd086fa07afff94324026e9dfb33bd512b08947e912435944c5a5305b6d0a521"
     }
   ],
-  "generated_on": "2026-09-01T02:13:58.160732+00:00",
-  "generation_id": "7b64a835558386f82eb4c3ce47971589",
+  "generated_on": "2026-09-01T13:51:53.465993+00:00",
+  "generation_id": "12cd217078a33807008c92c60e3ce5d4",
   "harness_kernel_version": "1.0.0",
   "profile": "high-assurance",
   "schema_version": "project-dossier.manifest.v1",
-  "source_fingerprint": "b153b807ae92b777b916f8396e4bcdd2a5b1ce9ba7553a98a531073069992981"
+  "source_fingerprint": "403733fcf8fb7159edd529eb180e85eb790da601a9518b31efd734c59e623b85"
 }

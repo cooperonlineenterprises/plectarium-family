@@ -1,0 +1,210 @@
+{
+  "schema_version": "plectarium-family.contract-surface-matrix.v2",
+  "document_role": "family_owned_successor_checkpoint_comparison",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v2",
+  "supersedes_for_sequencing": "three-capability-conventions-v1",
+  "outcome": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+  "allowed_structural_classifications": [
+    "exact_alignment",
+    "compatible_refinement",
+    "intentional_domain_divergence",
+    "provisional_experiment",
+    "potential_family_conflict",
+    "breaking_incompatibility",
+    "missing_evidence"
+  ],
+  "allowed_family_statuses": [
+    "ESTABLISHED",
+    "ACCEPTED",
+    "PROVISIONAL",
+    "DEFERRED",
+    "REJECTED",
+    "UNRESOLVED"
+  ],
+  "rows": [
+    {
+      "id": "V2-001",
+      "key": "input_profiles",
+      "element": "Published input profile",
+      "capabilities": {
+        "verity": "legacy_pre_family_1_2",
+        "titra": "family_1_2_packet_specific",
+        "ortha": "family_1_2_packet_specific"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "result": "pass_with_profile_qualification",
+      "disposition": "No family-schema conformance claim is made for any packet."
+    },
+    {
+      "id": "V2-002",
+      "key": "identity_coordinates",
+      "element": "Family and capability coordinates",
+      "capabilities": {
+        "verity": "Externally qualified by family repository map and exact Verity commit; no packet-local tuple claim",
+        "titra": "Packet-local family/capability tuple",
+        "ortha": "Packet-local family/capability tuple"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Profiled identity is sufficient for packet sequencing, not shared manifest stabilization."
+    },
+    {
+      "id": "V2-003",
+      "key": "capability_manifests",
+      "element": "Capability manifest shapes",
+      "capabilities": {
+        "verity": "Legacy Verity-specific capability schema",
+        "titra": "Titra packet-specific v1 manifest",
+        "ortha": "Ortha packet-specific v1 manifest"
+      },
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "None is claimed to conform to family standalone-capability-manifest.v0."
+    },
+    {
+      "id": "V2-004",
+      "key": "schema_identity",
+      "element": "Schema identifiers",
+      "capabilities": {
+        "verity": "Qualified absolute/packet schema coordinates",
+        "titra": "Qualified repository+commit+packet+path+digest",
+        "ortha": "Qualified repository+commit+packet+path+digest"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "result": "pass_with_qualified_identity",
+      "disposition": "Cross-packet bare-$id registries are prohibited."
+    },
+    {
+      "id": "V2-005",
+      "key": "result_import_pipeline",
+      "element": "Result reference to import transformation",
+      "capabilities": {
+        "verity": "Legacy reference/bundle profile; consumer transformation required",
+        "titra": "Reference then verified bundle resolution then consumer transformation",
+        "ortha": "Reference then verified bundle resolution then consumer transformation"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_unknown_compatibility",
+      "disposition": "Compatibility remains unknown until implemented and tested."
+    },
+    {
+      "id": "V2-006",
+      "key": "completion",
+      "element": "Completion semantics",
+      "capabilities": {
+        "verity": "Five common states plus audit details",
+        "titra": "Five common states plus verification nodes",
+        "ortha": "Five common states plus conformance coverage"
+      },
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "PROVISIONAL",
+      "result": "pass",
+      "disposition": "Refinements are capability-specific; only top-level truth rules are shared."
+    },
+    {
+      "id": "V2-007",
+      "key": "permissions",
+      "element": "Permission semantics",
+      "capabilities": {
+        "verity": "Legacy permission profile",
+        "titra": "Current family vocabulary plus restrictions-only extensions",
+        "ortha": "Current family vocabulary plus restrictions-only extensions"
+      },
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "No implicit legacy mapping or authority widening."
+    },
+    {
+      "id": "V2-008",
+      "key": "discovery_and_plans",
+      "element": "Discovery/request/plan surfaces",
+      "capabilities": {
+        "verity": "Legacy Verity product/subject profiles",
+        "titra": "Titra packet-specific profiles",
+        "ortha": "Ortha packet-specific profiles"
+      },
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Similarity creates no universal schema."
+    },
+    {
+      "id": "V2-009",
+      "key": "engine_and_interfaces",
+      "element": "Independent engine with thin projections",
+      "capabilities": {
+        "verity": "Preserved",
+        "titra": "Preserved",
+        "ortha": "Preserved"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Domain semantics remain capability-owned."
+    },
+    {
+      "id": "V2-010",
+      "key": "security_profiles",
+      "element": "Operation-specific security",
+      "capabilities": {
+        "verity": "Read-heavy audit",
+        "titra": "Execution-centered verification",
+        "ortha": "Read-heavy conformance aggregation"
+      },
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Do not normalize permissions or execution profiles."
+    },
+    {
+      "id": "V2-011",
+      "key": "shared_sdk_runtime",
+      "element": "Shared SDK/runtime extraction",
+      "capabilities": {
+        "verity": "Absent",
+        "titra": "Absent",
+        "ortha": "Absent"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "DEFERRED",
+      "result": "pass",
+      "disposition": "Implementation evidence and a later family ADR remain mandatory."
+    },
+    {
+      "id": "V2-012",
+      "key": "portfolio_sequence",
+      "element": "Packet-generation sequence",
+      "capabilities": {
+        "verity": "First reference capability",
+        "titra": "Second capability published",
+        "ortha": "Third capability published"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "ACCEPTED",
+      "result": "pass_with_constraints",
+      "disposition": "Genea/Echo/Harmia/Iris/Janus/Atlas may proceed; Sibyl remains last after real upstream contracts."
+    }
+  ],
+  "sequencing": {
+    "second_wave_capabilities": [
+      "genea",
+      "echo",
+      "harmia",
+      "iris",
+      "janus",
+      "atlas"
+    ],
+    "second_wave_blockers": [],
+    "sibyl_constraint": "Sibyl remains last and requires real published upstream contracts; v2 does not satisfy or waive that gate."
+  },
+  "non_promotion_rule": "All shared contracts remain PROVISIONAL or UNRESOLVED; packet similarity promotes nothing.",
+  "sdk_rule": "FAM-028 remains DEFERRED; no shared code or runtime is authorized."
+}
+

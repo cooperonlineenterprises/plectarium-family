@@ -53,6 +53,37 @@
         "initial publication evidence",
         "closure publication and equality evidence"
       ]
-    }
+    },
+    {
+      "id": "PLAN-0003",
+      "title": "Execute the three-capability conventions checkpoint",
+      "objective": "Compare exact published Verity, Titra, and Ortha packet contracts without capability or family-packet mutation.",
+      "status": "completed",
+      "owner_role": "family_contract_maintainer",
+      "depends_on": ["PLAN-0002"],
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0003", "FIND-0004"],
+      "gate_refs": ["GATE-0004"],
+      "task_refs": ["TASK-0003"],
+      "evidence_refs": ["EVD-0004", "EVD-0005"],
+      "acceptance_criteria": ["published inputs locked and validated", "every matrix element classified", "blocking divergence explicit", "no promotion or SDK extraction"],
+      "evidence_expected": ["input validation", "comparison artifacts", "independent review", "checkpoint"]
+    },
+    {
+      "id": "PLAN-0004",
+      "title": "Publish the local checkpoint after new authority",
+      "objective": "Create and normally push one checkpoint commit only after separate explicit authority.",
+      "status": "completed",
+      "owner_role": "primary_agent",
+      "depends_on": ["PLAN-0005"],
+      "requirement_refs": ["REQ-0001", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0004", "FIND-0005"],
+      "gate_refs": ["GATE-0005"],
+      "task_refs": ["TASK-0004"],
+      "evidence_refs": ["EVD-0005", "EVD-0008"],
+      "acceptance_criteria": ["new exact one-push authority", "reviewed checkpoint commit", "one normal push", "final equality and clean worktree"],
+      "evidence_expected": ["separate operator authority", "post-push equality evidence"]
+    },
+    {"id":"PLAN-0005","title":"Create profile-qualified checkpoint successor","objective":"Correct sequencing disposition without changing v1, capabilities, or family packet.","status":"completed","owner_role":"family_contract_maintainer","depends_on":["PLAN-0003"],"requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"finding_refs":["FIND-0003","FIND-0005"],"gate_refs":["GATE-0006"],"task_refs":["TASK-0005"],"evidence_refs":["EVD-0006","EVD-0007"],"acceptance_criteria":["v1 hashes unchanged","profile-qualified comparison","zero second-wave blockers","Sibyl last","no promotion or SDK"],"evidence_expected":["successor artifacts","review","checkpoint"]}
   ]
 }

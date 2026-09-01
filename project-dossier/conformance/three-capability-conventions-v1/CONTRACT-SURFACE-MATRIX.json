@@ -1,0 +1,448 @@
+{
+  "schema_version": "plectarium-family.contract-surface-matrix.v1",
+  "document_role": "family_owned_checkpoint_comparison",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v1",
+  "allowed_structural_classifications": [
+    "exact_alignment",
+    "compatible_refinement",
+    "intentional_domain_divergence",
+    "provisional_experiment",
+    "potential_family_conflict",
+    "breaking_incompatibility",
+    "missing_evidence"
+  ],
+  "allowed_family_statuses": [
+    "ESTABLISHED",
+    "ACCEPTED",
+    "PROVISIONAL",
+    "DEFERRED",
+    "REJECTED",
+    "UNRESOLVED"
+  ],
+  "outcome": "INCOMPLETE",
+  "rows": [
+    {
+      "id": "C3-001",
+      "key": "family_namespace",
+      "element": "Family/capability/version identity",
+      "capabilities": {
+        "verity": "Verity packet-local family_id absent; capability_id present in capability schema",
+        "titra": "family_id and capability_id in manifest and source lock",
+        "ortha": "family_id and capability_id in manifest and source lock"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "ESTABLISHED",
+      "result": "fail_missing_established_identity_evidence",
+      "disposition": "Do not stabilize family manifest v1 until the legacy Verity projection is migrated or explicitly profiled."
+    },
+    {
+      "id": "C3-002",
+      "key": "family_source_lock",
+      "element": "Immutable family provenance",
+      "capabilities": {
+        "verity": "No packet-local family 1.2.0 lock",
+        "titra": "Exact family commit, packet digests, and 17 seed hashes",
+        "ortha": "Exact family commit, packet digests, and 17 seed hashes"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "ESTABLISHED",
+      "result": "fail_missing_established_provenance_evidence",
+      "disposition": "Treat Verity as a legacy published input; require a future non-semantic provenance migration before common lock claims."
+    },
+    {
+      "id": "C3-003",
+      "key": "repository_identity",
+      "element": "Character repository mapping",
+      "capabilities": {
+        "verity": "Repository and character identity are established externally, but the packet lacks the machine family_id/capability_id tuple",
+        "titra": "titra / verification-assurance / Titra",
+        "ortha": "ortha / specification-conformance / Ortha"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "ESTABLISHED",
+      "result": "fail_missing_packet_identity_projection",
+      "disposition": "Preserve the external mapping, but do not claim packet-level alignment until a Verity-owned projection exists."
+    },
+    {
+      "id": "C3-004",
+      "key": "engine_ownership",
+      "element": "One authoritative semantic engine",
+      "capabilities": {
+        "verity": "Audit engine owns audit semantics",
+        "titra": "Verification engine owns claim/proof semantics",
+        "ortha": "Conformance engine owns authority/traceability semantics"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass",
+      "disposition": "Shared outer principle; payloads and algorithms remain capability-owned."
+    },
+    {
+      "id": "C3-005",
+      "key": "independent_cli",
+      "element": "Direct harness-independent use",
+      "capabilities": {
+        "verity": "Canonical CLI designed independent of Octon/AI",
+        "titra": "Canonical CLI independent of Plectarium/Octon/AI",
+        "ortha": "Canonical CLI independent of Plectarium/Octon/AI"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass",
+      "disposition": "No suite or harness runtime dependency."
+    },
+    {
+      "id": "C3-006",
+      "key": "thin_interfaces",
+      "element": "CLI/CI/MCP/OCI/skill/harness ownership",
+      "capabilities": {
+        "verity": "Thin projections over Verity engine",
+        "titra": "Thin projections over Titra engine",
+        "ortha": "Thin projections over Ortha engine"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Operation sets may differ; transport cannot change authority."
+    },
+    {
+      "id": "C3-007",
+      "key": "capability_manifest",
+      "element": "Static capability discovery manifest",
+      "capabilities": {
+        "verity": "Verity-specific capability schema; no family tuple",
+        "titra": "Packet-root Titra manifest with family tuple",
+        "ortha": "Packet-root Ortha manifest with family tuple"
+      },
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Retain packet-specific manifests until a successor family profile is validated."
+    },
+    {
+      "id": "C3-008",
+      "key": "discovery",
+      "element": "Discovery semantics",
+      "capabilities": {
+        "verity": "Repository/language/project discovery schema",
+        "titra": "Capability operation/adapter discovery schema",
+        "ortha": "Capability operation/adapter discovery schema"
+      },
+      "structural_classification": "potential_family_conflict",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Distinguish product discovery from Verity subject discovery before standardization."
+    },
+    {
+      "id": "C3-009",
+      "key": "request_model",
+      "element": "Request identity and scope",
+      "capabilities": {
+        "verity": "Audit request binds repository/scope",
+        "titra": "Verification request binds subject/claims",
+        "ortha": "Conformance request binds subject/scope/authority sources"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "PROVISIONAL",
+      "result": "pass",
+      "disposition": "Common identity/binding principle; domain request payloads remain separate."
+    },
+    {
+      "id": "C3-010",
+      "key": "plan_digest",
+      "element": "Inspectable immutable plan",
+      "capabilities": {
+        "verity": "Audit plan and digest",
+        "titra": "Verification plan and digest",
+        "ortha": "Conformance plan and digest"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Meaning aligns; exact DAG nodes/effects remain domain-specific."
+    },
+    {
+      "id": "C3-011",
+      "key": "permission_vocabulary",
+      "element": "Permission identity and extension",
+      "capabilities": {
+        "verity": "Legacy narrower enum with credentials token and allow/deny entries",
+        "titra": "Family vocabulary plus namespaced restrictions-only extensions",
+        "ortha": "Family vocabulary plus namespaced restrictions-only extensions"
+      },
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Map legacy credentials to current credential_access/secret_access semantics; never infer stronger rights."
+    },
+    {
+      "id": "C3-012",
+      "key": "authority_effect",
+      "element": "Evidence and transport create no authority",
+      "capabilities": {
+        "verity": "Explicit evidence-not-authority boundary",
+        "titra": "authority_effect none and action permissions rejected",
+        "ortha": "authority_effect none and action permissions rejected"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass",
+      "disposition": "No capability conclusion authorizes downstream work."
+    },
+    {
+      "id": "C3-013",
+      "key": "completion_top_level",
+      "element": "Truthful completion states",
+      "capabilities": {
+        "verity": "complete, complete_with_limitations, partial, failed, cancelled",
+        "titra": "Same five states",
+        "ortha": "Same five states"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass",
+      "disposition": "Top-level vocabulary survived all three packets."
+    },
+    {
+      "id": "C3-014",
+      "key": "completion_shape",
+      "element": "Domain completion refinements",
+      "capabilities": {
+        "verity": "Audit state, node/capability summaries",
+        "titra": "Status plus required execution nodes",
+        "ortha": "Status plus required nodes and requirement coverage"
+      },
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Do not force one payload shape; preserve common top-level meaning."
+    },
+    {
+      "id": "C3-015",
+      "key": "result_reference",
+      "element": "Immutable durable-result reference",
+      "capabilities": {
+        "verity": "Normative prose in Octon integration; no standalone schema",
+        "titra": "Structured reference omits required scope/provenance/freshness interoperability fields",
+        "ortha": "Stronger structured reference still omits evidence_classes required by imported-result source"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "PROVISIONAL",
+      "result": "fail_missing_cross_capability_reference_evidence",
+      "disposition": "Require Verity projection plus explicit Titra/Ortha reference-to-import enrichment contracts before interoperability is claimed."
+    },
+    {
+      "id": "C3-016",
+      "key": "bundle_identity",
+      "element": "Canonical content vs transport identity",
+      "capabilities": {
+        "verity": "Audit Bundle content identity separate from packaging",
+        "titra": "Verification Bundle content identity separate from packaging",
+        "ortha": "Conformance Bundle content identity separate from packaging"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Shared meaning is demonstrated at packet level, not implementation level."
+    },
+    {
+      "id": "C3-017",
+      "key": "import_preservation",
+      "element": "Imported evidence provenance/completion/limitations",
+      "capabilities": {
+        "verity": "Evidence model and integrations preserve source context in prose",
+        "titra": "Strict imported-result schema/fixtures require fields absent from its native result-reference schema",
+        "ortha": "Strict imported-result schema/fixtures require evidence_classes absent from its native result-reference schema"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "ESTABLISHED",
+      "result": "fail_missing_reference_to_import_contract",
+      "disposition": "Preservation principle remains established, but native reference enrichment/transformation must be explicit and tested."
+    },
+    {
+      "id": "C3-018",
+      "key": "evidence_classes",
+      "element": "Common evidence class vocabulary",
+      "capabilities": {
+        "verity": "Uses heuristic_static and credentials-era vocabulary",
+        "titra": "Uses family heuristic token and current classes",
+        "ortha": "Uses family heuristic token and current classes"
+      },
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Resolve heuristic_static versus heuristic through migration evidence, not silent aliasing."
+    },
+    {
+      "id": "C3-019",
+      "key": "schema_ids",
+      "element": "Schema identifiers and public namespace",
+      "capabilities": {
+        "verity": "Absolute schemas.verity.dev/v1 IDs",
+        "titra": "Project-local relative IDs pending namespace ADR",
+        "ortha": "Project-local relative IDs pending namespace ADR"
+      },
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "UNRESOLVED",
+      "result": "fail_ambiguous_reused_relative_schema_ids",
+      "disposition": "Titra and Ortha reuse relative $id strings for different bytes; define collision-free retrieval identities before shared interchange."
+    },
+    {
+      "id": "C3-020",
+      "key": "schema_versioning",
+      "element": "Compatibility and migrations",
+      "capabilities": {
+        "verity": "Explicit v1 schemas and compatibility checks",
+        "titra": "Packet-local v1 schemas; migrations gated",
+        "ortha": "Packet-local v1 schemas; migrations gated"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Breaking changes require explicit migration; no shared generated bindings."
+    },
+    {
+      "id": "C3-021",
+      "key": "packet_check",
+      "element": "Read-only packet validation",
+      "capabilities": {
+        "verity": "Safe byte preflight plus validator; configured default lacks PyYAML",
+        "titra": "Exact immutable-root packet check",
+        "ortha": "Exact immutable-root packet check"
+      },
+      "structural_classification": "compatible_refinement",
+      "family_status": "ACCEPTED",
+      "result": "pass_with_provisional_divergence",
+      "disposition": "Verity runtime portability remains unresolved; direct preconfigured runtime passed."
+    },
+    {
+      "id": "C3-022",
+      "key": "packet_writer",
+      "element": "Designated integrity writer",
+      "capabilities": {
+        "verity": "Packet script has separate switches, but repository validators declare no governed packet refresh command or exact combined write set",
+        "titra": "Single refresh writes report/manifest/checksums",
+        "ortha": "Single refresh writes report/manifest/checksums"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "UNRESOLVED",
+      "result": "fail_missing_governed_writer_contract",
+      "disposition": "Require a Verity-owned combined writer contract and exact declared write set before cross-packet writer conformance is claimed."
+    },
+    {
+      "id": "C3-023",
+      "key": "repository_roots",
+      "element": "Independent repositories and source ownership",
+      "capabilities": {
+        "verity": "Independent clean Git root",
+        "titra": "Independent clean Git root",
+        "ortha": "Independent clean Git root"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass",
+      "disposition": "No sibling source imports or shared mutable state observed."
+    },
+    {
+      "id": "C3-024",
+      "key": "task_readiness",
+      "element": "Foundation versus implementation state",
+      "capabilities": {
+        "verity": "Task index defines FOUNDATION-001 as a dependency root but carries no machine readiness/status field",
+        "titra": "Exactly FOUNDATION-001 ready, remaining tasks blocked",
+        "ortha": "Exactly FOUNDATION-001 ready, remaining tasks blocked"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "UNRESOLVED",
+      "result": "fail_missing_machine_readiness_evidence",
+      "disposition": "Do not equate dependency-root position with ready status; require a Verity-owned readiness projection or explicit profile."
+    },
+    {
+      "id": "C3-025",
+      "key": "readiness_claims",
+      "element": "Structural versus product readiness",
+      "capabilities": {
+        "verity": "Implementation/readiness unassessed",
+        "titra": "Implementation/readiness unassessed",
+        "ortha": "Implementation/readiness unassessed"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass",
+      "disposition": "No structural result is a product/security/release claim."
+    },
+    {
+      "id": "C3-026",
+      "key": "security_profile",
+      "element": "Operation-specific execution posture",
+      "capabilities": {
+        "verity": "Read-heavy; execution/network denied by default",
+        "titra": "Execution-evidence; accepted commands and isolation required",
+        "ortha": "Read-heavy aggregator; execution normally denied"
+      },
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Differences are required by domain risk and must not be normalized."
+    },
+    {
+      "id": "C3-027",
+      "key": "character_and_machine_naming",
+      "element": "Canonical user and machine identities",
+      "capabilities": {
+        "verity": "Verity user identity exists, but the packet lacks the established family_id plus universal-code-audit machine tuple",
+        "titra": "Titra with descriptive verification-assurance",
+        "ortha": "Ortha with descriptive specification-conformance"
+      },
+      "structural_classification": "missing_evidence",
+      "family_status": "ESTABLISHED",
+      "result": "fail_missing_machine_identity_tuple",
+      "disposition": "Do not claim FAM-036 packet alignment until a Verity-owned machine identity projection exists."
+    },
+    {
+      "id": "C3-028",
+      "key": "domain_payloads",
+      "element": "Capability-specific result semantics",
+      "capabilities": {
+        "verity": "Findings/candidates/audit graph",
+        "titra": "Claims/obligations/evidence conclusions",
+        "ortha": "Requirements/traceability/conformance assessments"
+      },
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "ACCEPTED",
+      "result": "pass",
+      "disposition": "Domain payload divergence is protected, not a candidate for family unification."
+    },
+    {
+      "id": "C3-029",
+      "key": "shared_runtime_sdk",
+      "element": "No premature extraction",
+      "capabilities": {
+        "verity": "No shared family runtime created",
+        "titra": "No shared family runtime created",
+        "ortha": "No shared family runtime created"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "DEFERRED",
+      "result": "pass",
+      "disposition": "Similarity is packet evidence only; FAM-028 remains deferred pending implemented duplication and a later ADR."
+    },
+    {
+      "id": "C3-030",
+      "key": "suite_harness_boundary",
+      "element": "Plectarium/Octon relationship",
+      "capabilities": {
+        "verity": "Octon integration remains external",
+        "titra": "Plectarium sequence pin non-semantic; harness external",
+        "ortha": "Plectarium/Titra pins non-semantic; harness external"
+      },
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass",
+      "disposition": "Neither suite nor harness owns capability semantics or gains action authority."
+    }
+  ],
+  "non_promotion_rule": "Exact or similar packet shapes remain at their existing family status unless a separately accepted family decision changes them.",
+  "sdk_rule": "No shared runtime, SDK, package, schema binding, or source extraction is authorized by this matrix."
+}
