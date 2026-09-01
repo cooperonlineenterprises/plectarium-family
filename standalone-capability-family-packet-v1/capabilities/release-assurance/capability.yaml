@@ -1,0 +1,129 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: release-assurance
+product_name: Release Assurance
+canonical_descriptive_name: Release Candidate Evidence and Readiness Assurance
+canonical_character_identity: Sibyl
+status: PROJECT SEED — LATE FAMILY CONSUMER
+creation_priority: 10
+working_cli:
+  value: release-assure
+  status: PROPOSED
+repository:
+  name: sibyl
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/sibyl.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: release-assurance
+  status: PROPOSED
+governing_question: Does this exact release candidate possess sufficient evidence to satisfy the declared release-readiness
+  criteria?
+purpose: Evaluate an exact candidate artifact and its declared release policy against fresh, compatible, provenance-preserving
+  evidence from specialist capabilities without acquiring publication authority.
+subjects:
+- release candidate artifact
+- source revision
+- release policy
+- set of capability results
+- SBOM/provenance
+- deployment or migration plan
+owns:
+- candidate identity
+- release-criteria interpretation
+- upstream-result compatibility checks
+- evidence aggregation
+- exception accounting
+- readiness conclusion
+- Release Assurance Bundle
+does_not_own:
+- tagging
+- publishing
+- deployment
+- app-store submission
+- production rollout
+- reimplementing upstream capability analyses
+primary_evidence:
+- UCA results
+- Verification Bundles
+- Conformance Bundles
+- Supply-Chain Bundles
+- Contract/UI/Migration/Infrastructure results
+- artifact identity
+- SBOM
+- provenance
+- release policy
+conclusion_states:
+- ready
+- ready_with_exceptions
+- not_ready
+- incomplete
+- indeterminate
+capability_classes:
+- value: evidence_aggregator
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- output_write
+- cache_write
+- temporary_write
+project_execution: Normally not required; it should request missing specialist evidence rather than reimplement execution.
+network: Denied by default; artifact registry verification may be explicitly authorized.
+browser_execution: Not intrinsic.
+production_access: Publication and deployment authority prohibited.
+external_tool_candidates:
+- result-bundle verifiers
+- signature/provenance validators
+- artifact identity tools
+- policy evaluators
+durable_result: Release Assurance Bundle
+optional_upstream_results:
+- universal-code-audit
+- verification-assurance
+- specification-conformance
+- supply-chain-intelligence
+- api-contract-assurance
+- ui-browser-assurance
+- database-migration-assurance
+- infrastructure-assurance
+downstream_consumers:
+- Octon release decision
+- human release review
+- CI release gate
+mature_target: A policy-driven, artifact-bound aggregator that verifies upstream result identity, schema compatibility, completion,
+  freshness, and provenance; explains unmet criteria and exceptions; and remains unable to publish or deploy.
+domain_threats:
+- forged upstream results
+- stale evidence
+- scope mismatch
+- policy manipulation
+- artifact substitution
+- readiness being mistaken for authority
+- credential pressure
+evaluation_focus:
+- known ready/not-ready cases
+- stale-result rejection
+- scope incompatibility detection
+- upstream provenance preservation
+- exception handling
+- no-publication authority tests
+research_agenda:
+- release policy systems
+- artifact attestation
+- SLSA/Sigstore
+- multi-evidence aggregation
+- release-readiness gates
+- software promotion models
+open_questions:
+- What minimum interoperability conventions must upstream bundles share?
+- How should organization-specific release policy be expressed without building a universal policy engine?
+- When is a ready-with-exceptions state permissible?

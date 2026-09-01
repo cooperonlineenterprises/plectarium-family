@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/standalone-capability/completion.v0.schema.json",
+  "title": "Standalone Capability Completion v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "nodes",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "standalone-capability.completion.v0"
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "complete_with_limitations",
+        "partial",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "succeeded",
+              "failed",
+              "unavailable",
+              "skipped",
+              "timed_out",
+              "cancelled",
+              "denied",
+              "incompatible",
+              "stale"
+            ]
+          },
+          "required": {
+            "type": "boolean",
+            "default": false
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

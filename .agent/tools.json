@@ -1,0 +1,66 @@
+{
+  "schema_version": "harness.tools.v1",
+  "permission_grant": false,
+  "declarative_only": true,
+  "real_enforcement_boundary": [
+    "platform_and_sandbox_permissions",
+    "operating_system_and_workspace_access",
+    "credential_scope",
+    "protected_remote_controls"
+  ],
+  "tools": {
+    "filesystem": {
+      "availability": "required",
+      "allowed": ["read_relevant", "write_requested_repository_paths"],
+      "denied": ["write_outside_declared_workspace", "follow_untrusted_symlink"]
+    },
+    "shell": {
+      "availability": "required",
+      "allowed": [
+        "declared_read_only_validation",
+        "designated_integrity_refresh_after_source_freeze",
+        "scoped_local_commands"
+      ],
+      "denied": [
+        "dependency_installation",
+        "product_code_execution",
+        "undeclared_external_effect",
+        "secret_in_command"
+      ]
+    },
+    "python": {
+      "availability": "required",
+      "harness_runtime": "python3_3.11_or_newer_standard_library_only",
+      "packet_runtime": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3",
+      "packet_dependencies_observed": ["PyYAML_6.0.3", "jsonschema_4.25.1"],
+      "installation_authorized": false,
+      "portability_status": "host_specific_packet_runtime"
+    },
+    "git": {
+      "availability": "optional",
+      "allowed": ["status", "diff"],
+      "task_scoped": ["add", "commit", "branch"],
+      "explicit_current_authorization": ["push", "remote_mutation"],
+      "denied": ["force_push", "history_rewrite", "unexpected_remote_overwrite"]
+    },
+    "github_cli": {
+      "availability": "optional",
+      "task_scoped": [
+        "exact_name_collision_inspection",
+        "create_exact_private_repository",
+        "set_non_sensitive_description_and_topics",
+        "verify_visibility_default_branch_and_refs"
+      ],
+      "constraints": [
+        "TASK-0002_and_current_operator_authority_required",
+        "credential_values_must_not_be_inspected_or_persisted",
+        "stop_on_unexpected_nonempty_remote_or_external_failure"
+      ]
+    }
+  },
+  "evidence": {
+    "record_material_commands": true,
+    "redact_secret_values": true,
+    "tool_availability_implies_permission": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "project.dossier.quality-gates.v1",
+  "document_role": "authoritative_repository_foundation_gate_registry",
+  "permission_grant": false,
+  "project_slug": "plectarium-family",
+  "last_reviewed": "2026-08-31",
+  "readiness": "local_foundation_validated_publication_pending",
+  "gates": [
+    {
+      "id": "GATE-0001",
+      "title": "Final local source, packet, harness, and integrity validation",
+      "status": "passed",
+      "owner_role": "validation_owner",
+      "required_evidence": ["packet_check", "harness_check", "mutation_tests", "packet_refresh_and_recheck", "harness_refresh_and_recheck"],
+      "approval_source": "authority:current-operator-plectarium-portfolio-setup-v2",
+      "limitations": ["Structural success does not establish product readiness."]
+    },
+    {
+      "id": "GATE-0002",
+      "title": "Exact private remote and publication safety",
+      "status": "pending",
+      "owner_role": "foundation_task_owner",
+      "required_evidence": ["exact_name_absence", "private_empty_remote", "reviewed_staged_content", "normal_pushes_only", "final_ref_equality"],
+      "approval_source": "authority:current-operator-plectarium-portfolio-setup-v2",
+      "limitations": ["The gate records criteria and cannot create GitHub permission."]
+    },
+    {
+      "id": "GATE-0003",
+      "title": "Independent foundation review",
+      "status": "passed",
+      "owner_role": "reviewer",
+      "required_evidence": ["review_record", "actionable_finding_dispositions", "limitations_and_external_effects"],
+      "approval_source": "authority:current-operator-plectarium-portfolio-setup-v2",
+      "limitations": ["Review does not approve external effects or product readiness."]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: universal-code-audit
+product_name: Universal Code Audit
+canonical_descriptive_name: Universal Code Audit
+canonical_character_identity: Verity
+status: ESTABLISHED REFERENCE IMPLEMENTATION
+creation_priority: 1
+working_cli:
+  value: uca
+  status: PROPOSED
+repository:
+  name: verity
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/verity.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: uca-audit
+  status: ACCEPTED
+- value: uca-simplify
+  status: ACCEPTED
+governing_question: What appears risky, defective, inconsistent, costly, structurally unhealthy, unnecessarily complicated,
+  or safely removable in this codebase?
+purpose: Produce reproducible repository intelligence and code-audit evidence by combining structural, historical, graph,
+  test, dependency, runtime-imported, security, and optional semantic evidence.
+subjects:
+- source repository
+- revision or working tree
+- subsystem
+- change set
+- audit baseline
+owns:
+- repository identity and scope
+- repository discovery
+- history and graph intelligence
+- audit planning
+- candidate validation and attempted refutation
+- stable findings
+- Reduction/Simplification lens
+- audit comparison
+- UCA Audit Bundle
+does_not_own:
+- project authority
+- automatic remediation
+- source-control actions
+- release or deployment authority
+- specialist analyzer reimplementation
+- Octon Mini governance
+primary_evidence:
+- structural observations
+- history and co-change observations
+- dependency and architecture graphs
+- analyzer imports
+- validated or rejected candidates
+- runtime evidence imports
+- reduction safety-floor evidence
+conclusion_states:
+- deterministic_violation
+- deterministic_regression
+- runtime_confirmed
+- historical_hotspot
+- investigation_required
+- evidence_gap
+- simplification_opportunity
+capability_classes:
+- value: read_only_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- git_read
+- external_process_execution
+- output_write
+- cache_write
+- temporary_write
+project_execution: Denied by default; explicitly planned for selected test or runtime adapters.
+network: Denied by default; may be granted to explicit adapters or providers.
+browser_execution: Not intrinsic.
+production_access: Prohibited.
+external_tool_candidates:
+- Semgrep
+- CodeQL
+- OSV-Scanner
+- Syft
+- Trivy
+- native compilers/linters
+- coverage and mutation systems
+- profilers as imported evidence
+durable_result: UCA Audit Bundle
+optional_upstream_results:
+- runtime-investigation
+- supply-chain-intelligence
+- verification-assurance
+downstream_consumers:
+- release-assurance
+- specification-conformance
+- Octon Mini and other harnesses
+mature_target: A production-grade, language-aware, local-first audit engine with CLI, CI, MCP, OCI, durable evidence, stable
+  comparison, deep Rust/Python support, useful TypeScript/JavaScript and Go support, selected mature adapters, and two evaluated
+  Agent Skills.
+domain_threats:
+- malicious repositories
+- hostile build scripts
+- untrusted analyzer output
+- prompt injection in source/documents
+- cache poisoning
+- path traversal and symlinks
+- hidden tool installation
+evaluation_focus:
+- top-k finding precision
+- candidate rejection quality
+- stable fingerprints
+- truthful partial completion
+- read-only proof
+- reduction safety-floor preservation
+research_agenda:
+- existing UCA Full Product Build Packet v1
+- code-quality research
+- agent-skill evaluation patterns
+- repository graph systems
+- specialist analyzer ecosystems
+open_questions:
+- How should UCA project licensing be finalized?
+- Which exact language-pack depth is mandatory for release?
+- Which external adapters qualify as stable v1 dependencies?

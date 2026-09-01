@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/standalone-capability/permission-set.v0.schema.json",
+  "title": "Standalone Capability Permission Set v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "requested",
+    "accepted",
+    "denied"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "standalone-capability.permission-set.v0"
+    },
+    "requested": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "repository_read",
+          "repository_write",
+          "git_read",
+          "git_write",
+          "project_execution",
+          "external_process_execution",
+          "network",
+          "browser_execution",
+          "infrastructure_read",
+          "infrastructure_apply",
+          "database_read",
+          "database_write",
+          "production_access",
+          "output_write",
+          "cache_write",
+          "temporary_write",
+          "credential_access",
+          "secret_access",
+          "artifact_publish",
+          "deployment",
+          "issue_creation",
+          "external_communication"
+        ]
+      }
+    },
+    "accepted": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "repository_read",
+          "repository_write",
+          "git_read",
+          "git_write",
+          "project_execution",
+          "external_process_execution",
+          "network",
+          "browser_execution",
+          "infrastructure_read",
+          "infrastructure_apply",
+          "database_read",
+          "database_write",
+          "production_access",
+          "output_write",
+          "cache_write",
+          "temporary_write",
+          "credential_access",
+          "secret_access",
+          "artifact_publish",
+          "deployment",
+          "issue_creation",
+          "external_communication"
+        ]
+      }
+    },
+    "denied": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "repository_read",
+          "repository_write",
+          "git_read",
+          "git_write",
+          "project_execution",
+          "external_process_execution",
+          "network",
+          "browser_execution",
+          "infrastructure_read",
+          "infrastructure_apply",
+          "database_read",
+          "database_write",
+          "production_access",
+          "output_write",
+          "cache_write",
+          "temporary_write",
+          "credential_access",
+          "secret_access",
+          "artifact_publish",
+          "deployment",
+          "issue_creation",
+          "external_communication"
+        ]
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "authority_effect": {
+      "const": "none"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": "project.dossier.evidence-index.v1",
+  "document_role": "authoritative_dossier_evidence_index",
+  "permission_grant": false,
+  "project_slug": "plectarium-family",
+  "live_harness_evidence_store": ".agent/evidence/",
+  "indexing_rule": "Do not duplicate a live harness evidence ID here; link to the owning record from findings, plans, tasks, and handoff.",
+  "evidence": []
+}

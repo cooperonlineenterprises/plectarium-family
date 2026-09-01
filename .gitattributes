@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+imports/historical/canonical-character-identities-v1.0/source.md whitespace=-trailing-space
+standalone-capability-family-packet-v1/*.md whitespace=-trailing-space
+standalone-capability-family-packet-v1/**/*.md whitespace=-trailing-space

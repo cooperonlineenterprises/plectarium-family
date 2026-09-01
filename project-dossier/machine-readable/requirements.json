@@ -1,0 +1,75 @@
+{
+  "schema_version": "project.dossier.requirements.v1",
+  "document_role": "authoritative_repository_requirement_registry",
+  "permission_grant": false,
+  "project_slug": "plectarium-family",
+  "last_reviewed": "2026-08-31",
+  "status_vocabulary": ["active", "proposed", "gated", "deferred", "superseded"],
+  "requirements": [
+    {
+      "id": "REQ-0001",
+      "title": "Preserve the family authority boundary",
+      "statement": "The repository must own only family constitution, invariants, narrow shared contracts, seeds, conformance assets, relationship graphs, and family release records while keeping suite, capability, workspace, and harness responsibilities separate.",
+      "status": "active",
+      "owner_role": "family_repository_maintainer",
+      "basis": "The current operator request and DEC-0001 establish the multi-repository ownership planes.",
+      "source_refs": ["SRC-0001"],
+      "validation": {
+        "method": "Inspect repository paths and packet contract surfaces for ownership-boundary violations.",
+        "evidence_expected": "Final inventory, review, and passing packet/harness validation."
+      }
+    },
+    {
+      "id": "REQ-0002",
+      "title": "Keep shared contracts narrow and capability semantics independent",
+      "statement": "Common contracts must remain limited to identity, discovery, planning, permissions, completion, provenance, durable result references, and bundle verification; domain payloads and semantic engines remain capability-owned.",
+      "status": "active",
+      "owner_role": "family_contract_maintainer",
+      "basis": "Established family architecture in the current operator request.",
+      "source_refs": ["SRC-0001"],
+      "validation": {
+        "method": "Validate packet schemas, seeds, architecture, and review findings against family boundaries.",
+        "evidence_expected": "Passing packet validator and boundary-focused review."
+      }
+    },
+    {
+      "id": "REQ-0003",
+      "title": "Preserve canonical identity-source provenance and bytes",
+      "statement": "The v1.0 historical identity source must retain its observed bytes, former locator, current archive locator, current packet projection, digest, and limitations without becoming an instruction channel.",
+      "status": "active",
+      "owner_role": "source_curator",
+      "basis": "The operator-directed source reconciliation and the established identity source.",
+      "source_refs": ["SRC-0001", "SRC-0002"],
+      "validation": {
+        "method": "Compare SHA-256 digests and validate provenance metadata and source-registry links.",
+        "evidence_expected": "EVD-0001 and final integrity validation."
+      }
+    },
+    {
+      "id": "REQ-0004",
+      "title": "Keep foundation work implementation-free",
+      "statement": "This task must not create capability engines, suite services, product packages, source-code roots, dependencies, or implementation readiness claims.",
+      "status": "active",
+      "owner_role": "foundation_task_owner",
+      "basis": "Explicit repository-foundation-only scope in the current operator request.",
+      "source_refs": ["SRC-0001"],
+      "validation": {
+        "method": "Inventory repository paths and dependency effects; review for implementation or readiness overclaim.",
+        "evidence_expected": "Final repository inventory and review record."
+      }
+    },
+    {
+      "id": "REQ-0005",
+      "title": "Validate and refresh through designated commands",
+      "statement": "Packet and harness checks must be reproducible and read-only; generated integrity must be refreshed only through the designated packet and harness writers after source freeze and followed by final read-only validation.",
+      "status": "active",
+      "owner_role": "validation_owner",
+      "basis": "Project Blueprint high-assurance contract and current operator validation requirements.",
+      "source_refs": ["SRC-0001", "SRC-0003"],
+      "validation": {
+        "method": "Run packet check, harness check, mutation tests, designated refreshes, and final read-only checks in the required order.",
+        "evidence_expected": "Bounded command evidence on the exact final local candidate."
+      }
+    }
+  ]
+}

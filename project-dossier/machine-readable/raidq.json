@@ -1,0 +1,42 @@
+{
+  "schema_version": "project.dossier.raidq.v1",
+  "document_role": "authoritative_repository_raidq_registry",
+  "permission_grant": false,
+  "project_slug": "plectarium-family",
+  "last_reviewed": "2026-08-31",
+  "items": [
+    {
+      "id": "RISK-0001",
+      "type": "risk",
+      "title": "Cross-repository contract drift",
+      "status": "monitoring",
+      "owner_role": "family_contract_maintainer",
+      "description": "Capability and suite packets may independently restate shared contracts and drift from the versioned family authority.",
+      "impact": "Incompatible discovery, planning, permission, provenance, completion, or result-reference behavior.",
+      "blocking": false,
+      "mitigation": "Pin family packet provenance, keep shared surfaces narrow, validate references, and use the three-capability conventions checkpoint before extraction."
+    },
+    {
+      "id": "DEP-0001",
+      "type": "dependency",
+      "title": "Packet reconciliation and source freeze",
+      "status": "resolved",
+      "owner_role": "foundation_task_owner",
+      "description": "Final harness integrity and publication depend on completion of concurrent packet reconciliation and a stable source tree.",
+      "impact": "Refreshing early would immediately create stale or misleading integrity evidence.",
+      "blocking": false,
+      "resolution_condition": "Packet editing is complete, the packet read-only check passes, and all source owners confirm freeze."
+    },
+    {
+      "id": "OQ-0001",
+      "type": "open_question",
+      "title": "Portable packet-validator runtime",
+      "status": "open",
+      "owner_role": "validation_owner",
+      "description": "The packet validator requires PyYAML and jsonschema, which are present only in a recorded host-specific Python runtime during adoption.",
+      "impact": "A clean or different host may not run the documented packet check without separately authorized environment preparation.",
+      "blocking": false,
+      "resolution_condition": "Document and validate an authorized portable dependency strategy in a later task or remove the third-party runtime requirement."
+    }
+  ]
+}

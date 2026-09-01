@@ -1,0 +1,58 @@
+{
+  "schema_version": "project.dossier.plan.v1",
+  "document_role": "authoritative_repository_foundation_plan",
+  "permission_grant": false,
+  "project_slug": "plectarium-family",
+  "last_reviewed": "2026-08-31",
+  "status_vocabulary": ["planned", "in_progress", "blocked", "completed", "deferred", "cancelled"],
+  "plan_items": [
+    {
+      "id": "PLAN-0001",
+      "title": "Complete the local family repository foundation",
+      "objective": "Close TASK-0001 with reconciled sources, fresh validation and integrity, review, and no product implementation or remote effect.",
+      "status": "completed",
+      "owner_role": "foundation_task_owner",
+      "depends_on": [],
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0003", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0001", "FIND-0002"],
+      "gate_refs": ["GATE-0001", "GATE-0003"],
+      "task_refs": ["TASK-0001"],
+      "evidence_refs": ["EVD-0001", "EVD-0002"],
+      "acceptance_criteria": [
+        "final packet and harness checks pass",
+        "mutation tests pass",
+        "designated integrity outputs are fresh",
+        "review findings are dispositioned",
+        "no implementation or external effect exists"
+      ],
+      "evidence_expected": [
+        "packet validation evidence",
+        "harness and mutation evidence",
+        "independent review"
+      ]
+    },
+    {
+      "id": "PLAN-0002",
+      "title": "Perform bounded family repository publication",
+      "objective": "Close TASK-0002 with exact private creation, two normal pushes, final ref equality, clean worktree, and complete external-effect evidence.",
+      "status": "in_progress",
+      "owner_role": "foundation_task_owner",
+      "depends_on": ["PLAN-0001"],
+      "requirement_refs": ["REQ-0001", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0001"],
+      "gate_refs": ["GATE-0002"],
+      "task_refs": ["TASK-0002"],
+      "evidence_refs": ["EVD-0001", "EVD-0002"],
+      "acceptance_criteria": [
+        "exact absent remote is created private and empty",
+        "foundation and closure commits are pushed normally within the two-push limit",
+        "local tracking and remote refs are exactly equal",
+        "final worktree is clean and every external effect is recorded"
+      ],
+      "evidence_expected": [
+        "initial publication evidence",
+        "closure publication and equality evidence"
+      ]
+    }
+  ]
+}

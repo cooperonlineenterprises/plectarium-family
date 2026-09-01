@@ -1,0 +1,1703 @@
+{
+  "schema_version": "standalone-capability-family-packet-manifest.v1",
+  "packet": {
+    "name": "standalone-capability-family-packet-v1",
+    "version": "1.2.0",
+    "generated_date": "2026-08-31",
+    "purpose": "Canonical family constitution, shared emerging architecture, and project-generation seeds for independent specialist capabilities."
+  },
+  "family_id": "standalone-capability-family",
+  "authority_hierarchy": [
+    "FAMILY-CHARTER.md",
+    "spec/family-invariants.md",
+    "spec/canonical-character-identities.md",
+    "shared provisional contracts",
+    "capability constitution",
+    "capability invariants/specifications",
+    "accepted ADRs",
+    "capability matrix/release criteria",
+    "workstreams/tasks",
+    "agent implementation choices"
+  ],
+  "counts": {
+    "content_files": 263,
+    "capabilities": 10,
+    "decisions": 36,
+    "decision_statuses": {
+      "ESTABLISHED": 18,
+      "ACCEPTED": 7,
+      "PROVISIONAL": 5,
+      "DEFERRED": 2,
+      "REJECTED": 4
+    },
+    "open_questions": 12,
+    "adrs": 13,
+    "provisional_schemas": 6,
+    "conversation_turns": 31,
+    "relationship_edges": 19
+  },
+  "capability_ids": [
+    "universal-code-audit",
+    "verification-assurance",
+    "specification-conformance",
+    "supply-chain-intelligence",
+    "runtime-investigation",
+    "api-contract-assurance",
+    "ui-browser-assurance",
+    "database-migration-assurance",
+    "infrastructure-assurance",
+    "release-assurance"
+  ],
+  "capability_repositories": {
+    "universal-code-audit": "verity",
+    "verification-assurance": "titra",
+    "specification-conformance": "ortha",
+    "supply-chain-intelligence": "genea",
+    "runtime-investigation": "echo",
+    "api-contract-assurance": "harmia",
+    "ui-browser-assurance": "iris",
+    "database-migration-assurance": "janus",
+    "infrastructure-assurance": "atlas",
+    "release-assurance": "sibyl"
+  },
+  "source_thread_coverage": {
+    "transcript": "reference/conversation-thread.md",
+    "coverage_statement": "reference/transcript-coverage.md",
+    "visible_turns_represented": 31,
+    "excludes": [
+      "system messages",
+      "developer messages",
+      "hidden reasoning",
+      "raw tool calls"
+    ]
+  },
+  "key_relationships": [
+    {
+      "from": "FAMILY-CHARTER.md",
+      "to": "spec/family-invariants.md",
+      "meaning": "Family constitution governs binding invariants."
+    },
+    {
+      "from": "spec/family-invariants.md",
+      "to": "capabilities/",
+      "meaning": "Seeds refine but cannot silently violate established family invariants."
+    },
+    {
+      "from": "spec/result-envelope.md",
+      "to": "capabilities/*/EVIDENCE-MODEL-SEED.md",
+      "meaning": "Shared envelope is provisional; payload semantics remain capability-specific."
+    },
+    {
+      "from": "architecture/capability-relationship-graph.yaml",
+      "to": "spec/imported-evidence.md",
+      "meaning": "Cross-capability evidence preserves provenance and completion."
+    },
+    {
+      "from": "design/adr/ADR-013.md",
+      "to": "spec/portfolio-source-ownership.md",
+      "meaning": "Plectarium, family, capability, workspace, and harness source ownership remain separate."
+    },
+    {
+      "from": "spec/family-identity-and-repository-map.md",
+      "to": "spec/schemas/",
+      "meaning": "Provisional discovery and result identities carry the canonical family namespace."
+    },
+    {
+      "from": "capabilities/*/PROJECT-GENERATION-PROMPT.md",
+      "to": "future separate repositories",
+      "meaning": "Each seed generates an independent capability build packet."
+    }
+  ],
+  "validation": {
+    "script": "scripts/validate-packet.py",
+    "status": "passed",
+    "validated_at": "2026-09-01T01:58:24.251824+00:00",
+    "errors": 0,
+    "warnings": 0
+  },
+  "integrity": {
+    "manifest_scope": "All files except manifest and checksum ledger.",
+    "checksums_scope": "All files except checksum ledger, including manifest.",
+    "algorithm": "SHA-256"
+  },
+  "files": [
+    {
+      "path": "ARCHITECTURE.md",
+      "sha256": "d91719dd7e23afc4de1cae1e8033c3c4cbf130ded88e70fa6c0018e88ea1738e",
+      "bytes": 7351,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "DECISIONS.md",
+      "sha256": "b0eed074771ff34d4c7c79c4a48c8fe0e384476d5c4c1d12a8064fb2ce52312f",
+      "bytes": 7211,
+      "classification": "governance"
+    },
+    {
+      "path": "FAMILY-CHARTER.md",
+      "sha256": "f15be80b6c77389c3c42bb5390999fe3d9bf27e071946ced1c6e4601522dce44",
+      "bytes": 7170,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "INTEGRITY-REPORT.md",
+      "sha256": "ea66b42557f670b66318d67774e30c9c85e1713b79ddc69f7c287e52ac683ebf",
+      "bytes": 3158,
+      "classification": "project-context"
+    },
+    {
+      "path": "OPEN-QUESTIONS.md",
+      "sha256": "0710e1189038874408bb842cbb6158c89aa584e25ded9f4fae003904c792e44d",
+      "bytes": 6391,
+      "classification": "governance"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4c5caf08626d443bf7d573bd0cce43fc0fd6a9a545aa7ddb7b6f5ed78e88937e",
+      "bytes": 7034,
+      "classification": "project-context"
+    },
+    {
+      "path": "RELEASE-CRITERIA.md",
+      "sha256": "e9cf65ae869813cd178c90f7d715748f9669767f7ed4232d733997419d9cd25f",
+      "bytes": 3955,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "ROADMAP.md",
+      "sha256": "62a9fa7f66fd8a6eac957e78daafff5b11a6945bf3eb357cade8d5f2d8e889c5",
+      "bytes": 3466,
+      "classification": "governance"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "69189aa18143ff72ae8e82a52633349c219369a3ceab51382fdb03e649cc3075",
+      "bytes": 3542,
+      "classification": "security-governance"
+    },
+    {
+      "path": "agent/BUILD-DIRECTIVE.md",
+      "sha256": "18bbaa5418bc97475e4aaf89cc0fccae4f4fe7caaabcf3b043e87331ab8a0bcb",
+      "bytes": 2393,
+      "classification": "governance"
+    },
+    {
+      "path": "agent/authority.md",
+      "sha256": "efa53ff44e989ef8ca92e3ae65aefbaab53b1e23eef0e8bb4bb1cc460d3e0feb",
+      "bytes": 1589,
+      "classification": "governance"
+    },
+    {
+      "path": "agent/change-control.md",
+      "sha256": "3e027739b94d9fc44ed0b39bd8da0cfa023db6ab5048f5ddf3191d5ebd0d170a",
+      "bytes": 1807,
+      "classification": "governance"
+    },
+    {
+      "path": "agent/family-workstreams.md",
+      "sha256": "5f215f7a439acb5c2e82e1cb4333034a453c0e2379174f1a53aea9a13a6c588d",
+      "bytes": 1679,
+      "classification": "governance"
+    },
+    {
+      "path": "agent/family-workstreams.yaml",
+      "sha256": "04224df728772c9f563a5a53d63e8d293c56e28a44285283369f69043df58c83",
+      "bytes": 1447,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "agent/project-generation-guide.md",
+      "sha256": "35f51bca4debeef86bfdfab87e526605a632fa5b23680318a9999a5f9154e1f8",
+      "bytes": 2117,
+      "classification": "governance"
+    },
+    {
+      "path": "architecture/capability-relationship-graph.md",
+      "sha256": "1af79cab3a98cabaf71b626314d2a184ddb3c53e56a9193a11ce17eb1caaee65",
+      "bytes": 4658,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "architecture/capability-relationship-graph.yaml",
+      "sha256": "d24d49d92085bf9244dc40bf2f9e3da27e5cdd7252d7afca94c0841675c791c0",
+      "bytes": 5228,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "architecture/emerging-architecture.md",
+      "sha256": "2d39a5fa64707cb28762d40a6ae11257edcb0f071b17e4df73b82a6f8ddb5e08",
+      "bytes": 1363,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "architecture/project-seed-dependency-graph.md",
+      "sha256": "4f56ff67ca478470cfa5ac4c4dd765322a162b0b73f2fe493d07c27fc838e61e",
+      "bytes": 1915,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "architecture/project-seed-dependency-graph.yaml",
+      "sha256": "b102ead2f70ee86c6d13756306eaccbb7c69d8a6441bc78d48e0de6466ba75d1",
+      "bytes": 2548,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/AGENT-SKILL-SEED.md",
+      "sha256": "3261581d1e5326d854907f5de33521762b1b0a6f12463f4629d357cde5a9dfa4",
+      "bytes": 2044,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/ARCHITECTURE-SEED.md",
+      "sha256": "5063f67e76142becdc889a186363ba1d461f46cd15bf0148d2d8444ddc0cb4de",
+      "bytes": 2781,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/CAPABILITY-MODEL.md",
+      "sha256": "3970957443e38a14b13b9f7b64219ab28eeff701a99066499ce07aaf8b9723d5",
+      "bytes": 1944,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/CHARTER-SEED.md",
+      "sha256": "d72969b69d7a0d5bcc4c9d3af33fc201fe7023d2c2db8baaae86563a38e614a0",
+      "bytes": 2785,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/EVALUATION-SEED.md",
+      "sha256": "0c8884deaddff7c49c813ad54372cad27f2dbc27db66c6717e5f77ca284e5f8e",
+      "bytes": 1562,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/EVIDENCE-MODEL-SEED.md",
+      "sha256": "00670fc1f905389ec15359be0dc100320d4cd824d421c697bc513ed2b2d6fb4b",
+      "bytes": 1576,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/INTERFACES-SEED.md",
+      "sha256": "a0a0d6949ee673e51d02b74dc9032e25d935e265d16c2f0440b820a775ecf55b",
+      "bytes": 1675,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/OPEN-QUESTIONS.md",
+      "sha256": "ec4bfe6db9abfd267416d38e405fa0ad14976bbc68cf2ab1f4d2683066a52c40",
+      "bytes": 1941,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/PRODUCT-BOUNDARY.md",
+      "sha256": "c4029e2c956a9c388c290dd1ac43b127446745b990cfd1f0c72314f6fda11947",
+      "bytes": 1624,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "403b18ff050f5d415e68f0eda8e574ce171e7411071adde7fe7dbfd93e8c793b",
+      "bytes": 11165,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/README.md",
+      "sha256": "a4d21ec17bb3131027c82c416f6cf128f3241c200c63ff222e835250a0a226e0",
+      "bytes": 2742,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/RELEASE-CRITERIA-SEED.md",
+      "sha256": "de8908d2dcf7be821ebbd32ba9534ddb00718c5ae92460068e9a69b1f32d5d2c",
+      "bytes": 1986,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/RESEARCH-AGENDA.md",
+      "sha256": "baecd8e1bd211373e06c8d83d5daa2fc188de6f94851319ae545230c9b10c293",
+      "bytes": 1300,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/ROADMAP-SEED.md",
+      "sha256": "e6674b7b1c8a1b5b8989a5676abb10de7e571ae30204d8bb3196b61a54590783",
+      "bytes": 1305,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/SECURITY-SEED.md",
+      "sha256": "2c824b93c19f1900a67bb1c9a544d8f5537ba5648d53f1e58204ff1f9b324ebe",
+      "bytes": 2911,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/SOURCE-MAP.md",
+      "sha256": "86985164a24094668cec0c9c0d3c782e05836da8b274ef65dd329b8951bd8dd8",
+      "bytes": 1423,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/api-contract-assurance/capability.yaml",
+      "sha256": "e7dc162717995c60aa9eccde8b0b2d0f11fc14834dfb68d32323404c37e7dad7",
+      "bytes": 3933,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/AGENT-SKILL-SEED.md",
+      "sha256": "fce3f218a303ad1457dbfdcc5a2ab8d2a41e4bfdf875fb1e7098e3e3fa8d3258",
+      "bytes": 2025,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/ARCHITECTURE-SEED.md",
+      "sha256": "ba0636774657a11729e1c4bb443a694d1145f8be35d08851d0174d0c9d17bb16",
+      "bytes": 2861,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/CAPABILITY-MODEL.md",
+      "sha256": "349c7e360a410063fcdcf3c3a660be38312bd7da0fed5e02f3cb6ee8ff06de88",
+      "bytes": 2013,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/CHARTER-SEED.md",
+      "sha256": "a8f5961f4b5acc6a2d498195aff2fe2b88aed60bdfcf0fb9c72d2636da9603bb",
+      "bytes": 2831,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/EVALUATION-SEED.md",
+      "sha256": "4891fcdb746644b81d43edd1725d86dda0b59d51c9e49267d0f35ceaab02c2b3",
+      "bytes": 1549,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/EVIDENCE-MODEL-SEED.md",
+      "sha256": "c742f77728fe6b35a09ea7f40b779180760986809451a2b39772ee2e314d0761",
+      "bytes": 1606,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/INTERFACES-SEED.md",
+      "sha256": "6b5674518f70a9dd9da4fb052176dd467ac396d9b6179aa531922a85b87fb042",
+      "bytes": 1682,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/OPEN-QUESTIONS.md",
+      "sha256": "828790625c2f46e3d48f26c4f256ebcd69f5edb162cc94c21ecebe9a04020cfc",
+      "bytes": 1945,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/PRODUCT-BOUNDARY.md",
+      "sha256": "6a6b32f155483b649d221924165f8eb4865f987aafb8417d85cf98af421a02ef",
+      "bytes": 1686,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "4bd5082cc0e82ca7acdb828bb4cfc11e0a01fb16f8350116949dd96bb84b0768",
+      "bytes": 11376,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/README.md",
+      "sha256": "625693b0e711789c724779753836e1b97e78047537cac8b39005f4a95a45677e",
+      "bytes": 2784,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/RELEASE-CRITERIA-SEED.md",
+      "sha256": "fcd8ab9eb2e62e54cce6d82d5dc1e7e36deb8a1d14a7fd20f444e2ad17ae60e4",
+      "bytes": 2007,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/RESEARCH-AGENDA.md",
+      "sha256": "93cb15b6455bdf1b70c50bc955d0e71c18ac9c2eede6242aee006b83c6a1a168",
+      "bytes": 1329,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/ROADMAP-SEED.md",
+      "sha256": "806fb81a6df596376bea0144129395f022c387ef0049055acf2d81969dfa9ba7",
+      "bytes": 1333,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/SECURITY-SEED.md",
+      "sha256": "d635ea7d25f591267e54de66c17e6dc44888f2b32b8de04d9a0e15174e460007",
+      "bytes": 2918,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/SOURCE-MAP.md",
+      "sha256": "af4205652ae787e6bf60100ca0f2d845b92fa2d9ab1132443e4eb36e35e049dc",
+      "bytes": 1429,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/database-migration-assurance/capability.yaml",
+      "sha256": "8fa0c16a0aadcee314b6dec7076709651dafb67cd5150f32854faa489300901a",
+      "bytes": 4171,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/AGENT-SKILL-SEED.md",
+      "sha256": "cc519ce744eb78681287e49b65a7df91f803e8c7335cdeed77c3f90f3f90dba5",
+      "bytes": 2044,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/ARCHITECTURE-SEED.md",
+      "sha256": "5e96a87ba37765c0bbedf459283a61ce82b0b5b65abbe50bdfb165ca84d72d08",
+      "bytes": 2891,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/CAPABILITY-MODEL.md",
+      "sha256": "7337c8558a638162e7ebc863fbf5477b7e1702e0d600d9887ccf4b7eb7984169",
+      "bytes": 2043,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/CHARTER-SEED.md",
+      "sha256": "2de5b23f55f3ece793cc1ab772f1eb8b533b3298a25fc7ee877320ed8812d33f",
+      "bytes": 2852,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/EVALUATION-SEED.md",
+      "sha256": "a63174bd85df8d6059b051daec58017d25b07d2764d2782f5ed2e415637e2dc0",
+      "bytes": 1528,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/EVIDENCE-MODEL-SEED.md",
+      "sha256": "c04c2af74c2131ccb602e1356fe81022beee47a3d33db243128b73f3ccbe35b2",
+      "bytes": 1557,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/INTERFACES-SEED.md",
+      "sha256": "484d04647c124b690f6c0dfbf1f2b02907d6476c25e15576be3f714f8a0b70e7",
+      "bytes": 1672,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/OPEN-QUESTIONS.md",
+      "sha256": "c9499700829fb8d44913bbc64ab4c1fe816da9815f7f23c7840c98b9532727af",
+      "bytes": 1894,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/PRODUCT-BOUNDARY.md",
+      "sha256": "242a87bf2d286adf8311822175183f7a7e8c8c2d37ff7d2062f20f412b891130",
+      "bytes": 1651,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "d343f88d352282b5dbb8a9309acc69389a90fd1634269a6cd8cc8d6c51def283",
+      "bytes": 11123,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/README.md",
+      "sha256": "ad0216b46ff28783e879635413e254efb1520284f605e389209795da7c9177bb",
+      "bytes": 2774,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/RELEASE-CRITERIA-SEED.md",
+      "sha256": "d166c3322adf5339991b87dec528ab284d5e86cc0ced02c99fa171e0c0518404",
+      "bytes": 1977,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/RESEARCH-AGENDA.md",
+      "sha256": "afe112809ce67320a94b45e3efdbdfc4a07f1145a15b458ee5853c6dece65342",
+      "bytes": 1295,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/ROADMAP-SEED.md",
+      "sha256": "0e0dfe0b5a49a87d4df4ec11297b15f26a6b2b1d894afd52962db491f0ae8054",
+      "bytes": 1304,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/SECURITY-SEED.md",
+      "sha256": "fb8cfca7f43a1fc5837f5f183075430390e66b62a2dfe309a45f8cfe49a6fc96",
+      "bytes": 2927,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/SOURCE-MAP.md",
+      "sha256": "8a48aded18e62fe3800c59af8c836e340fdb4a0b6729410a8e845696a4896ca8",
+      "bytes": 1423,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/infrastructure-assurance/capability.yaml",
+      "sha256": "d156d6d1ac696178574b9fcd7b65ab07a05ff90b9231d76c1f4d1798d8690aeb",
+      "bytes": 3914,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/release-assurance/AGENT-SKILL-SEED.md",
+      "sha256": "99edde48a7c4fa6d2b5966f5541d818a685d650d798d73aaf1ee1488f0cdf1ec",
+      "bytes": 2019,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/ARCHITECTURE-SEED.md",
+      "sha256": "3ef4b98baa4c2ea39a62f7688a344f219dcb1666fdedfd642bf2da4bd3e58716",
+      "bytes": 2486,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/CAPABILITY-MODEL.md",
+      "sha256": "2c14fe6befa5cbf14c830a2b3d8603993521757585ec98f3c066a1cf1fd049ce",
+      "bytes": 1883,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/CHARTER-SEED.md",
+      "sha256": "cdfb4a1053f5b16c1cc7b8e20cc862bfa10f7df4231558365f957b3db86ff6f2",
+      "bytes": 2750,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/EVALUATION-SEED.md",
+      "sha256": "90165f89506239ca24d9b70f0de9d50b1faef2f11763f83b83071160ead2c179",
+      "bytes": 1550,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/EVIDENCE-MODEL-SEED.md",
+      "sha256": "19a867484973a255518342a10ed38d7a699872b9f4d57ecbae36b8d5d899be2d",
+      "bytes": 1709,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/INTERFACES-SEED.md",
+      "sha256": "0a48f5ee83c1fdda7b686a007cb9ee1a4e5af58d73841f792f7213407714f4c9",
+      "bytes": 1667,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/OPEN-QUESTIONS.md",
+      "sha256": "e69a7c6f2e6a481adec1c6bf0c37b1ee21e20463c36fed6aff881220f3c9bf91",
+      "bytes": 1939,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/PRODUCT-BOUNDARY.md",
+      "sha256": "b4124086803fe7eda2930a67920bed91e1663144a96f8bd9826f8746e45939ee",
+      "bytes": 1638,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "e36e8e7f74cea54aa48c197be7648d373e0e0ba8af3baadd7429873d9fda9ae9",
+      "bytes": 11012,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/README.md",
+      "sha256": "119042fca55f74423b39a7004f40f6f5424bb611a760ca43bb6c4d88a45caf4c",
+      "bytes": 2767,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/RELEASE-CRITERIA-SEED.md",
+      "sha256": "3751cdeb10da09bc1945d34ab62b71b149bfdbd470f190b40363109121267742",
+      "bytes": 1922,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/RESEARCH-AGENDA.md",
+      "sha256": "247a7fefe87950d10556c6a9333c3b62aafc2e033efc34997e1ad1ec8d39d105",
+      "bytes": 1289,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/ROADMAP-SEED.md",
+      "sha256": "2b078e1e7977abc7ee44f39a22bbc5888aaf72b76beabe75b403176286a660c4",
+      "bytes": 1313,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/SECURITY-SEED.md",
+      "sha256": "b14a411f3148ec0c258eafa6620ec5f48838f8466876859194a11d42068ab1cf",
+      "bytes": 2958,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/SOURCE-MAP.md",
+      "sha256": "05e452ae8376880495f5b6a2f71beb59cc654313d615beb60638c97c5bdff023",
+      "bytes": 1416,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/release-assurance/capability.yaml",
+      "sha256": "462542b1e9db56b755a68fa9e826ed8ebb08b8ec95daf619c49589039bdde2af",
+      "bytes": 3939,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/runtime-investigation/AGENT-SKILL-SEED.md",
+      "sha256": "3618e4f6b41c8a9750a54f89631136e4ce32131f4377dcb829593c04ca5031ef",
+      "bytes": 2011,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/ARCHITECTURE-SEED.md",
+      "sha256": "65bfaa465c54b386b4b77045f309a354515004201cee0343ad82dece48a88894",
+      "bytes": 2950,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/CAPABILITY-MODEL.md",
+      "sha256": "90d3c9f5e600bbb9942343d8a5acd407c529dee4619c6d0e6d57579c2363d27e",
+      "bytes": 2052,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/CHARTER-SEED.md",
+      "sha256": "f4a2f42c459bbb35a5d9be8765e30cba9951ab54604831f716b95769f1a87ed5",
+      "bytes": 2857,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/EVALUATION-SEED.md",
+      "sha256": "4aca41ac9624abe1b212f0051a2d694e88d67d97449998dc18783e26ccdefb55",
+      "bytes": 1558,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/EVIDENCE-MODEL-SEED.md",
+      "sha256": "89d18c42a07de0c667792c5e192ac554fdeffd8bd102b3224672c35d466e05e2",
+      "bytes": 1568,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/INTERFACES-SEED.md",
+      "sha256": "a6744062622267b02c690ce9c31bfbed3fa6b12cf4942419ab17ce0b216b4093",
+      "bytes": 1676,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/OPEN-QUESTIONS.md",
+      "sha256": "250c0711f710021e57dc1254f2494fda0cc90b901528b8ae2e6c47a14a076570",
+      "bytes": 1893,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/PRODUCT-BOUNDARY.md",
+      "sha256": "b86ad89cdc59ec1dc0ec5d963a90d2cd0edb8d0c5a82ccd1293158837a5fde55",
+      "bytes": 1666,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "12f43d1d292a1a672eed8ef834eb7cdc5c64242fda3e68f213f42c4803005509",
+      "bytes": 11382,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/README.md",
+      "sha256": "dc4351bd2d35c0c70339e30c06c5725af1ba0456d07096d308d3d020ef1aa3ad",
+      "bytes": 2761,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/RELEASE-CRITERIA-SEED.md",
+      "sha256": "aa27a9cb0a39875aee06e898f77e80aec9c75efe918c9d4f52707820f755be45",
+      "bytes": 2075,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/RESEARCH-AGENDA.md",
+      "sha256": "0bb5e8c9e7c756bf129de32028f58f862818886781da6b4330eb2c9cd66a9207",
+      "bytes": 1294,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/ROADMAP-SEED.md",
+      "sha256": "42b66a4db8f0d8d26ed4f5ff3a2fe70cf193cf4284d4fef75acec3d457b83f47",
+      "bytes": 1319,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/SECURITY-SEED.md",
+      "sha256": "305022a5feb3202e671d2f2ad186ceb381f5c637dc7bfeb25700fe25e8f87175",
+      "bytes": 2984,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/SOURCE-MAP.md",
+      "sha256": "91111175484d799a5524bf76a35df955d13adad2b632cd3f8b7b1e6d46f3706a",
+      "bytes": 1420,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/runtime-investigation/capability.yaml",
+      "sha256": "42a694360a06a09f3938894cffb99c213ed9a808aaaed92ee0460799dfb3e9dd",
+      "bytes": 4214,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/specification-conformance/AGENT-SKILL-SEED.md",
+      "sha256": "18328bf4df9e903d56a308f278e0016836774e9b439a1ce2470d643a9bd526df",
+      "bytes": 2053,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/ARCHITECTURE-SEED.md",
+      "sha256": "de71bc4a82269cb20d61046a48c402e961e0c31c2443d43e8a7a61be33bd7832",
+      "bytes": 2661,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/CAPABILITY-MODEL.md",
+      "sha256": "b7459f931b9bced2859041f3864aa44341e6d8db03c82082992e9d517a352e92",
+      "bytes": 1979,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/CHARTER-SEED.md",
+      "sha256": "725ee1945ef10ef20c23559d33ef2f7d81ed5af52a49e1113839377b362fb513",
+      "bytes": 2818,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/EVALUATION-SEED.md",
+      "sha256": "a4ff68d002ae7170c89e0b1e46d6e3777662ffb7cdf9c0fcae5242e987ff626f",
+      "bytes": 1564,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/EVIDENCE-MODEL-SEED.md",
+      "sha256": "7fcdc272ba3f89eda3f09ab15511db77b82e10fcc7df965e81bb520d04232157",
+      "bytes": 1592,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/INTERFACES-SEED.md",
+      "sha256": "dfb28b19affeec9de67dedfd246d80a82e54d69353b9351a324e0e9411e4a1aa",
+      "bytes": 1677,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/OPEN-QUESTIONS.md",
+      "sha256": "867ccc994f6df75c4763545824928935d5a5d0f9a78622b1a0f800b1b0b05c0a",
+      "bytes": 1937,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/PRODUCT-BOUNDARY.md",
+      "sha256": "34c09ee485adf6968af00f16e09f23b5030ea2637d8e76dd726a5d21591257bf",
+      "bytes": 1663,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "ff4ec1afbc1998e835b5eb7930b012bc936f112657bdc0da17a2c5f6f95189b6",
+      "bytes": 11153,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/README.md",
+      "sha256": "7800d0ce82ec925b663103be576544e6d3e4d08f8d7840599fcaeb1b37cfa3d2",
+      "bytes": 2782,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/RELEASE-CRITERIA-SEED.md",
+      "sha256": "55fbf57a7a7ad1898bb059b68de5c91e422975d79b7d2396e5206337c62f03a3",
+      "bytes": 1984,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/RESEARCH-AGENDA.md",
+      "sha256": "ec6063587de4542bed93b070e1805261abda0748ca1ebfeacf99da54aca05f68",
+      "bytes": 1327,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/ROADMAP-SEED.md",
+      "sha256": "e749a32813fafa2fb839f0e1d9be8ec3b19c83a7c57b8584c629a0bb761ab089",
+      "bytes": 1302,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/SECURITY-SEED.md",
+      "sha256": "02a57f2b48fa676aacf7932c44aa6992afe78831f69f581060177223cd4d04a9",
+      "bytes": 2884,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/SOURCE-MAP.md",
+      "sha256": "a479686109a1e3135f057da59e97f68bd045a8bea31f0a4de9e8bbe7199f7622",
+      "bytes": 1424,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/specification-conformance/capability.yaml",
+      "sha256": "8ac86d613ad15bde0444035c0903590f013fc9965e7e82ac792c06af0bf0fed0",
+      "bytes": 3959,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/AGENT-SKILL-SEED.md",
+      "sha256": "56984bd4715a81c3cb39ccf466a300782c9c46c2c66237d3c7757ca01ab58075",
+      "bytes": 2041,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/ARCHITECTURE-SEED.md",
+      "sha256": "096e248a68cb449317bb65ae1f4423707a139656392dab40631c91be6d67c076",
+      "bytes": 3387,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/CAPABILITY-MODEL.md",
+      "sha256": "026c560f276c4e1f098ecbb15024f86201924d50ea25ad58c14cdfb6dd656b21",
+      "bytes": 1980,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/CHARTER-SEED.md",
+      "sha256": "7026309eee8d3a2dd90984a776f909ef358fdac4b6be3927ff67d53c31931e04",
+      "bytes": 2925,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/EVALUATION-SEED.md",
+      "sha256": "647ca6d4f3fa2b40a6e46aaffeee483e17933ee37c146c66c805ad49a58d7555",
+      "bytes": 1549,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/EVIDENCE-MODEL-SEED.md",
+      "sha256": "fc45b8c84505a1d26131ff99684dc569dccdfd757b2e45369ff479042965364f",
+      "bytes": 1565,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/INTERFACES-SEED.md",
+      "sha256": "4cacf5d1c1291fc12533516f267a8e7b7865bc2955d222fbc99adc346ce730d4",
+      "bytes": 1679,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/OPEN-QUESTIONS.md",
+      "sha256": "fbefb72b4380c60fbd447f8f34730717077147a6130309aaaf0b0c333af618b7",
+      "bytes": 1964,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/PRODUCT-BOUNDARY.md",
+      "sha256": "480e5b651eb5b3619f7d94fef751b897164ef53bc6ed60df3fcb6f2bdbf67e83",
+      "bytes": 1702,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "167f00a56e3c52faeceea57243ffcb422724c1d1d29280ed54aa8251926eef9e",
+      "bytes": 11307,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/README.md",
+      "sha256": "a9e84f00098fb60e900f818a9dc5f044a2c7c634ed2d858117e3fdccb4c6fd11",
+      "bytes": 2857,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/RELEASE-CRITERIA-SEED.md",
+      "sha256": "2207574862ecbc502351561bd809aaba4588b2627ce43b2945cd15dd516dbe7c",
+      "bytes": 2055,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/RESEARCH-AGENDA.md",
+      "sha256": "a39e73d18281a04ba730eb3afe71798b3f7ef5c7f287fcbda1d5afb788d4c66b",
+      "bytes": 1275,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/ROADMAP-SEED.md",
+      "sha256": "5ba6bb74563312a59b3ebc733e3b04322cebefec80de5a268f27a04d54ec50c8",
+      "bytes": 1347,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/SECURITY-SEED.md",
+      "sha256": "449c70e38ff9e2074015d008986f6f3b5d061352ae30c4647b426c0bedd14712",
+      "bytes": 2916,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/SOURCE-MAP.md",
+      "sha256": "6f5df0817adef42ebbcf1c2e806465aa8d5c16ff054bafc5fa08d332b5271ad9",
+      "bytes": 1424,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/supply-chain-intelligence/capability.yaml",
+      "sha256": "2b548f1d96d564913f5b15754229f45f186e2c1a5ae48fde417968b85193589b",
+      "bytes": 4024,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/AGENT-SKILL-SEED.md",
+      "sha256": "e635214eca2acb58cd10d6d5bd148e55f3686e5e30dae539d61de18cb640bd37",
+      "bytes": 2016,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/ARCHITECTURE-SEED.md",
+      "sha256": "b85c7b3ceacd0a20f739d48cf6c671afd3120ee4850a8dabeae282d361a40ca5",
+      "bytes": 2603,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/CAPABILITY-MODEL.md",
+      "sha256": "8096dd92c25df8617dcb0a2f57f30eaaf210c3fb16170e3e74a9eb0ca567657e",
+      "bytes": 1965,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/CHARTER-SEED.md",
+      "sha256": "d4f527c1ba68c1178f40595102cf5f1269f66914776cef019ea0b456c0c96455",
+      "bytes": 2774,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/EVALUATION-SEED.md",
+      "sha256": "d6fa360cc3138e1b7b748f4bd2dcbaba5d87c53dfb3a9796486be24d6b77f585",
+      "bytes": 1542,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/EVIDENCE-MODEL-SEED.md",
+      "sha256": "771acd550e5d411f4b2131625a3c2e674509395b59ab00998c9060e924c729f6",
+      "bytes": 1561,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/INTERFACES-SEED.md",
+      "sha256": "fbf33a739bae42bca50b564ea1e61f89a424a38ad2f39b16ff136d5595290c73",
+      "bytes": 1667,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/OPEN-QUESTIONS.md",
+      "sha256": "039b72edfcdeba2ab07d7096c704c87276a99f5ebec4d02584afedbabf841a13",
+      "bytes": 1898,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/PRODUCT-BOUNDARY.md",
+      "sha256": "7005889bfbef9b7a863196e75768e137889999cc319ba35a0cb0f3d8a620480c",
+      "bytes": 1622,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "99157712ba6a0a041cca22b054442597dd7cd4ef5cd3267ff0fb62ba2c56f807",
+      "bytes": 11170,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/README.md",
+      "sha256": "cdef57c196dfebb0b668f2db58483babe62dd22a532bd2662c7600abeb1429a2",
+      "bytes": 2699,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/RELEASE-CRITERIA-SEED.md",
+      "sha256": "42f56d48d7dfebb4b7044f09855630f773cb3a048baa2312e703f797d359ff61",
+      "bytes": 1968,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/RESEARCH-AGENDA.md",
+      "sha256": "48f6c48089a6a64b954790e279454407043d6df05ac10578821ba20533d06877",
+      "bytes": 1285,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/ROADMAP-SEED.md",
+      "sha256": "501f9911ae257f27491a5c5e6e13474d0192b1325fcd44ce75cc4bd1d6f4809b",
+      "bytes": 1301,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/SECURITY-SEED.md",
+      "sha256": "5734ef45ecf47ef8945becc91c443b1a5ea90ae8adba79061486cb10e660d29c",
+      "bytes": 2926,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/SOURCE-MAP.md",
+      "sha256": "ad114d7c37e9e535317cce16c0fe574a00f813c54e47f7ccc7ef0dcd3fbdc3a5",
+      "bytes": 1421,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/ui-browser-assurance/capability.yaml",
+      "sha256": "d274cf00cc0ae55f6488b54524a080e9262f50eb6e875177d17151123a531c04",
+      "bytes": 3914,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/universal-code-audit/AGENT-SKILL-SEED.md",
+      "sha256": "a925102ff7930b5f083eadcf810ac555ba71c27cc7366587e5ae72c88b1c974e",
+      "bytes": 2079,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/ARCHITECTURE-SEED.md",
+      "sha256": "9cfd0da126de16bdf516c9a725c10aee1a05b7b3d6d03181a5489b13e402bcdd",
+      "bytes": 3114,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/CAPABILITY-MODEL.md",
+      "sha256": "e39f0681af325d5f4e4b885a6f045c2f5f4511a93a8d1d624571b87467c4af83",
+      "bytes": 1936,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/CHARTER-SEED.md",
+      "sha256": "814150c35834ffd99315a512956c901a39ebd78e3208eacc9a0610cf46cce7a0",
+      "bytes": 2842,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/EVALUATION-SEED.md",
+      "sha256": "6c2faf70bd2cdd3d6b1d24f302d03b6c2e918d320eb3e6ff1d40b2175b5e9de6",
+      "bytes": 1540,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/EVIDENCE-MODEL-SEED.md",
+      "sha256": "4f499ac40ef033d2b6b74095b7a4c464265fb0bc63b4aedc92a916cca880e4e7",
+      "bytes": 1600,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/INTERFACES-SEED.md",
+      "sha256": "3b82479b10ec35fda1a8989cebe7805897026152aedd5f28686077d0e059dbc8",
+      "bytes": 1659,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/OPEN-QUESTIONS.md",
+      "sha256": "c71c7d04626435ac1a3e5113b906a2ed8dd7f0a4c67bda607a09bf200f1bffd5",
+      "bytes": 1888,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/PRODUCT-BOUNDARY.md",
+      "sha256": "43966efb23a03735b0c42d34c43332bddd62c520b25a1a6aeff8cac32afc0be2",
+      "bytes": 1724,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "8280213e18d9b0d2ba979f942acac9984a95aee78c859ba82837459b4408d651",
+      "bytes": 11201,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/README.md",
+      "sha256": "d37d547c8e09855989f935a1e94066ed36e90261444c11074c4117ccd550a362",
+      "bytes": 2738,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/RELEASE-CRITERIA-SEED.md",
+      "sha256": "bfbb03bd9946d8e2473f5fd3b1ce6ee835977fc1bd92819c4b2ac68fd046a46e",
+      "bytes": 2040,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/RESEARCH-AGENDA.md",
+      "sha256": "3972898ec196ea86e1f9bb4c7b430aea692ec9fcc62fdd85a8ee394d1c82ccad",
+      "bytes": 1307,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/ROADMAP-SEED.md",
+      "sha256": "394b36db7a0d2604eb711e20822c703e87d57ad7ebd3e2da858995d73c817adf",
+      "bytes": 1367,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/SECURITY-SEED.md",
+      "sha256": "31b1bc175c47af3bf3408a79dab98f6bc76c64864ec4537942977057e925682a",
+      "bytes": 2830,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/SOURCE-MAP.md",
+      "sha256": "104c6ab0a9ee56d0a0d79b5d91408d1cefedf491f22e88ce80f15d4d9e9f8d22",
+      "bytes": 1414,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/universal-code-audit/capability.yaml",
+      "sha256": "776ce5a710a82747d2c0e5b49e21ae926faa3b8f73d753b96f093052b08b3f60",
+      "bytes": 3987,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "capabilities/verification-assurance/AGENT-SKILL-SEED.md",
+      "sha256": "ec55aacdd3a3b741c73ab7038b35f668420357d3c03ea61f9b8861e3677974e2",
+      "bytes": 2023,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/ARCHITECTURE-SEED.md",
+      "sha256": "530557a3376ad972e7301cd1b1ac0af73d101d6075ab53d2053fc4c58999fe9f",
+      "bytes": 3110,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/CAPABILITY-MODEL.md",
+      "sha256": "9a9ef2e0743b64d263b6a350c6aeae93633db20f15dc4df601b0fef3ed2c74d7",
+      "bytes": 1923,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/CHARTER-SEED.md",
+      "sha256": "6adb35ae0049d58f5f1d1503c725e4f976d976156ee2b23e84ec337d14900cfa",
+      "bytes": 2871,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/EVALUATION-SEED.md",
+      "sha256": "f015b6d66f5953edb16bc161cf347e4971e38efb6ecfe4bd926cc28589611a8f",
+      "bytes": 1538,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/EVIDENCE-MODEL-SEED.md",
+      "sha256": "0199864f5db6d0e1607336b265734caedd70e2379f30dbe0d397fb10e492e818",
+      "bytes": 1609,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/INTERFACES-SEED.md",
+      "sha256": "8ceb75039167475543fce9526321f70aa4555675a9adaf9e6762814f62540b71",
+      "bytes": 1674,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/OPEN-QUESTIONS.md",
+      "sha256": "dd081f0ffca76bb2f0daa917362f25fa9463ecf26273a290cf3e7f119e8b1a40",
+      "bytes": 1924,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/PRODUCT-BOUNDARY.md",
+      "sha256": "999d28fec8f651a4f8766eed048417134a89ad84658f0ac7c5b73456b0e388bb",
+      "bytes": 1693,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/PROJECT-GENERATION-PROMPT.md",
+      "sha256": "7aa183b3c90a37b90e94e62ec6c0881b241f0ff95b7bf990e258d0f86d696248",
+      "bytes": 11444,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/README.md",
+      "sha256": "525f7804e4e8ae603f75c9fddba026c3bfd6449aa10705df192f08aba3f5661b",
+      "bytes": 2839,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/RELEASE-CRITERIA-SEED.md",
+      "sha256": "19ae728dac01caae3213c39e64e7692fd582a01a665899400cf97e0fa6d46eeb",
+      "bytes": 2045,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/RESEARCH-AGENDA.md",
+      "sha256": "f791021805311e02c60563b4e631d55dad57a23db98a51c758b922ea319a983c",
+      "bytes": 1316,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/ROADMAP-SEED.md",
+      "sha256": "ab0a3af47ad4754fa04b81b59b078e0f3b21b2a7c88476e1f342e725031e762a",
+      "bytes": 1326,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/SECURITY-SEED.md",
+      "sha256": "11e452989f362279f105496941cad9826d2b463f606ad083f6faa4a595566ef5",
+      "bytes": 2987,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/SOURCE-MAP.md",
+      "sha256": "6aa8142221d61d99c3eb616e544fad8887027261b868055bd7407a0675aed87d",
+      "bytes": 1421,
+      "classification": "capability-project-seed"
+    },
+    {
+      "path": "capabilities/verification-assurance/capability.yaml",
+      "sha256": "d9c3739a8d738e82034b1bf6caa064982e31d792c0e865bb34e514724c8464fd",
+      "bytes": 4238,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "design/adr/ADR-001.md",
+      "sha256": "da9a9302c5a9b3862504c1fc8ed7cee26ce3f53e775c13c3dec2c1076856af7f",
+      "bytes": 1292,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-002.md",
+      "sha256": "a08ef05d23800c0c9976e591ff880a73a92b3f89f4048438e557b9af9def8422",
+      "bytes": 1237,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-003.md",
+      "sha256": "1dc09c69443a79221e4d99925504acbda4937f029eaee63265e66b0d0f65d2f0",
+      "bytes": 1253,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-004.md",
+      "sha256": "3a96ef8edee36bfd5bd868247bf59046f1751a88713580540fb77bbe76ec60af",
+      "bytes": 1220,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-005.md",
+      "sha256": "0aec46ae02645a7cc018cfa89aab692d08f7e5c90a31454d7a0eeb65694467bf",
+      "bytes": 1250,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-006.md",
+      "sha256": "44f7b17247469f3fec2fa4d6c26886d7a48cc64f496f53a5ee9f2a4f2be15c76",
+      "bytes": 1231,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-007.md",
+      "sha256": "37267885d08fd30d959dff3ce09b9267687c2a0239a4904a9d53c95a0c187ee7",
+      "bytes": 1254,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-008.md",
+      "sha256": "7ccf80ee2e3eef162d61f60357f464b4373cf18ab4aa804a42cce60ee59e1487",
+      "bytes": 1269,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-009.md",
+      "sha256": "62504d72c13d79fb4fc0ddd830d6055df27d15770703a255e3ebb8f92b278ae1",
+      "bytes": 1268,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-010.md",
+      "sha256": "92f89477b1575e6862eabc7a7fdf076ddd331d8223fb355a93047fc7de63ff69",
+      "bytes": 1278,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-011.md",
+      "sha256": "a6bdd1879dc7d6b6cee2621e4f5c0200c621052543df26e64f138493ad501756",
+      "bytes": 1270,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-012.md",
+      "sha256": "541cb397c4922b220042b85f3fb0f706716ec5907d805cee90f706e1ba950822",
+      "bytes": 1304,
+      "classification": "governance"
+    },
+    {
+      "path": "design/adr/ADR-013.md",
+      "sha256": "81b97db78013953d906d3042711c98943c77cad0bf220ac01073cb5feac06385",
+      "bytes": 4214,
+      "classification": "governance"
+    },
+    {
+      "path": "design/decision-ledger.md",
+      "sha256": "3203ecfb129d7be0c5e38453e966fb20e9ca1cef44f63209c3807b8f1873ec56",
+      "bytes": 42664,
+      "classification": "governance"
+    },
+    {
+      "path": "design/decisions.yaml",
+      "sha256": "44fcaf08d8589ab860c5653b4f547ceb375ea054c291029b1d16e96e90e461c8",
+      "bytes": 8728,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "docs/family-creation-sequence.md",
+      "sha256": "19db31e312c06e7e268441a7455ad69ddfd150bc8ee1e3fb1a4ecbf1bd013ab1",
+      "bytes": 1570,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "docs/future-shared-sdk-policy.md",
+      "sha256": "d3aad58c2cb1aa2eff10502d90425613843964ed4cf4ba51d0bbdb8d513fe1c9",
+      "bytes": 810,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "docs/new-capability-criteria.md",
+      "sha256": "66cba9414ef617e70b91734305589e401e8a42ede6d06ac884184a7a561d1947",
+      "bytes": 875,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "docs/standalone-capability-pattern.md",
+      "sha256": "5a2344ad13af139eb02d97639063f0c2c58ebf7ec30b98d073d91b1314ba7a8b",
+      "bytes": 1438,
+      "classification": "reference-architecture"
+    },
+    {
+      "path": "evals/FAMILY-EVALUATION-SPEC.md",
+      "sha256": "73a601f2c4ec8cc04235102ca9fa8a419fbf9f595c18de8da5cd985d3f8685e8",
+      "bytes": 2878,
+      "classification": "verification"
+    },
+    {
+      "path": "evals/capability-seed-quality-gates.md",
+      "sha256": "330ea8ebf2a41fb8cf0b39363c628c08865964518ddf7b58eabfbc23cb0187fe",
+      "bytes": 1903,
+      "classification": "verification"
+    },
+    {
+      "path": "evals/claim-proof-matrix.md",
+      "sha256": "ee4f74a65dc33f54ef1d6258aae5397d4aac7ec0735f4525dd06b0926138812b",
+      "bytes": 1276,
+      "classification": "verification"
+    },
+    {
+      "path": "evals/project-generation-validation.md",
+      "sha256": "0e55f34b226b0ac0d2dbdbb37a5d2a3cda787d48de9dffa04a393854dcc0834c",
+      "bytes": 1782,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "ed31172969e50b10993efb0b7384dda312a6bbe5bf1f9aff8bd21b660861fc5d",
+      "bytes": 1154,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/provisional-contracts/imported-result.valid.json",
+      "sha256": "a1a074ab34bf62c1ef37d9875fab02befca43c703f2caf7ca7e027540b11dade",
+      "bytes": 1043,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/provisional-contracts/manifest.legacy.invalid.json",
+      "sha256": "bc25e0e72414bea436690baa86939971a4b2fd29c61684a99c868b0bce33701f",
+      "bytes": 760,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/provisional-contracts/manifest.valid.json",
+      "sha256": "1592cb227dbd5fda20ce26592c6cbf4c31ee37289078b7b3e6793569dd298d60",
+      "bytes": 1006,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/provisional-contracts/result-envelope.legacy.invalid.json",
+      "sha256": "0d822ac785f7297ce8e991d18c9795b99afc3163ac10589eb2b448ae2f225665",
+      "bytes": 941,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/provisional-contracts/result-envelope.valid.json",
+      "sha256": "495ca6c4243a1426c6f2161b0666e7c71394b0865fd0ef7248308642e194a1dd",
+      "bytes": 1533,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/provisional-contracts/result-reference.legacy.invalid.json",
+      "sha256": "a704e44d1efe63b650f39896bd2307cdecc3a0ac27149ef296c0d19a4a93d7b2",
+      "bytes": 478,
+      "classification": "verification"
+    },
+    {
+      "path": "fixtures/provisional-contracts/result-reference.valid.json",
+      "sha256": "d4cea80010c07c71ee6fc64744d09ed119189278cb90f28c8698bee8168b8bf0",
+      "bytes": 609,
+      "classification": "verification"
+    },
+    {
+      "path": "integrations/generic-harness.md",
+      "sha256": "ca2c06ad82c9f50278fc39f98e00cb37d7a37f4c1e518a10d996dcd4ef7f8509",
+      "bytes": 1770,
+      "classification": "integration-boundary"
+    },
+    {
+      "path": "integrations/octon-mini.md",
+      "sha256": "04c4de99f8f6844088207ca9b48817370cf6a8e9e57d08f53f7526608dc3c0b2",
+      "bytes": 3360,
+      "classification": "integration-boundary"
+    },
+    {
+      "path": "reference/conversation-decision-map.md",
+      "sha256": "f0ee8711c359780913d2a08fac35c7c844b36ebed0a319b372d3acef8142bb2f",
+      "bytes": 1701,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/conversation-thread.md",
+      "sha256": "ec3c3f6f87a9b83aaf0b18e2466c20ca478fbadb0239b759bef6abfc9e7ecc24",
+      "bytes": 446023,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/internal-consistency-review.md",
+      "sha256": "0ddadaf96aa7b283eaff99011a490fd762a0deceb8e22430ba38f9b6a9206e4e",
+      "bytes": 3932,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/related-packets/README.md",
+      "sha256": "af4bb2268f188a0fafeb89f393bba5425942e7409224d6a41c9f489fe5e92b6a",
+      "bytes": 1054,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/related-packets/uca-full-product-build-packet-v1.manifest.json",
+      "sha256": "6e35de7197ea494930bd31b29d56b4cb090ff5d564bbdf2f1a21cfec4adeca73",
+      "bytes": 34840,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/related-packets/uca-full-product-build-packet-v1.zip",
+      "sha256": "8409ea03117ad8b5dff1e32b0760ce0fc761775dd70a5254e708ff9fe9949570",
+      "bytes": 428754,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/related-packets/uca-full-product-build-packet-v1.zip.sha256",
+      "sha256": "353c9f4a717f3ded31a741e948ced316eb6aa0ee673500c7043c27c56ba92659",
+      "bytes": 103,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/source-map.md",
+      "sha256": "4179419efd483d093b5bed6acc708196345f11c1a3000a7542a920920badfdb1",
+      "bytes": 2181,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "reference/transcript-coverage.md",
+      "sha256": "ce482c3ae22ded7da4432d8bfd3c534ecb538273202dbf50590707ae413d7b91",
+      "bytes": 2035,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "research/licensing.md",
+      "sha256": "4c0f1ee07edad4c18b4127f444025977231bffc776ca91e451c51081849b67e7",
+      "bytes": 1531,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "research/research-agenda.md",
+      "sha256": "01d1bca495f0d6af47436a91739379ab6b696f28166d85912ae563bfab697358",
+      "bytes": 2290,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "research/source-register.md",
+      "sha256": "7b226a2b8e699d392f8185006d48280634295f80567e8af7ea4d6a7b33d9f765",
+      "bytes": 7405,
+      "classification": "research-or-historical-reference"
+    },
+    {
+      "path": "scripts/render-projections.py",
+      "sha256": "15af21fe455add9bbb7c3cfcb3fc19d1b4e9f9f7bfe135d51e8772d4ce900daf",
+      "bytes": 9776,
+      "classification": "validation-tooling"
+    },
+    {
+      "path": "scripts/validate-packet.py",
+      "sha256": "f910984af20c5426ce8bbf3f02e9473690721cd0316ccb68e37ad9832d6538d1",
+      "bytes": 51791,
+      "classification": "validation-tooling"
+    },
+    {
+      "path": "spec/authority-model.md",
+      "sha256": "7b8fdba62aa0e02acce56d3e2957a109c10422b67089b693b61f41e21418c76d",
+      "bytes": 3719,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/canonical-character-identities.md",
+      "sha256": "019646c2ba98e8faa01b27f3bc1ff4ccf41fc1e7d13d35ffc7bc7684cb111faa",
+      "bytes": 20459,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/capability-classes.md",
+      "sha256": "ea36c6b554cb412de6b541cefb63177e6bd9936ce2155aee95f8cfff306423f2",
+      "bytes": 1061,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/capability-family-matrix.md",
+      "sha256": "35ef413c7966a897d2390f96d519e1e7ee46e7a0ccac9f007ff2c8bcd69ca593",
+      "bytes": 6214,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/capability-family-matrix.yaml",
+      "sha256": "f05b0c66a9670624e5a5ad39a6e6409a4298a155b0871dace04960e19bc040a3",
+      "bytes": 28003,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "spec/completion-conventions.md",
+      "sha256": "335bffcf8632e633cc8313615b9096181cd8abe62b50494777f0e73d7332ca41",
+      "bytes": 1757,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/evidence-conventions.md",
+      "sha256": "f4170de4768445565dd50a8caeb5eead2f07064e10828d79cb87a4ae9914792a",
+      "bytes": 2834,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/family-identity-and-repository-map.md",
+      "sha256": "593d2ed0211b357c9e2a65ecf21fb35b5d8c6d5fe4ac061cbed25109ba46647d",
+      "bytes": 2557,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/family-invariants.md",
+      "sha256": "5fff35216cf60ca992e8b29f8c12956b1c51f4421e28313295f24803e273f3a4",
+      "bytes": 5360,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/imported-evidence.md",
+      "sha256": "de481ac54de73a2e389797ad21419300da433a3788c7e687b9a4f20776af063e",
+      "bytes": 1350,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/interface-conventions.md",
+      "sha256": "2d7761731a38966bd20d3ee74bc20051ccd4ccb0431bfd310c5827b27d31ca75",
+      "bytes": 3168,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/lifecycle.md",
+      "sha256": "2796f90165a39a10a2e1aaa4946c6537f0e0db76aef755f4505eed22a56d27e8",
+      "bytes": 2337,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/migrations/provisional-family-namespace-1.2.0.md",
+      "sha256": "2436c3baa6864c80f6303af24ea5c34b5910dc100e1e883d9997865a62964748",
+      "bytes": 2360,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/planning-conventions.md",
+      "sha256": "76f8f7c24714a6b7f101c5c9fff52718f303ad95559ae54a8cd6ca723fc02878",
+      "bytes": 1067,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/portfolio-source-ownership.md",
+      "sha256": "424479680700bd46b6a31ec38f8d4840c1ce4f74f35ed622a9343cf5c1e8ed94",
+      "bytes": 2631,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/project-seed-contract.md",
+      "sha256": "b3adcd875678bd5da50d54a49aaf268089ad296ead94813ef4018ab83313977a",
+      "bytes": 2023,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/provisional-manifest.md",
+      "sha256": "83466b5a08cb34e0c7fae7c118a025ac81aa93429f364da3f8f47e5ce58f2350",
+      "bytes": 1634,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/result-envelope.md",
+      "sha256": "f0ba39368ad66f029ea00d8bf4e72eaf0a415108a4a62bb4b3b65420acca78ab",
+      "bytes": 2358,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/schemas/completion.v0.schema.json",
+      "sha256": "0fbed79bd39cc925656867af054b59bf31e2c3f078e27b8bbcab368427f72a35",
+      "bytes": 1852,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "spec/schemas/imported-result.v0.schema.json",
+      "sha256": "407de451aa0bff5a042603c1cda6fe3d1403204764b6b76e8c8e07a548d354ba",
+      "bytes": 1360,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "spec/schemas/permission-set.v0.schema.json",
+      "sha256": "802eab8a7628ba00548c81f5986c507624b6fcfd0866b919b77f058054b2072b",
+      "bytes": 2896,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "spec/schemas/result-envelope.v0.schema.json",
+      "sha256": "3305a484ed96e5475fed3a16cb98050ed36fde0946fee1d4c4565737ad88ded6",
+      "bytes": 4148,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "spec/schemas/result-reference.v0.schema.json",
+      "sha256": "37b9a1401cb3fae49a301c55fd82840d91907784f5f682742b517ff1e1f949a5",
+      "bytes": 1693,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "spec/schemas/standalone-capability-manifest.v0.schema.json",
+      "sha256": "47bac44717652d531548fa360d19021939333b73636cfe50265ecd418a2a06d7",
+      "bytes": 3627,
+      "classification": "machine-readable"
+    },
+    {
+      "path": "spec/skill-conventions.md",
+      "sha256": "606b74498c598d19bfa9f2790a7b06fe95ed549f52598e5a3830b1e3acd4de6b",
+      "bytes": 2351,
+      "classification": "normative-or-provisional-specification"
+    },
+    {
+      "path": "spec/terminology.md",
+      "sha256": "fd086fa07afff94324026e9dfb33bd512b08947e912435944c5a5305b6d0a521",
+      "bytes": 3749,
+      "classification": "normative-or-provisional-specification"
+    }
+  ]
+}

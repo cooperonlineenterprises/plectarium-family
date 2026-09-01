@@ -1,0 +1,137 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: supply-chain-intelligence
+product_name: Supply-Chain Intelligence
+canonical_descriptive_name: Software Supply-Chain and Dependency Intelligence
+canonical_character_identity: Genea
+status: PROJECT SEED
+creation_priority: 4
+working_cli:
+  value: supply-chain-intel
+  status: PROPOSED
+repository:
+  name: genea
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/genea.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: supply-chain-intelligence
+  status: PROPOSED
+governing_question: What external software, artifacts, build inputs, dependencies, and supply-chain risks does this project
+  actually carry?
+purpose: Build a provenance-aware inventory of direct, transitive, vendored, build, runtime, optional, and image dependencies;
+  combine vulnerability, lifecycle, license, signature, provenance, and substitution evidence without pretending presence
+  equals exploitability.
+subjects:
+- repository and lockfiles
+- SBOM
+- container image
+- release artifact
+- build provenance
+- dependency graph
+owns:
+- component identity reconciliation
+- dependency graph
+- SBOM generation/import
+- vulnerability and lifecycle intelligence
+- license obligations
+- provenance/signature verification
+- Supply-Chain Intelligence Bundle
+does_not_own:
+- automatic dependency upgrades
+- package installation
+- license legal advice
+- release authority
+- code-quality analysis unrelated to supply chain
+primary_evidence:
+- component inventory
+- dependency paths
+- advisories
+- reachability/exposure context when supportable
+- license declarations
+- maintainer/lifecycle signals
+- signatures and attestations
+- registry/package origin
+conclusion_states:
+- inventory_complete
+- inventory_partial
+- vulnerability_observed
+- provenance_verified
+- provenance_missing
+- license_attention_required
+- lifecycle_risk
+- investigation_required
+capability_classes:
+- value: read_only_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- external_process_execution
+- output_write
+- cache_write
+- temporary_write
+project_execution: Normally denied; build-generated inventories require explicit execution.
+network: Often useful but denied by default; offline databases and pinned metadata are first-class.
+browser_execution: Not intrinsic.
+production_access: No production mutation or registry publishing.
+external_tool_candidates:
+- Syft
+- Grype
+- OSV-Scanner
+- Trivy
+- OpenSSF Scorecard
+- Sigstore/Cosign
+- SLSA tooling
+- CycloneDX
+- SPDX
+- package-manager metadata
+durable_result: Supply-Chain Intelligence Bundle
+optional_upstream_results:
+- universal-code-audit
+downstream_consumers:
+- release-assurance
+- infrastructure-assurance
+- UCA dependency-health lens
+mature_target: A multi-ecosystem component and provenance intelligence engine with interoperable SBOM support, contextual
+  vulnerability prioritization, offline operation, signed evidence, lifecycle and license analysis, and stable comparison
+  across releases.
+domain_threats:
+- poisoned package metadata
+- malicious registries
+- advisory tampering
+- dependency confusion
+- signed-but-untrusted artifacts
+- SBOM incompleteness
+- credential exposure
+evaluation_focus:
+- inventory precision/recall
+- dependency-path accuracy
+- advisory correlation
+- offline reproducibility
+- signature/provenance validation
+- false exploitability claims
+research_agenda:
+- Syft
+- Grype
+- OSV
+- Trivy
+- OpenSSF Scorecard
+- Sigstore
+- SLSA
+- CycloneDX
+- SPDX
+- VEX
+- package lifecycle intelligence
+open_questions:
+- What reachability claims are portable enough to normalize?
+- How should mutable advisory databases affect result identity and freshness?
+- What license-analysis conclusions remain informational versus legal-review required?

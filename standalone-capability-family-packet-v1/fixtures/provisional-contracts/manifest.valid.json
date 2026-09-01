@@ -1,0 +1,36 @@
+{
+  "schema_version": "standalone-capability-manifest.v0",
+  "status": "PROVISIONAL",
+  "family_id": "standalone-capability-family",
+  "capability_id": "verification-assurance",
+  "name": "Verification Assurance",
+  "character_identity": "Titra",
+  "version": "0.0.0-fixture",
+  "description": "A non-executable conformance fixture for namespaced static discovery.",
+  "operations": [
+    {
+      "id": "inspect",
+      "description": "Inspect an existing durable result without executing product code.",
+      "planning_required": false
+    }
+  ],
+  "interfaces": [
+    {
+      "kind": "cli"
+    }
+  ],
+  "result_schemas": [
+    "standalone-capability.result-envelope.v0"
+  ],
+  "permissions": {
+    "schema_version": "standalone-capability.permission-set.v0",
+    "requested": [],
+    "accepted": [],
+    "denied": [],
+    "authority_effect": "none"
+  },
+  "completion_model": "standalone-capability.completion.v0",
+  "limitations": [
+    "Fixture only; not a discoverable implemented capability."
+  ]
+}

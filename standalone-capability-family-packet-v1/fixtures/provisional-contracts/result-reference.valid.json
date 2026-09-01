@@ -1,0 +1,15 @@
+{
+  "schema_version": "standalone-capability.result-reference.v0",
+  "family_id": "standalone-capability-family",
+  "capability_id": "verification-assurance",
+  "capability_version": "0.0.0-fixture",
+  "result_id": "fixture-result-0001",
+  "result_schema": "standalone-capability.result-envelope.v0",
+  "subject_identity": "fixture:subject:0001",
+  "completion_status": "complete_with_limitations",
+  "location": "fixture://result/0001",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "limitations": [
+    "Fixture only; the location is intentionally non-resolvable."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "standalone-capability.result-reference.v0",
+  "capability_id": "verification-assurance",
+  "capability_version": "0.0.0-legacy",
+  "result_id": "legacy-result-0001",
+  "result_schema": "standalone-capability.result-envelope.v0",
+  "subject_identity": "fixture:subject:legacy",
+  "completion_status": "complete",
+  "location": "fixture://result/legacy",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "limitations": []
+}

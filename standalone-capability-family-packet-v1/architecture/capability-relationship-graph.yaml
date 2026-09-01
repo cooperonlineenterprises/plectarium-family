@@ -1,0 +1,130 @@
+schema_version: standalone-capability-relationship-graph.v1
+family_id: standalone-capability-family
+nodes:
+- id: universal-code-audit
+  name: Universal Code Audit
+  canonical_character_identity: Verity
+  status: ESTABLISHED REFERENCE IMPLEMENTATION
+- id: verification-assurance
+  name: Verification Assurance
+  canonical_character_identity: Titra
+  status: PROJECT SEED
+- id: specification-conformance
+  name: Specification Conformance
+  canonical_character_identity: Ortha
+  status: PROJECT SEED
+- id: supply-chain-intelligence
+  name: Supply-Chain Intelligence
+  canonical_character_identity: Genea
+  status: PROJECT SEED
+- id: runtime-investigation
+  name: Runtime Investigation
+  canonical_character_identity: Echo
+  status: PROJECT SEED
+- id: api-contract-assurance
+  name: API / Contract Assurance
+  canonical_character_identity: Harmia
+  status: PROJECT SEED
+- id: ui-browser-assurance
+  name: UI / Browser Assurance
+  canonical_character_identity: Iris
+  status: PROJECT SEED
+- id: database-migration-assurance
+  name: Database / Migration Assurance
+  canonical_character_identity: Janus
+  status: PROJECT SEED
+- id: infrastructure-assurance
+  name: Infrastructure Assurance
+  canonical_character_identity: Atlas
+  status: PROJECT SEED
+- id: release-assurance
+  name: Release Assurance
+  canonical_character_identity: Sibyl
+  status: PROJECT SEED — LATE FAMILY CONSUMER
+edge_types:
+  hard_dependency: Required for the consuming capability to function.
+  optional_evidence_dependency: Optional imported evidence that enriches a conclusion.
+  aggregation_dependency: Optional or policy-required result consumed by an aggregator.
+  peer_evidence_relationship: Capabilities may exchange evidence without ownership hierarchy.
+  future_relationship: Relationship is plausible but intentionally not stabilized.
+edges:
+- from: runtime-investigation
+  to: universal-code-audit
+  type: optional_evidence_dependency
+  meaning: Runtime observations may validate or contradict static performance/reliability candidates.
+- from: supply-chain-intelligence
+  to: universal-code-audit
+  type: optional_evidence_dependency
+  meaning: Dependency and provenance evidence may enrich UCA dependency-health findings.
+- from: verification-assurance
+  to: universal-code-audit
+  type: optional_evidence_dependency
+  meaning: Verification evidence may validate recommended changes and candidate correctness concerns.
+- from: universal-code-audit
+  to: specification-conformance
+  type: optional_evidence_dependency
+  meaning: Architecture and implementation observations may support conformance mappings.
+- from: verification-assurance
+  to: specification-conformance
+  type: optional_evidence_dependency
+  meaning: Verification results support requirement satisfaction claims.
+- from: api-contract-assurance
+  to: specification-conformance
+  type: optional_evidence_dependency
+  meaning: Contract compatibility evidence may satisfy interface requirements.
+- from: api-contract-assurance
+  to: verification-assurance
+  type: peer_evidence_relationship
+  meaning: Contract tests may be part of a verification portfolio; results retain source identity.
+- from: ui-browser-assurance
+  to: verification-assurance
+  type: peer_evidence_relationship
+  meaning: UI journey results may verify user-facing claims.
+- from: runtime-investigation
+  to: verification-assurance
+  type: optional_evidence_dependency
+  meaning: Runtime observations can verify performance, resource, and failure-behavior claims.
+- from: supply-chain-intelligence
+  to: infrastructure-assurance
+  type: optional_evidence_dependency
+  meaning: Container/base-image and provenance evidence may enrich infrastructure assessment.
+- from: universal-code-audit
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: Release policy may require a compatible UCA result.
+- from: verification-assurance
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: Release policy commonly requires claim-centered verification.
+- from: specification-conformance
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: Release policy may require conformance evidence.
+- from: supply-chain-intelligence
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: Release policy may require SBOM, vulnerability, license, signature, and provenance evidence.
+- from: api-contract-assurance
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: Interface compatibility may be a release criterion.
+- from: ui-browser-assurance
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: UI journeys/accessibility/performance may be release criteria.
+- from: database-migration-assurance
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: Migration safety may be a release criterion.
+- from: infrastructure-assurance
+  to: release-assurance
+  type: aggregation_dependency
+  meaning: Infrastructure plan risk may be a release criterion.
+- from: runtime-investigation
+  to: release-assurance
+  type: future_relationship
+  meaning: Selected runtime budgets or incident follow-ups may be release evidence.
+constraints:
+- No circular hard dependencies.
+- No edge grants authority.
+- Imported evidence preserves provenance and completion.

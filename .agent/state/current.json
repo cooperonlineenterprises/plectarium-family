@@ -1,0 +1,27 @@
+{
+  "schema_version": "harness.current-state.v1",
+  "project_slug": "plectarium-family",
+  "updated_at": "2026-08-31",
+  "authority": "Compact operational view derived from authoritative task, decision, and evidence records. This file does not grant permission.",
+  "adoption_status": "adopted_local_foundation",
+  "active_tasks": ["TASK-0002"],
+  "accepted_decisions": ["DEC-0001"],
+  "fresh_evidence": ["EVD-0001", "EVD-0002"],
+  "blocked_by": [],
+  "pending_gates": [
+    "post_git_init_integrity_refresh_and_validation",
+    "fresh_exact_remote_collision_check",
+    "authorized_initial_and_closure_publication",
+    "final_ref_equality_and_clean_worktree"
+  ],
+  "next_action": "refresh integrity after Git initialization, revalidate, then inspect and commit the exact staged foundation",
+  "external_effects_authorized": true,
+  "external_effect_scope": "TASK-0002 records the exact consumable private GitHub creation and two-push limit from the current operator request; this state record does not grant authority",
+  "external_effects_observed": "none_to_date",
+  "limitations": [
+    "family_repository_has_no_commit_or_remote_yet",
+    "packet_validator_uses_a_host_specific_preconfigured_python_runtime",
+    "remote_publication_pending",
+    "structural_foundation_does_not_establish_product_readiness"
+  ]
+}

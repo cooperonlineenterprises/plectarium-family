@@ -1,0 +1,32 @@
+schema_version: standalone-capability-family-workstreams.v1
+workstreams:
+- id: FW-01
+  name: Family authority and governance
+  objective: Maintain charter, invariants, canonical character identities, decisions, ADRs, statuses, and open questions.
+- id: FW-02
+  name: Shared provisional contracts
+  objective: Evolve manifest, envelope, permissions, completion, result reference, and import experiments.
+- id: FW-03
+  name: Capability relationship and interoperability
+  objective: Maintain result-consumption rules and relationship graphs.
+- id: FW-04
+  name: Capability seed quality
+  objective: Keep all ten project seeds coherent and implementation-generating.
+- id: FW-05
+  name: Project-generation prompts
+  objective: Evaluate prompts against fresh agents and produced packet quality.
+- id: FW-06
+  name: Security and authority
+  objective: Maintain family threat model and domain-specific authority prohibitions.
+- id: FW-07
+  name: Agent Skills and portability
+  objective: Maintain skill conventions, routing evals, and generated-adapter policy.
+- id: FW-08
+  name: Evaluation and honesty
+  objective: Maintain family claim-proof model, baselines, and result reporting discipline.
+- id: FW-09
+  name: Research and licensing
+  objective: Verify primary sources, licenses, and domain research agendas.
+- id: FW-10
+  name: Packet integrity
+  objective: Maintain validator, manifest, checksums, transcript coverage, and archive verification.

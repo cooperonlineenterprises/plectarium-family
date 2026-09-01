@@ -1,0 +1,137 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: verification-assurance
+product_name: Verification Assurance
+canonical_descriptive_name: Implementation and Behavior Verification Assurance
+canonical_character_identity: Titra
+status: PROJECT SEED
+creation_priority: 2
+working_cli:
+  value: verify-assurance
+  status: PROPOSED
+repository:
+  name: titra
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/titra.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: verification-assurance
+  status: PROPOSED
+governing_question: What evidence demonstrates that this implementation, change, behavior, or system actually works as claimed?
+purpose: Represent explicit claims, discover available proof mechanisms, execute a reviewed verification plan, and return
+  supporting, contradicting, missing, and mutation-sensitivity evidence without overstating ordinary testing as mathematical
+  proof.
+subjects:
+- implementation claim
+- change set
+- behavior or invariant
+- build artifact
+- scenario
+- system version
+owns:
+- claim model
+- proof-mechanism discovery
+- verification planning
+- controlled test/build execution
+- claim-evidence mapping
+- contradiction handling
+- verification completion
+- Verification Bundle
+does_not_own:
+- product requirement definition
+- automatic bug fixing
+- test authoring authority by default
+- release authority
+- production deployment
+- code-quality auditing as a whole
+primary_evidence:
+- compiler/type-check evidence
+- unit/integration/acceptance results
+- property-based results
+- mutation outcomes
+- fuzz reproductions
+- contract checks
+- runtime assertions
+- scenario replay
+- benchmark budget observations
+conclusion_states:
+- proven_within_scope
+- strongly_supported
+- partially_supported
+- unproven
+- contradicted
+- not_testable
+- verification_incomplete
+capability_classes:
+- value: execution_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- git_read
+- project_execution
+- external_process_execution
+- output_write
+- cache_write
+- temporary_write
+project_execution: Core capability; every command and environment must be explicit in the plan.
+network: Denied by default; selectively allowed for integration environments or external services.
+browser_execution: Optional through delegated UI Assurance or a scoped browser adapter.
+production_access: Prohibited by default; production observations should normally be imported rather than generated.
+external_tool_candidates:
+- native compilers and test runners
+- Stryker
+- PIT
+- cargo-mutants
+- Hypothesis/QuickCheck-style tools
+- fuzzers
+- coverage tools
+- test-impact analysis tools
+durable_result: Verification Bundle
+optional_upstream_results:
+- api-contract-assurance
+- ui-browser-assurance
+- runtime-investigation
+downstream_consumers:
+- specification-conformance
+- release-assurance
+- UCA candidate validation
+- Octon task validation
+mature_target: A claim-centered verification engine that can plan and execute proof portfolios across major languages, preserve
+  negative and missing evidence, quantify exercised scope, detect test weakness through mutation/property methods, and provide
+  stable claim status across revisions.
+domain_threats:
+- hostile tests and build scripts
+- test environments exfiltrating secrets
+- flaky/non-deterministic tests
+- false proof from tautological tests
+- stale test evidence
+- unsafe integration credentials
+evaluation_focus:
+- known-claim support/contradiction recall
+- false proof rejection
+- mutation sensitivity
+- flaky-test handling
+- scope honesty
+- claim-to-evidence traceability
+research_agenda:
+- mutation testing
+- property-based testing
+- model-based testing
+- test-impact analysis
+- flaky-test detection
+- coverage semantics
+- fuzzing
+- verification provenance
+open_questions:
+- What minimum claim language is expressive without becoming a formal-methods DSL?
+- How should mutation-equivalent cases be represented?
+- When may imported CI results count as fresh verification?

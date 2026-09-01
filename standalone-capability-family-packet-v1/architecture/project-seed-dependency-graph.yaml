@@ -1,0 +1,86 @@
+schema_version: standalone-capability-project-seed-dependency-graph.v1
+family_id: standalone-capability-family
+nodes:
+- id: universal-code-audit
+  canonical_character_identity: Verity
+  repository: verity
+  creation_priority: 1
+  status: ESTABLISHED REFERENCE IMPLEMENTATION
+- id: verification-assurance
+  canonical_character_identity: Titra
+  repository: titra
+  creation_priority: 2
+  status: PROJECT SEED
+- id: specification-conformance
+  canonical_character_identity: Ortha
+  repository: ortha
+  creation_priority: 3
+  status: PROJECT SEED
+- id: supply-chain-intelligence
+  canonical_character_identity: Genea
+  repository: genea
+  creation_priority: 4
+  status: PROJECT SEED
+- id: runtime-investigation
+  canonical_character_identity: Echo
+  repository: echo
+  creation_priority: 5
+  status: PROJECT SEED
+- id: api-contract-assurance
+  canonical_character_identity: Harmia
+  repository: harmia
+  creation_priority: 6
+  status: PROJECT SEED
+- id: ui-browser-assurance
+  canonical_character_identity: Iris
+  repository: iris
+  creation_priority: 7
+  status: PROJECT SEED
+- id: database-migration-assurance
+  canonical_character_identity: Janus
+  repository: janus
+  creation_priority: 8
+  status: PROJECT SEED
+- id: infrastructure-assurance
+  canonical_character_identity: Atlas
+  repository: atlas
+  creation_priority: 9
+  status: PROJECT SEED
+- id: release-assurance
+  canonical_character_identity: Sibyl
+  repository: sibyl
+  creation_priority: 10
+  status: PROJECT SEED — LATE FAMILY CONSUMER
+milestones:
+- id: M0
+  name: Family packet validated
+- id: M1
+  name: UCA production-shaped implementation evidence
+- id: M2
+  name: Verification Assurance generated/built
+- id: M3
+  name: Specification Conformance generated/built
+- id: M4
+  name: Three-capability shared-convention checkpoint
+- id: M5
+  name: Peer specialist capabilities mature
+- id: M6
+  name: Release Assurance aggregation experiment
+- id: M7
+  name: Shared specification/SDK decision
+recommended_sequence:
+- universal-code-audit
+- verification-assurance
+- specification-conformance
+- supply-chain-intelligence
+- runtime-investigation
+- api-contract-assurance
+- ui-browser-assurance
+- database-migration-assurance
+- infrastructure-assurance
+- release-assurance
+notes:
+- Sequence is architectural learning priority, not a hard dependency for every project.
+- Supply chain, runtime, API, UI, migration, and infrastructure projects may be generated in parallel after the three-capability
+  checkpoint.
+- Release Assurance benefits strongly from mature upstream durable results.

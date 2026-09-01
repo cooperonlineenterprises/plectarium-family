@@ -1,0 +1,66 @@
+{
+  "schema_version": "harness.project.v1",
+  "project": {
+    "id": "plectarium-family",
+    "name": "Plectarium Capability Family",
+    "repository_root": ".",
+    "profile": "high-assurance",
+    "blueprint_version": "1.0.0",
+    "adoption_status": "adopted_local_foundation",
+    "repository_role": "independent_capability_family_authority",
+    "profile_rationale": [
+      "family contracts influence multiple independently released repositories",
+      "concurrent agent work and multi-session handoff are expected",
+      "source provenance and reproducible integrity are material",
+      "the portfolio setup includes a separately bounded external publication task"
+    ]
+  },
+  "paths": {
+    "source": [
+      "standalone-capability-family-packet-v1",
+      "imports"
+    ],
+    "tests": [
+      ".agent/tests",
+      "standalone-capability-family-packet-v1/scripts/validate-packet.py",
+      "standalone-capability-family-packet-v1/fixtures"
+    ],
+    "generated": [".agent/generated"],
+    "instruction_roots": ["AGENTS.md"],
+    "fingerprint_exclusions": []
+  },
+  "commands": {
+    "project_test": {
+      "status": "configured",
+      "run": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3 -B standalone-capability-family-packet-v1/scripts/validate-packet.py",
+      "writes": [],
+      "runtime_limitation": "The recorded host runtime has PyYAML and jsonschema; unqualified python3 does not currently satisfy packet dependencies."
+    },
+    "project_lint": {
+      "status": "not_applicable",
+      "run": null,
+      "reason": "No separate family-packet lint command exists; packet validation owns its structural and semantic checks."
+    },
+    "project_build": {
+      "status": "not_applicable",
+      "run": null,
+      "reason": "This authority repository contains specifications and validation tooling, not product implementation."
+    },
+    "project_closure": {
+      "status": "configured",
+      "run": "python3 -B .agent/scripts/validate.py --check",
+      "writes": [],
+      "preconditions": [
+        "packet_check_passed",
+        "harness_mutation_tests_passed",
+        "packet_integrity_refreshed_by_packet_writer",
+        "harness_integrity_refreshed_by_harness_writer"
+      ]
+    }
+  },
+  "extensions": {
+    "registry": ".agent/extensions/registry.json",
+    "registry_required_in_profile": "standard_or_higher"
+  },
+  "mutable_work_status": "prohibited_here"
+}

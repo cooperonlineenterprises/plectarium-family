@@ -1,0 +1,137 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: runtime-investigation
+product_name: Runtime Investigation
+canonical_descriptive_name: Runtime Behavior and Performance Investigation
+canonical_character_identity: Echo
+status: PROJECT SEED
+creation_priority: 5
+working_cli:
+  value: runtime-investigate
+  status: PROPOSED
+repository:
+  name: echo
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/echo.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: runtime-investigation
+  status: PROPOSED
+governing_question: What is this system actually doing while it runs, and what evidence explains the observed behavior?
+purpose: Plan and conduct hypothesis-driven runtime investigations using profiles, traces, logs, metrics, queries, concurrency
+  observations, and controlled experiments while binding conclusions to workload and environment.
+subjects:
+- running process
+- service
+- benchmark workload
+- trace window
+- profile
+- incident scenario
+- runtime environment
+owns:
+- investigation hypothesis
+- workload identity
+- instrumentation plan
+- runtime evidence ingestion
+- causal candidate validation/refutation
+- runtime conclusion
+- Runtime Investigation Bundle
+does_not_own:
+- production remediation
+- always-on observability platform
+- deployment authority
+- unbounded production access
+- static code audit as a whole
+primary_evidence:
+- CPU profiles
+- allocation and heap profiles
+- traces
+- logs
+- metrics
+- I/O and network observations
+- query plans
+- lock/contention observations
+- race-detector results
+- fault-injection outcomes
+conclusion_states:
+- hypothesis_supported
+- hypothesis_contradicted
+- causal_link_indicated
+- bottleneck_confirmed_within_workload
+- insufficient_evidence
+- environment_incompatible
+- investigation_incomplete
+capability_classes:
+- value: execution_evidence_producer
+  status: PROVISIONAL
+- value: controlled_environment_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- project_execution
+- external_process_execution
+- network
+- output_write
+- cache_write
+- temporary_write
+- credential_access
+project_execution: Central; explicit workload, command, environment, resource, and stop conditions are mandatory.
+network: Denied by default; may be required for distributed systems or telemetry endpoints.
+browser_execution: Optional for browser/runtime investigations, preferably delegated to UI Assurance.
+production_access: Read-only production observation may be supported only by explicit high-assurance policy; mutation is prohibited.
+external_tool_candidates:
+- OpenTelemetry
+- pprof
+- perf/eBPF tools
+- runtime-specific profilers
+- database query analyzers
+- race detectors
+- continuous profiling imports
+durable_result: Runtime Investigation Bundle
+optional_upstream_results:
+- universal-code-audit
+- verification-assurance
+downstream_consumers:
+- universal-code-audit
+- verification-assurance
+- api-contract-assurance
+- release-assurance
+mature_target: A workload- and environment-bound investigation engine that can import and collect multi-signal telemetry,
+  correlate runtime evidence to code and operations, test causal hypotheses, compare investigations, and preserve uncertainty.
+domain_threats:
+- production data leakage
+- instrumentation overhead
+- credential exposure
+- unsafe fault injection
+- network exfiltration
+- host compromise through profilers
+- unrepresentative workloads
+evaluation_focus:
+- known bottleneck identification
+- causal-hypothesis rejection
+- workload completeness honesty
+- overhead measurement
+- trace/profile correlation
+- resource and credential isolation
+research_agenda:
+- OpenTelemetry
+- native profilers
+- continuous profiling
+- eBPF
+- race detectors
+- query analyzers
+- fault injection
+- causal performance analysis
+open_questions:
+- What production-read access classes are supportable?
+- How should telemetry sampling affect confidence?
+- Which collection agents can be trusted and versioned portably?

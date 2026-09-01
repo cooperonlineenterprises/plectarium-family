@@ -1,0 +1,30 @@
+{
+  "schema_version": "standalone-capability-manifest.v0",
+  "status": "PROVISIONAL",
+  "capability_id": "verification-assurance",
+  "name": "Legacy unnamespaced manifest",
+  "version": "0.0.0-legacy",
+  "description": "This deliberate negative fixture omits the required family namespace.",
+  "operations": [
+    {
+      "id": "inspect",
+      "description": "Negative fixture operation."
+    }
+  ],
+  "interfaces": [
+    {
+      "kind": "cli"
+    }
+  ],
+  "result_schemas": [
+    "standalone-capability.result-envelope.v0"
+  ],
+  "permissions": {
+    "schema_version": "standalone-capability.permission-set.v0",
+    "requested": [],
+    "accepted": [],
+    "denied": []
+  },
+  "completion_model": "standalone-capability.completion.v0",
+  "limitations": []
+}

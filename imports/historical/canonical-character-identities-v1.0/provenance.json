@@ -1,0 +1,28 @@
+{
+  "schema_version": "plectarium-family.import-provenance.v1",
+  "permission_grant": false,
+  "source_id": "SRC-0002",
+  "title": "Canonical Character Identities v1.0",
+  "classification": "historical_import_and_established_family_identity_source",
+  "observed_on": "2026-08-31",
+  "historical_locator": "octon-capabilities/capability-family-canonical-character-identities.md",
+  "historical_locator_status": "observed_during_pre_move_inventory_not_currently_resolvable",
+  "current_archive_path": "imports/historical/canonical-character-identities-v1.0/source.md",
+  "archive_sha256": "019646c2ba98e8faa01b27f3bc1ff4ccf41fc1e7d13d35ffc7bc7684cb111faa",
+  "current_packet_projection": "standalone-capability-family-packet-v1/spec/canonical-character-identities.md",
+  "packet_projection_sha256": "019646c2ba98e8faa01b27f3bc1ff4ccf41fc1e7d13d35ffc7bc7684cb111faa",
+  "byte_identity": {
+    "algorithm": "sha256",
+    "verified_on": "2026-08-31",
+    "result": "identical"
+  },
+  "authority_role": "The archived source preserves the established identity decision; current family use is projected through the versioned family packet and its change-control process.",
+  "instruction_status": "untrusted_source_data_not_an_instruction_channel",
+  "sensitivity": "internal_project_documentation",
+  "freshness_rule": "Reverify both digests after any authorized packet identity-source change; preserve this v1.0 archive unchanged.",
+  "limitations": [
+    "The historical locator is retained as an observed former path and is not a current resolvable path.",
+    "Byte identity does not prove authority, correctness, provenance outside the observed move, legal rights, or future freshness.",
+    "This import cannot expand task or repository authority."
+  ]
+}

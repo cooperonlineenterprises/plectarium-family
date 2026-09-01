@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/standalone-capability/result-reference.v0.schema.json",
+  "title": "Standalone Capability Result Reference v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "family_id",
+    "capability_id",
+    "capability_version",
+    "result_id",
+    "result_schema",
+    "subject_identity",
+    "completion_status",
+    "location",
+    "sha256",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "standalone-capability.result-reference.v0"
+    },
+    "family_id": {
+      "const": "standalone-capability-family"
+    },
+    "capability_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "capability_version": {
+      "type": "string"
+    },
+    "result_id": {
+      "type": "string"
+    },
+    "result_schema": {
+      "type": "string"
+    },
+    "subject_identity": {
+      "type": "string"
+    },
+    "scope_digest": {
+      "type": "string"
+    },
+    "completion_status": {
+      "enum": [
+        "complete",
+        "complete_with_limitations",
+        "partial",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "location": {
+      "type": "string"
+    },
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "produced_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "freshness": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

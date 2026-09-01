@@ -1,0 +1,45 @@
+{
+  "schema_version": "harness.validators.v1",
+  "validator_version": "1.0.0",
+  "runtime": {
+    "executable": "python3",
+    "minimum_version": "3.11",
+    "dependencies": "standard_library_only",
+    "bytecode_and_cache_writes": "prohibited_for_check"
+  },
+  "project_runtime": {
+    "packet_executable": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3",
+    "observed_version": "3.14.0",
+    "observed_dependencies": ["PyYAML_6.0.3", "jsonschema_4.25.1"],
+    "dependency_installation": "not_authorized",
+    "portability_limitation": "unqualified_python3_lacks_packet_dependencies_on_the_adoption_host"
+  },
+  "commands": {
+    "bootstrap": {"run": "python3 --version", "writes": []},
+    "check": {"run": "python3 -B .agent/scripts/validate.py --check", "writes": []},
+    "test": {"run": "python3 -B -m unittest discover -s .agent/tests -p 'test_*.py'", "writes": []},
+    "refresh": {"run": "python3 -B .agent/scripts/refresh.py --refresh", "writes": [".agent/generated/manifest.json", ".agent/generated/validation-report.json", "project-dossier/MANIFEST.json", "project-dossier/CHECKSUMS.sha256"]},
+    "packet_check": {"run": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3 -B standalone-capability-family-packet-v1/scripts/validate-packet.py", "writes": []},
+    "packet_refresh": {"run": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3 -B standalone-capability-family-packet-v1/scripts/validate-packet.py --refresh-projections --write-manifest --refresh-checksums", "writes": ["standalone-capability-family-packet-v1/DECISIONS.md", "standalone-capability-family-packet-v1/agent/family-workstreams.md", "standalone-capability-family-packet-v1/architecture/capability-relationship-graph.md", "standalone-capability-family-packet-v1/architecture/project-seed-dependency-graph.md", "standalone-capability-family-packet-v1/spec/capability-family-matrix.md", "standalone-capability-family-packet-v1/PACKET-MANIFEST.json", "standalone-capability-family-packet-v1/PACKET-CHECKSUMS.sha256"]},
+    "closure": {"run": "python3 -B .agent/scripts/validate.py --check", "writes": [], "preconditions": ["packet_check", "test", "packet_refresh", "refresh"]}
+  },
+  "required_core_checks": [
+    "python_runtime_floor",
+    "strict_json_and_duplicate_keys",
+    "schemas_and_versions",
+    "authority_and_nested_instruction_invariants",
+    "identifiers_references_and_lifecycles",
+    "dossier_catalog_path_authority_and_traceability",
+    "extension_compatibility_confinement_and_validator_protocol",
+    "unresolved_generation_placeholders",
+    "redacted_secret_detection",
+    "repository_symlinks_and_host_metadata",
+    "generated_integrity_freshness_when_present"
+  ],
+  "limitations": [
+    "structural_checks_do_not_prove_project_readiness",
+    "repository_policy_is_not_runtime_sandbox_enforcement",
+    "packet_validation_is_not_portable_to_unqualified_python3_on_the_adoption_host",
+    "packet_and_harness_refresh_commands_are_writers_and_must_run_only_after_source_freeze"
+  ]
+}

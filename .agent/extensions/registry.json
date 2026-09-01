@@ -1,0 +1,27 @@
+{
+  "core_version": "1.0.0",
+  "extension_api": "harness.extension.v1",
+  "extensions": [
+    {
+      "authority_effect": "restrictions_only",
+      "config": ".agent/extensions/sample-restriction/config.json",
+      "deprecated_at": null,
+      "enabled": false,
+      "id": "sample-restriction",
+      "owner": "family_repository_maintainer",
+      "path": ".agent/extensions/sample-restriction",
+      "provenance": "generated_domain_neutral_reference_extension_retained_disabled_under_DEC-0001",
+      "requires_core": "^1.0.0",
+      "side_effects": "read_only",
+      "successor": null,
+      "validator": ".agent/extensions/sample-restriction/validate.py",
+      "version": "1.0.0"
+    }
+  ],
+  "limitations": [
+    "Reference extension only; disabled because current family-specific restrictions are declarative path and contract boundaries already enforced by the kernel, packet validator, and review.",
+    "Enabling or adding an extension requires an accepted restrictions-only decision, confined validator, owner, provenance, and mutation coverage."
+  ],
+  "permission_grant": false,
+  "schema_version": "harness.extension-registry.v1"
+}

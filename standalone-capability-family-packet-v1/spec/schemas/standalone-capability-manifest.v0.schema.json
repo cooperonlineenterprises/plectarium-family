@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/standalone-capability/manifest.v0.schema.json",
+  "title": "Standalone Capability Manifest v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "family_id",
+    "capability_id",
+    "name",
+    "version",
+    "description",
+    "operations",
+    "interfaces",
+    "result_schemas",
+    "permissions",
+    "completion_model",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "standalone-capability-manifest.v0"
+    },
+    "status": {
+      "const": "PROVISIONAL"
+    },
+    "family_id": {
+      "const": "standalone-capability-family",
+      "description": "Canonical producer-family namespace. Identity only; never trust, compatibility, permission, or authority."
+    },
+    "capability_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Descriptive capability or product name used alongside capability_id."
+    },
+    "character_identity": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional canonical user-facing character identity; never a substitute for capability_id or a source of authority."
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "protocol_version": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "planning_required": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "interfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "kind"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "cli",
+              "ci",
+              "mcp",
+              "oci",
+              "agent_skill",
+              "harness_adapter",
+              "http"
+            ]
+          }
+        }
+      }
+    },
+    "result_schemas": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "permissions": {
+      "$ref": "permission-set.v0.schema.json"
+    },
+    "supported_subjects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supported_environments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "capability_classes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "read_only_evidence_producer",
+          "execution_evidence_producer",
+          "controlled_environment_evidence_producer",
+          "evidence_aggregator"
+        ]
+      }
+    },
+    "completion_model": {
+      "type": "string"
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "compatibility": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

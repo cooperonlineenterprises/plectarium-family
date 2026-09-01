@@ -1,0 +1,129 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: specification-conformance
+product_name: Specification Conformance
+canonical_descriptive_name: Specification, Requirement, and Architecture Conformance
+canonical_character_identity: Ortha
+status: PROJECT SEED
+creation_priority: 3
+working_cli:
+  value: spec-conformance
+  status: PROPOSED
+repository:
+  name: ortha
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/ortha.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: specification-conformance
+  status: PROPOSED
+governing_question: Does the implementation actually conform to the intended requirements, architecture, decisions, contracts,
+  and acceptance criteria?
+purpose: Build traceability from authoritative specifications to implementation and verification evidence while preserving
+  ambiguity, authority conflicts, supersession, and unverified obligations.
+subjects:
+- requirements corpus
+- ADRs
+- architecture rules
+- policies
+- acceptance criteria
+- implementation revision
+- verification results
+owns:
+- source-authority inventory
+- requirement identity
+- traceability graph
+- conformance planning
+- ambiguity and conflict records
+- conformance status
+- Conformance Bundle
+does_not_own:
+- inventing missing product requirements
+- silently resolving authority conflicts
+- project governance
+- code remediation
+- formal proof claims without formal evidence
+primary_evidence:
+- specification excerpts with identity
+- implementation mappings
+- architecture-rule results
+- verification imports
+- unimplemented obligation evidence
+- ambiguity/conflict records
+- supersession lineage
+conclusion_states:
+- satisfied
+- partially_satisfied
+- violated
+- unimplemented
+- unverified
+- ambiguous
+- superseded
+- not_applicable
+capability_classes:
+- value: read_only_evidence_producer
+  status: PROVISIONAL
+- value: evidence_aggregator
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- git_read
+- output_write
+- cache_write
+- temporary_write
+project_execution: Normally denied; may import Verification results or explicitly run safe conformance adapters.
+network: Denied by default; external document systems require explicit authorization.
+browser_execution: Not intrinsic.
+production_access: Prohibited.
+external_tool_candidates:
+- architecture test systems
+- policy-as-code engines
+- requirements/traceability tools
+- schema validators
+- UCA and Verification result importers
+durable_result: Conformance Bundle
+optional_upstream_results:
+- universal-code-audit
+- verification-assurance
+- api-contract-assurance
+downstream_consumers:
+- release-assurance
+- Octon decisions and acceptance reviews
+mature_target: A source-authority-aware traceability and conformance engine that maps requirements and decisions to code and
+  proof, supports architecture fitness checks, preserves conflicts and ambiguity, and produces revision-stable conformance
+  status.
+domain_threats:
+- malicious or stale specifications
+- prompt injection in documents
+- authority spoofing
+- ambiguous identifiers
+- outdated architecture diagrams
+- silent supersession
+evaluation_focus:
+- ground-truth traceability
+- ambiguity detection
+- false conformance rejection
+- authority-conflict preservation
+- coverage of declared requirements
+- stable mapping across refactors
+research_agenda:
+- requirements traceability
+- architecture conformance
+- policy-as-code
+- spec-to-code systems
+- ADR tooling
+- formal/semi-formal specifications
+- requirements authority models
+open_questions:
+- What sources may be declared authoritative?
+- How should natural-language requirement identity survive edits?
+- How should incompatible authorities be ordered without becoming a governance system?

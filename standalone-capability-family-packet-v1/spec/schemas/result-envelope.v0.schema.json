@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/standalone-capability/result-envelope.v0.schema.json",
+  "title": "Standalone Capability Result Envelope v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "result_id",
+    "capability",
+    "operation",
+    "subject",
+    "scope",
+    "permissions",
+    "completion",
+    "evidence_inventory",
+    "payloads",
+    "limitations",
+    "provenance",
+    "checksums"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "standalone-capability.result-envelope.v0"
+    },
+    "status": {
+      "const": "PROVISIONAL"
+    },
+    "result_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "content_id": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family_id",
+        "capability_id",
+        "version"
+      ],
+      "properties": {
+        "family_id": {
+          "const": "standalone-capability-family"
+        },
+        "capability_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "version": {
+          "type": "string"
+        },
+        "artifact_digest": {
+          "type": "string"
+        }
+      }
+    },
+    "operation": {
+      "type": "string"
+    },
+    "request_ref": {
+      "type": "string"
+    },
+    "plan_ref": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "identity"
+      ],
+      "properties": {
+        "identity": {
+          "type": "string"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "permissions": {
+      "$ref": "permission-set.v0.schema.json"
+    },
+    "execution_environment": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "completion": {
+      "$ref": "completion.v0.schema.json"
+    },
+    "evidence_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": [
+          "id",
+          "class"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "class": {
+            "enum": [
+              "deterministic_static",
+              "deterministic_contract",
+              "external_tool_deterministic",
+              "heuristic",
+              "historical",
+              "runtime_observed",
+              "imported_human",
+              "ai_interpretation",
+              "derived_fusion",
+              "absence_or_unavailability"
+            ]
+          }
+        }
+      }
+    },
+    "imported_results": {
+      "type": "array",
+      "items": {
+        "$ref": "result-reference.v0.schema.json"
+      }
+    },
+    "payloads": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "role",
+          "path",
+          "schema",
+          "sha256"
+        ],
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "schema": {
+            "type": "string"
+          },
+          "sha256": {
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "media_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "tool_versions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "timestamps": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "checksums": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    }
+  }
+}

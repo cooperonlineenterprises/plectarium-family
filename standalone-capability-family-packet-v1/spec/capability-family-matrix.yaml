@@ -1,0 +1,810 @@
+schema_version: standalone-capability-family-matrix.v1
+family_id: standalone-capability-family
+generated_date: '2026-08-31'
+capabilities:
+- id: universal-code-audit
+  product_name: Universal Code Audit
+  canonical_descriptive_name: Universal Code Audit
+  canonical_character_identity: Verity
+  working_cli:
+    value: uca
+    status: PROPOSED
+  repository:
+    name: verity
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/verity.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - uca-audit
+  - uca-simplify
+  status: ESTABLISHED REFERENCE IMPLEMENTATION
+  creation_priority: 1
+  governing_question: What appears risky, defective, inconsistent, costly, structurally unhealthy, unnecessarily complicated,
+    or safely removable in this codebase?
+  primary_subjects:
+  - source repository
+  - revision or working tree
+  - subsystem
+  - change set
+  - audit baseline
+  primary_evidence:
+  - structural observations
+  - history and co-change observations
+  - dependency and architecture graphs
+  - analyzer imports
+  - validated or rejected candidates
+  - runtime evidence imports
+  - reduction safety-floor evidence
+  capability_classes:
+  - value: read_only_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - git_read
+  - external_process_execution
+  - output_write
+  - cache_write
+  - temporary_write
+  project_execution: Denied by default; explicitly planned for selected test or runtime adapters.
+  network: Denied by default; may be granted to explicit adapters or providers.
+  browser_execution: Not intrinsic.
+  production_access: Prohibited.
+  likely_external_tools:
+  - Semgrep
+  - CodeQL
+  - OSV-Scanner
+  - Syft
+  - Trivy
+  - native compilers/linters
+  - coverage and mutation systems
+  - profilers as imported evidence
+  durable_result_type: UCA Audit Bundle
+  optional_upstream_results:
+  - runtime-investigation
+  - supply-chain-intelligence
+  - verification-assurance
+  downstream_consumers:
+  - release-assurance
+  - specification-conformance
+  - Octon Mini and other harnesses
+  mature_target: A production-grade, language-aware, local-first audit engine with CLI, CI, MCP, OCI, durable evidence, stable
+    comparison, deep Rust/Python support, useful TypeScript/JavaScript and Go support, selected mature adapters, and two evaluated
+    Agent Skills.
+  evaluation_focus:
+  - top-k finding precision
+  - candidate rejection quality
+  - stable fingerprints
+  - truthful partial completion
+  - read-only proof
+  - reduction safety-floor preservation
+  known_open_questions:
+  - How should UCA project licensing be finalized?
+  - Which exact language-pack depth is mandatory for release?
+  - Which external adapters qualify as stable v1 dependencies?
+- id: verification-assurance
+  product_name: Verification Assurance
+  canonical_descriptive_name: Implementation and Behavior Verification Assurance
+  canonical_character_identity: Titra
+  working_cli:
+    value: verify-assurance
+    status: PROPOSED
+  repository:
+    name: titra
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/titra.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - verification-assurance
+  status: PROJECT SEED
+  creation_priority: 2
+  governing_question: What evidence demonstrates that this implementation, change, behavior, or system actually works as claimed?
+  primary_subjects:
+  - implementation claim
+  - change set
+  - behavior or invariant
+  - build artifact
+  - scenario
+  - system version
+  primary_evidence:
+  - compiler/type-check evidence
+  - unit/integration/acceptance results
+  - property-based results
+  - mutation outcomes
+  - fuzz reproductions
+  - contract checks
+  - runtime assertions
+  - scenario replay
+  - benchmark budget observations
+  capability_classes:
+  - value: execution_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - git_read
+  - project_execution
+  - external_process_execution
+  - output_write
+  - cache_write
+  - temporary_write
+  project_execution: Core capability; every command and environment must be explicit in the plan.
+  network: Denied by default; selectively allowed for integration environments or external services.
+  browser_execution: Optional through delegated UI Assurance or a scoped browser adapter.
+  production_access: Prohibited by default; production observations should normally be imported rather than generated.
+  likely_external_tools:
+  - native compilers and test runners
+  - Stryker
+  - PIT
+  - cargo-mutants
+  - Hypothesis/QuickCheck-style tools
+  - fuzzers
+  - coverage tools
+  - test-impact analysis tools
+  durable_result_type: Verification Bundle
+  optional_upstream_results:
+  - api-contract-assurance
+  - ui-browser-assurance
+  - runtime-investigation
+  downstream_consumers:
+  - specification-conformance
+  - release-assurance
+  - UCA candidate validation
+  - Octon task validation
+  mature_target: A claim-centered verification engine that can plan and execute proof portfolios across major languages, preserve
+    negative and missing evidence, quantify exercised scope, detect test weakness through mutation/property methods, and provide
+    stable claim status across revisions.
+  evaluation_focus:
+  - known-claim support/contradiction recall
+  - false proof rejection
+  - mutation sensitivity
+  - flaky-test handling
+  - scope honesty
+  - claim-to-evidence traceability
+  known_open_questions:
+  - What minimum claim language is expressive without becoming a formal-methods DSL?
+  - How should mutation-equivalent cases be represented?
+  - When may imported CI results count as fresh verification?
+- id: specification-conformance
+  product_name: Specification Conformance
+  canonical_descriptive_name: Specification, Requirement, and Architecture Conformance
+  canonical_character_identity: Ortha
+  working_cli:
+    value: spec-conformance
+    status: PROPOSED
+  repository:
+    name: ortha
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/ortha.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - specification-conformance
+  status: PROJECT SEED
+  creation_priority: 3
+  governing_question: Does the implementation actually conform to the intended requirements, architecture, decisions, contracts,
+    and acceptance criteria?
+  primary_subjects:
+  - requirements corpus
+  - ADRs
+  - architecture rules
+  - policies
+  - acceptance criteria
+  - implementation revision
+  - verification results
+  primary_evidence:
+  - specification excerpts with identity
+  - implementation mappings
+  - architecture-rule results
+  - verification imports
+  - unimplemented obligation evidence
+  - ambiguity/conflict records
+  - supersession lineage
+  capability_classes:
+  - value: read_only_evidence_producer
+    status: PROVISIONAL
+  - value: evidence_aggregator
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - git_read
+  - output_write
+  - cache_write
+  - temporary_write
+  project_execution: Normally denied; may import Verification results or explicitly run safe conformance adapters.
+  network: Denied by default; external document systems require explicit authorization.
+  browser_execution: Not intrinsic.
+  production_access: Prohibited.
+  likely_external_tools:
+  - architecture test systems
+  - policy-as-code engines
+  - requirements/traceability tools
+  - schema validators
+  - UCA and Verification result importers
+  durable_result_type: Conformance Bundle
+  optional_upstream_results:
+  - universal-code-audit
+  - verification-assurance
+  - api-contract-assurance
+  downstream_consumers:
+  - release-assurance
+  - Octon decisions and acceptance reviews
+  mature_target: A source-authority-aware traceability and conformance engine that maps requirements and decisions to code
+    and proof, supports architecture fitness checks, preserves conflicts and ambiguity, and produces revision-stable conformance
+    status.
+  evaluation_focus:
+  - ground-truth traceability
+  - ambiguity detection
+  - false conformance rejection
+  - authority-conflict preservation
+  - coverage of declared requirements
+  - stable mapping across refactors
+  known_open_questions:
+  - What sources may be declared authoritative?
+  - How should natural-language requirement identity survive edits?
+  - How should incompatible authorities be ordered without becoming a governance system?
+- id: supply-chain-intelligence
+  product_name: Supply-Chain Intelligence
+  canonical_descriptive_name: Software Supply-Chain and Dependency Intelligence
+  canonical_character_identity: Genea
+  working_cli:
+    value: supply-chain-intel
+    status: PROPOSED
+  repository:
+    name: genea
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/genea.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - supply-chain-intelligence
+  status: PROJECT SEED
+  creation_priority: 4
+  governing_question: What external software, artifacts, build inputs, dependencies, and supply-chain risks does this project
+    actually carry?
+  primary_subjects:
+  - repository and lockfiles
+  - SBOM
+  - container image
+  - release artifact
+  - build provenance
+  - dependency graph
+  primary_evidence:
+  - component inventory
+  - dependency paths
+  - advisories
+  - reachability/exposure context when supportable
+  - license declarations
+  - maintainer/lifecycle signals
+  - signatures and attestations
+  - registry/package origin
+  capability_classes:
+  - value: read_only_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - external_process_execution
+  - output_write
+  - cache_write
+  - temporary_write
+  project_execution: Normally denied; build-generated inventories require explicit execution.
+  network: Often useful but denied by default; offline databases and pinned metadata are first-class.
+  browser_execution: Not intrinsic.
+  production_access: No production mutation or registry publishing.
+  likely_external_tools:
+  - Syft
+  - Grype
+  - OSV-Scanner
+  - Trivy
+  - OpenSSF Scorecard
+  - Sigstore/Cosign
+  - SLSA tooling
+  - CycloneDX
+  - SPDX
+  - package-manager metadata
+  durable_result_type: Supply-Chain Intelligence Bundle
+  optional_upstream_results:
+  - universal-code-audit
+  downstream_consumers:
+  - release-assurance
+  - infrastructure-assurance
+  - UCA dependency-health lens
+  mature_target: A multi-ecosystem component and provenance intelligence engine with interoperable SBOM support, contextual
+    vulnerability prioritization, offline operation, signed evidence, lifecycle and license analysis, and stable comparison
+    across releases.
+  evaluation_focus:
+  - inventory precision/recall
+  - dependency-path accuracy
+  - advisory correlation
+  - offline reproducibility
+  - signature/provenance validation
+  - false exploitability claims
+  known_open_questions:
+  - What reachability claims are portable enough to normalize?
+  - How should mutable advisory databases affect result identity and freshness?
+  - What license-analysis conclusions remain informational versus legal-review required?
+- id: runtime-investigation
+  product_name: Runtime Investigation
+  canonical_descriptive_name: Runtime Behavior and Performance Investigation
+  canonical_character_identity: Echo
+  working_cli:
+    value: runtime-investigate
+    status: PROPOSED
+  repository:
+    name: echo
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/echo.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - runtime-investigation
+  status: PROJECT SEED
+  creation_priority: 5
+  governing_question: What is this system actually doing while it runs, and what evidence explains the observed behavior?
+  primary_subjects:
+  - running process
+  - service
+  - benchmark workload
+  - trace window
+  - profile
+  - incident scenario
+  - runtime environment
+  primary_evidence:
+  - CPU profiles
+  - allocation and heap profiles
+  - traces
+  - logs
+  - metrics
+  - I/O and network observations
+  - query plans
+  - lock/contention observations
+  - race-detector results
+  - fault-injection outcomes
+  capability_classes:
+  - value: execution_evidence_producer
+    status: PROVISIONAL
+  - value: controlled_environment_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - project_execution
+  - external_process_execution
+  - network
+  - output_write
+  - cache_write
+  - temporary_write
+  - credential_access
+  project_execution: Central; explicit workload, command, environment, resource, and stop conditions are mandatory.
+  network: Denied by default; may be required for distributed systems or telemetry endpoints.
+  browser_execution: Optional for browser/runtime investigations, preferably delegated to UI Assurance.
+  production_access: Read-only production observation may be supported only by explicit high-assurance policy; mutation is
+    prohibited.
+  likely_external_tools:
+  - OpenTelemetry
+  - pprof
+  - perf/eBPF tools
+  - runtime-specific profilers
+  - database query analyzers
+  - race detectors
+  - continuous profiling imports
+  durable_result_type: Runtime Investigation Bundle
+  optional_upstream_results:
+  - universal-code-audit
+  - verification-assurance
+  downstream_consumers:
+  - universal-code-audit
+  - verification-assurance
+  - api-contract-assurance
+  - release-assurance
+  mature_target: A workload- and environment-bound investigation engine that can import and collect multi-signal telemetry,
+    correlate runtime evidence to code and operations, test causal hypotheses, compare investigations, and preserve uncertainty.
+  evaluation_focus:
+  - known bottleneck identification
+  - causal-hypothesis rejection
+  - workload completeness honesty
+  - overhead measurement
+  - trace/profile correlation
+  - resource and credential isolation
+  known_open_questions:
+  - What production-read access classes are supportable?
+  - How should telemetry sampling affect confidence?
+  - Which collection agents can be trusted and versioned portably?
+- id: api-contract-assurance
+  product_name: API / Contract Assurance
+  canonical_descriptive_name: API, Protocol, and Contract Compatibility Assurance
+  canonical_character_identity: Harmia
+  working_cli:
+    value: contract-assure
+    status: PROPOSED
+  repository:
+    name: harmia
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/harmia.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - api-contract-assurance
+  status: PROJECT SEED
+  creation_priority: 6
+  governing_question: Are interfaces, protocols, consumers, providers, schemas, and service boundaries behaviorally and evolutionarily
+    compatible?
+  primary_subjects:
+  - API schema
+  - consumer contract
+  - provider implementation
+  - event schema
+  - SDK surface
+  - protocol version
+  - interface change
+  primary_evidence:
+  - schema diffs
+  - consumer/provider verification
+  - generated API tests
+  - stateful workflow results
+  - compatibility-tool reports
+  - observed behavior samples
+  - version-policy rules
+  capability_classes:
+  - value: execution_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - project_execution
+  - external_process_execution
+  - network
+  - output_write
+  - cache_write
+  - temporary_write
+  project_execution: Often required for provider verification or API testing; explicitly planned.
+  network: Denied by default; local or isolated endpoints preferred.
+  browser_execution: Not intrinsic, though UI-facing API flows may coordinate with UI Assurance.
+  production_access: Production traffic mutation prohibited; read-only schema imports require policy.
+  likely_external_tools:
+  - Schemathesis
+  - Pact
+  - OpenAPI/GraphQL/protobuf diff tools
+  - JSON Schema validators
+  - AsyncAPI tooling
+  - language-native API compatibility tools
+  durable_result_type: Contract Assurance Bundle
+  optional_upstream_results:
+  - verification-assurance
+  - runtime-investigation
+  - specification-conformance
+  downstream_consumers:
+  - release-assurance
+  - specification-conformance
+  - verification-assurance
+  mature_target: A protocol-agnostic compatibility engine that combines static schema analysis with consumer/provider and
+    stateful behavioral evidence, supports compatibility windows, and produces stable contract conclusions across releases.
+  evaluation_focus:
+  - known breaking-change detection
+  - non-breaking near-miss rejection
+  - consumer/provider mismatch recall
+  - stateful bug detection
+  - safe endpoint isolation
+  - version-policy fidelity
+  known_open_questions:
+  - How should semantic compatibility be represented across protocol families?
+  - When can observed clients establish a supported compatibility contract?
+  - How should nondeterministic API behavior be verified?
+- id: ui-browser-assurance
+  product_name: UI / Browser Assurance
+  canonical_descriptive_name: User Interface and Browser Experience Assurance
+  canonical_character_identity: Iris
+  working_cli:
+    value: ui-assure
+    status: PROPOSED
+  repository:
+    name: iris
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/iris.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - ui-browser-assurance
+  status: PROJECT SEED
+  creation_priority: 7
+  governing_question: Does the delivered user experience actually function correctly across the declared browser and UI scope?
+  primary_subjects:
+  - web application
+  - browser journey
+  - page/component
+  - declared browser matrix
+  - visual baseline
+  - accessibility scope
+  primary_evidence:
+  - journey outcomes
+  - screenshots and videos
+  - Playwright traces
+  - DOM/accessibility-tree observations
+  - axe results
+  - console/network errors
+  - visual diffs
+  - Core Web Vitals and Lighthouse evidence
+  capability_classes:
+  - value: controlled_environment_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - project_execution
+  - external_process_execution
+  - network
+  - browser_execution
+  - output_write
+  - cache_write
+  - temporary_write
+  - credential_access
+  project_execution: Often required to start a local application; every command must be planned.
+  network: Denied by default; explicit origin allowlists and isolated test environments required.
+  browser_execution: Core permission; browser profile, origins, storage, downloads, and outbound requests must be bounded.
+  production_access: Production interaction disabled by default; read-only smoke checks require explicit authorization.
+  likely_external_tools:
+  - Playwright
+  - axe-core
+  - Lighthouse/Lighthouse CI
+  - visual-diff engines
+  - browser trace tooling
+  durable_result_type: UI Assurance Bundle
+  optional_upstream_results:
+  - api-contract-assurance
+  - verification-assurance
+  downstream_consumers:
+  - release-assurance
+  - verification-assurance
+  - specification-conformance
+  mature_target: A reproducible multi-browser assurance engine with isolated sessions, journey plans, accessibility and performance
+    checks, visual evidence, stable baselines, rich traces, and strict origin/credential controls.
+  evaluation_focus:
+  - known journey failures
+  - accessibility near-misses
+  - visual baseline stability
+  - cross-browser variance
+  - origin/network containment
+  - secret and session isolation
+  known_open_questions:
+  - How should visual-diff tolerance be standardized?
+  - What production smoke-test class is acceptable?
+  - How should authenticated test credentials be brokered and redacted?
+- id: database-migration-assurance
+  product_name: Database / Migration Assurance
+  canonical_descriptive_name: Database Schema and Data Migration Assurance
+  canonical_character_identity: Janus
+  working_cli:
+    value: migration-assure
+    status: PROPOSED
+  repository:
+    name: janus
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/janus.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - database-migration-assurance
+  status: PROJECT SEED
+  creation_priority: 8
+  governing_question: Can this schema or data migration be deployed safely under the declared operational conditions?
+  primary_subjects:
+  - migration files
+  - schema diff
+  - database model
+  - backfill plan
+  - application versions
+  - deployment topology
+  - representative database
+  primary_evidence:
+  - schema diffs
+  - destructive changes
+  - lock/rewrite estimates
+  - compatibility checks
+  - dry-run results
+  - backfill behavior
+  - rollback analysis
+  - data-integrity checks
+  - traffic and version assumptions
+  capability_classes:
+  - value: execution_evidence_producer
+    status: PROVISIONAL
+  - value: controlled_environment_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - project_execution
+  - external_process_execution
+  - database_read
+  - output_write
+  - cache_write
+  - temporary_write
+  - credential_access
+  project_execution: Often required in an ephemeral or replica database; commands and data sources must be explicit.
+  network: Denied by default; database access requires explicit endpoint and credential authority.
+  browser_execution: Not intrinsic.
+  production_access: Production database write is prohibited; read-only production metadata is exceptional and explicit.
+  likely_external_tools:
+  - Ariga Atlas migration linting
+  - Liquibase/Flyway ecosystem imports
+  - gh-ost
+  - pt-online-schema-change
+  - database-native explain/lock tools
+  - ORM migration analyzers
+  durable_result_type: Migration Assurance Bundle
+  optional_upstream_results:
+  - verification-assurance
+  - runtime-investigation
+  - specification-conformance
+  downstream_consumers:
+  - release-assurance
+  - Octon migration decision
+  mature_target: A database-aware migration assurance engine with dialect-specific adapters, staged-rollout modeling, application-version
+    compatibility, dry-run and representative-data evidence, data-loss protections, and no production mutation authority.
+  evaluation_focus:
+  - known unsafe migrations
+  - safe near-misses
+  - locking/rewrite prediction
+  - rolling-version compatibility
+  - data-integrity preservation
+  - no-production-write proof
+  known_open_questions:
+  - Which database dialects define mature v1?
+  - How can lock/rewrite risk be calibrated without production execution?
+  - What sanitized data fixtures are sufficient for backfill validation?
+- id: infrastructure-assurance
+  product_name: Infrastructure Assurance
+  canonical_descriptive_name: Infrastructure-as-Code and Configuration Assurance
+  canonical_character_identity: Atlas
+  working_cli:
+    value: infra-assure
+    status: PROPOSED
+  repository:
+    name: atlas
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/atlas.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - infrastructure-assurance
+  status: PROJECT SEED
+  creation_priority: 9
+  governing_question: Is this infrastructure or configuration change coherent, secure, compatible, and sufficiently understood
+    before application?
+  primary_subjects:
+  - Terraform/OpenTofu plan
+  - Kubernetes manifests
+  - Helm chart
+  - IAM policy
+  - container/deployment configuration
+  - cloud policy
+  - infrastructure diff
+  primary_evidence:
+  - plan changes
+  - resource graph
+  - privilege deltas
+  - exposure changes
+  - destructive/replacement operations
+  - policy results
+  - drift indicators
+  - rollback and cost indicators
+  capability_classes:
+  - value: read_only_evidence_producer
+    status: PROVISIONAL
+  - value: controlled_environment_evidence_producer
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - external_process_execution
+  - infrastructure_read
+  - output_write
+  - cache_write
+  - temporary_write
+  project_execution: Plan generation may execute providers or configuration; explicit controlled environment required.
+  network: Denied by default; provider/schema access or read-only cloud queries require explicit authorization.
+  browser_execution: Not intrinsic.
+  production_access: Infrastructure apply and mutation strictly prohibited.
+  likely_external_tools:
+  - OpenTofu/Terraform plan
+  - OPA
+  - Checkov
+  - Trivy config
+  - Kubernetes validators
+  - IAM analyzers
+  - cloud policy tools
+  durable_result_type: Infrastructure Assurance Bundle
+  optional_upstream_results:
+  - supply-chain-intelligence
+  - specification-conformance
+  downstream_consumers:
+  - release-assurance
+  - Octon infrastructure decision
+  mature_target: A multi-format infrastructure assurance engine that safely parses or generates plans, models resource and
+    privilege change, integrates policy tools, detects destructive/exposure changes, and operates without apply authority.
+  evaluation_focus:
+  - known destructive plans
+  - near-miss safe changes
+  - privilege-delta accuracy
+  - state/secret redaction
+  - no-apply proof
+  - provider/network isolation
+  known_open_questions:
+  - When is live read-only cloud state required?
+  - How should provider execution be isolated?
+  - How should cost estimates be represented without false precision?
+- id: release-assurance
+  product_name: Release Assurance
+  canonical_descriptive_name: Release Candidate Evidence and Readiness Assurance
+  canonical_character_identity: Sibyl
+  working_cli:
+    value: release-assure
+    status: PROPOSED
+  repository:
+    name: sibyl
+    owner: cooperonlineenterprises
+    url: https://github.com/cooperonlineenterprises/sibyl.git
+    default_branch: main
+    status: ESTABLISHED
+  primary_agent_skills:
+  - release-assurance
+  status: PROJECT SEED — LATE FAMILY CONSUMER
+  creation_priority: 10
+  governing_question: Does this exact release candidate possess sufficient evidence to satisfy the declared release-readiness
+    criteria?
+  primary_subjects:
+  - release candidate artifact
+  - source revision
+  - release policy
+  - set of capability results
+  - SBOM/provenance
+  - deployment or migration plan
+  primary_evidence:
+  - UCA results
+  - Verification Bundles
+  - Conformance Bundles
+  - Supply-Chain Bundles
+  - Contract/UI/Migration/Infrastructure results
+  - artifact identity
+  - SBOM
+  - provenance
+  - release policy
+  capability_classes:
+  - value: evidence_aggregator
+    status: PROVISIONAL
+  permissions:
+  - repository_read
+  - output_write
+  - cache_write
+  - temporary_write
+  project_execution: Normally not required; it should request missing specialist evidence rather than reimplement execution.
+  network: Denied by default; artifact registry verification may be explicitly authorized.
+  browser_execution: Not intrinsic.
+  production_access: Publication and deployment authority prohibited.
+  likely_external_tools:
+  - result-bundle verifiers
+  - signature/provenance validators
+  - artifact identity tools
+  - policy evaluators
+  durable_result_type: Release Assurance Bundle
+  optional_upstream_results:
+  - universal-code-audit
+  - verification-assurance
+  - specification-conformance
+  - supply-chain-intelligence
+  - api-contract-assurance
+  - ui-browser-assurance
+  - database-migration-assurance
+  - infrastructure-assurance
+  downstream_consumers:
+  - Octon release decision
+  - human release review
+  - CI release gate
+  mature_target: A policy-driven, artifact-bound aggregator that verifies upstream result identity, schema compatibility,
+    completion, freshness, and provenance; explains unmet criteria and exceptions; and remains unable to publish or deploy.
+  evaluation_focus:
+  - known ready/not-ready cases
+  - stale-result rejection
+  - scope incompatibility detection
+  - upstream provenance preservation
+  - exception handling
+  - no-publication authority tests
+  known_open_questions:
+  - What minimum interoperability conventions must upstream bundles share?
+  - How should organization-specific release policy be expressed without building a universal policy engine?
+  - When is a ready-with-exceptions state permissible?

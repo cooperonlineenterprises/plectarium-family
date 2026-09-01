@@ -1,0 +1,128 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: ui-browser-assurance
+product_name: UI / Browser Assurance
+canonical_descriptive_name: User Interface and Browser Experience Assurance
+canonical_character_identity: Iris
+status: PROJECT SEED
+creation_priority: 7
+working_cli:
+  value: ui-assure
+  status: PROPOSED
+repository:
+  name: iris
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/iris.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: ui-browser-assurance
+  status: PROPOSED
+governing_question: Does the delivered user experience actually function correctly across the declared browser and UI scope?
+purpose: Execute controlled browser journeys and inspect functional, accessibility, visual, console, network, responsive,
+  performance, and compatibility evidence in isolated browser environments.
+subjects:
+- web application
+- browser journey
+- page/component
+- declared browser matrix
+- visual baseline
+- accessibility scope
+owns:
+- browser-environment planning
+- journey identity
+- controlled browser execution
+- screenshots/traces/DOM evidence
+- accessibility and visual evidence
+- UI Assurance Bundle
+does_not_own:
+- unrestricted web browsing for agents
+- production data mutation
+- automatic UI fixes
+- product design authority
+- deployment
+primary_evidence:
+- journey outcomes
+- screenshots and videos
+- Playwright traces
+- DOM/accessibility-tree observations
+- axe results
+- console/network errors
+- visual diffs
+- Core Web Vitals and Lighthouse evidence
+conclusion_states:
+- journey_passed
+- journey_failed
+- accessibility_violation
+- visual_regression
+- browser_incompatibility
+- performance_budget_failed
+- incomplete
+capability_classes:
+- value: controlled_environment_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- project_execution
+- external_process_execution
+- network
+- browser_execution
+- output_write
+- cache_write
+- temporary_write
+- credential_access
+project_execution: Often required to start a local application; every command must be planned.
+network: Denied by default; explicit origin allowlists and isolated test environments required.
+browser_execution: Core permission; browser profile, origins, storage, downloads, and outbound requests must be bounded.
+production_access: Production interaction disabled by default; read-only smoke checks require explicit authorization.
+external_tool_candidates:
+- Playwright
+- axe-core
+- Lighthouse/Lighthouse CI
+- visual-diff engines
+- browser trace tooling
+durable_result: UI Assurance Bundle
+optional_upstream_results:
+- api-contract-assurance
+- verification-assurance
+downstream_consumers:
+- release-assurance
+- verification-assurance
+- specification-conformance
+mature_target: A reproducible multi-browser assurance engine with isolated sessions, journey plans, accessibility and performance
+  checks, visual evidence, stable baselines, rich traces, and strict origin/credential controls.
+domain_threats:
+- malicious web content
+- browser escape
+- credential/session leakage
+- untrusted downloads
+- external communication
+- production data changes
+- visual-baseline poisoning
+evaluation_focus:
+- known journey failures
+- accessibility near-misses
+- visual baseline stability
+- cross-browser variance
+- origin/network containment
+- secret and session isolation
+research_agenda:
+- Playwright
+- axe-core
+- Lighthouse
+- visual regression systems
+- browser tracing
+- accessibility evaluation
+- secure browser containers
+open_questions:
+- How should visual-diff tolerance be standardized?
+- What production smoke-test class is acceptable?
+- How should authenticated test credentials be brokered and redacted?

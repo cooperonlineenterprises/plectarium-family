@@ -1,0 +1,131 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: infrastructure-assurance
+product_name: Infrastructure Assurance
+canonical_descriptive_name: Infrastructure-as-Code and Configuration Assurance
+canonical_character_identity: Atlas
+status: PROJECT SEED
+creation_priority: 9
+working_cli:
+  value: infra-assure
+  status: PROPOSED
+repository:
+  name: atlas
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/atlas.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: infrastructure-assurance
+  status: PROPOSED
+governing_question: Is this infrastructure or configuration change coherent, secure, compatible, and sufficiently understood
+  before application?
+purpose: Analyze infrastructure definitions and plans for destructive changes, privilege expansion, exposure, drift, policy
+  violations, replacement, rollback, and cost-impact signals without applying changes.
+subjects:
+- Terraform/OpenTofu plan
+- Kubernetes manifests
+- Helm chart
+- IAM policy
+- container/deployment configuration
+- cloud policy
+- infrastructure diff
+owns:
+- infrastructure subject identity
+- plan/config parsing
+- change-impact model
+- policy and graph evidence
+- simulation/import orchestration
+- Infrastructure Assurance Bundle
+does_not_own:
+- infrastructure apply
+- production credentials by default
+- cloud resource mutation
+- deployment authority
+- organization policy governance
+primary_evidence:
+- plan changes
+- resource graph
+- privilege deltas
+- exposure changes
+- destructive/replacement operations
+- policy results
+- drift indicators
+- rollback and cost indicators
+conclusion_states:
+- coherent
+- coherent_with_conditions
+- policy_violation
+- destructive_change
+- privilege_expansion
+- exposure_change
+- high_risk
+- incomplete
+capability_classes:
+- value: read_only_evidence_producer
+  status: PROVISIONAL
+- value: controlled_environment_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- external_process_execution
+- infrastructure_read
+- output_write
+- cache_write
+- temporary_write
+project_execution: Plan generation may execute providers or configuration; explicit controlled environment required.
+network: Denied by default; provider/schema access or read-only cloud queries require explicit authorization.
+browser_execution: Not intrinsic.
+production_access: Infrastructure apply and mutation strictly prohibited.
+external_tool_candidates:
+- OpenTofu/Terraform plan
+- OPA
+- Checkov
+- Trivy config
+- Kubernetes validators
+- IAM analyzers
+- cloud policy tools
+durable_result: Infrastructure Assurance Bundle
+optional_upstream_results:
+- supply-chain-intelligence
+- specification-conformance
+downstream_consumers:
+- release-assurance
+- Octon infrastructure decision
+mature_target: A multi-format infrastructure assurance engine that safely parses or generates plans, models resource and privilege
+  change, integrates policy tools, detects destructive/exposure changes, and operates without apply authority.
+domain_threats:
+- provider code execution
+- cloud credential theft
+- state-file secrets
+- plan manipulation
+- destructive apply confusion
+- remote-state access
+- untrusted custom policies
+evaluation_focus:
+- known destructive plans
+- near-miss safe changes
+- privilege-delta accuracy
+- state/secret redaction
+- no-apply proof
+- provider/network isolation
+research_agenda:
+- OpenTofu/Terraform planning
+- OPA/Rego
+- Checkov
+- Trivy config
+- Kubernetes validation
+- IAM analysis
+- infrastructure drift and cost analysis
+open_questions:
+- When is live read-only cloud state required?
+- How should provider execution be isolated?
+- How should cost estimates be represented without false precision?

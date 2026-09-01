@@ -1,0 +1,127 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: api-contract-assurance
+product_name: API / Contract Assurance
+canonical_descriptive_name: API, Protocol, and Contract Compatibility Assurance
+canonical_character_identity: Harmia
+status: PROJECT SEED
+creation_priority: 6
+working_cli:
+  value: contract-assure
+  status: PROPOSED
+repository:
+  name: harmia
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/harmia.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: api-contract-assurance
+  status: PROPOSED
+governing_question: Are interfaces, protocols, consumers, providers, schemas, and service boundaries behaviorally and evolutionarily
+  compatible?
+purpose: Assess declared and observed interface compatibility across schema changes, consumer/provider expectations, stateful
+  workflows, version policies, and behavior evidence.
+subjects:
+- API schema
+- consumer contract
+- provider implementation
+- event schema
+- SDK surface
+- protocol version
+- interface change
+owns:
+- contract identity
+- schema and semantic diff
+- consumer/provider compatibility plan
+- stateful/API property testing
+- version-policy conformance
+- Contract Assurance Bundle
+does_not_own:
+- service deployment
+- production traffic mutation
+- general product requirements
+- automatic API versioning decisions
+primary_evidence:
+- schema diffs
+- consumer/provider verification
+- generated API tests
+- stateful workflow results
+- compatibility-tool reports
+- observed behavior samples
+- version-policy rules
+conclusion_states:
+- compatible
+- compatible_with_conditions
+- breaking_change
+- behavioral_mismatch
+- undeclared_behavior
+- unverified
+- incomplete
+capability_classes:
+- value: execution_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- project_execution
+- external_process_execution
+- network
+- output_write
+- cache_write
+- temporary_write
+project_execution: Often required for provider verification or API testing; explicitly planned.
+network: Denied by default; local or isolated endpoints preferred.
+browser_execution: Not intrinsic, though UI-facing API flows may coordinate with UI Assurance.
+production_access: Production traffic mutation prohibited; read-only schema imports require policy.
+external_tool_candidates:
+- Schemathesis
+- Pact
+- OpenAPI/GraphQL/protobuf diff tools
+- JSON Schema validators
+- AsyncAPI tooling
+- language-native API compatibility tools
+durable_result: Contract Assurance Bundle
+optional_upstream_results:
+- verification-assurance
+- runtime-investigation
+- specification-conformance
+downstream_consumers:
+- release-assurance
+- specification-conformance
+- verification-assurance
+mature_target: A protocol-agnostic compatibility engine that combines static schema analysis with consumer/provider and stateful
+  behavioral evidence, supports compatibility windows, and produces stable contract conclusions across releases.
+domain_threats:
+- unsafe API fuzzing
+- production endpoint targeting
+- credential leakage
+- schema poisoning
+- consumer data exposure
+- false compatibility from schema-only checks
+evaluation_focus:
+- known breaking-change detection
+- non-breaking near-miss rejection
+- consumer/provider mismatch recall
+- stateful bug detection
+- safe endpoint isolation
+- version-policy fidelity
+research_agenda:
+- Schemathesis
+- Pact
+- OpenAPI diff systems
+- GraphQL compatibility
+- protobuf compatibility
+- AsyncAPI/event compatibility
+- SDK/API evolution tools
+open_questions:
+- How should semantic compatibility be represented across protocol families?
+- When can observed clients establish a supported compatibility contract?
+- How should nondeterministic API behavior be verified?

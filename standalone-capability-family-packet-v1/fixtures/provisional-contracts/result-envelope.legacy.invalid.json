@@ -1,0 +1,38 @@
+{
+  "schema_version": "standalone-capability.result-envelope.v0",
+  "status": "PROVISIONAL",
+  "result_id": "legacy-result-0001",
+  "capability": {
+    "id": "verification-assurance",
+    "version": "0.0.0-legacy"
+  },
+  "operation": "inspect",
+  "subject": {
+    "identity": "fixture:subject:legacy"
+  },
+  "scope": {},
+  "permissions": {
+    "schema_version": "standalone-capability.permission-set.v0",
+    "requested": [],
+    "accepted": [],
+    "denied": []
+  },
+  "completion": {
+    "schema_version": "standalone-capability.completion.v0",
+    "status": "complete",
+    "nodes": [],
+    "limitations": []
+  },
+  "evidence_inventory": [],
+  "payloads": [
+    {
+      "role": "fixture",
+      "path": "payloads/fixture.json",
+      "schema": "example.invalid/fixture.schema.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "limitations": [],
+  "provenance": {},
+  "checksums": {}
+}

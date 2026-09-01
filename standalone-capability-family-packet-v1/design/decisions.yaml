@@ -1,0 +1,191 @@
+schema_version: standalone-capability-family-decision-ledger.v1
+generated_date: '2026-08-31'
+decisions:
+- id: FAM-001
+  status: ESTABLISHED
+  title: Standalone specialist capability boundary
+  decision: Heavy domain intelligence is implemented in independently versioned capabilities rather than accumulated inside
+    Octon Mini.
+- id: FAM-002
+  status: ESTABLISHED
+  title: Harness-agnostic core
+  decision: No capability core may require Octon Mini or another agent harness.
+- id: FAM-003
+  status: ESTABLISHED
+  title: One authoritative engine per capability
+  decision: CLI, CI, MCP, OCI, Agent Skills, harness adapters, and future HTTP must not create divergent semantic engines.
+- id: FAM-004
+  status: ESTABLISHED
+  title: Evidence is not authority
+  decision: Capability results never authorize repository, production, publication, deployment, database, infrastructure,
+    or project actions.
+- id: FAM-005
+  status: ESTABLISHED
+  title: Explicit permissions and effects
+  decision: Capabilities declare execution, network, credential, write, and controlled-resource requirements before use.
+- id: FAM-006
+  status: ESTABLISHED
+  title: No hidden installation or network
+  decision: Capabilities do not silently install specialist tools or enable network access.
+- id: FAM-007
+  status: ESTABLISHED
+  title: Truthful completion
+  decision: Unavailable, denied, stale, unsupported, failed, timed-out, or partial work cannot appear complete or passed.
+- id: FAM-008
+  status: ESTABLISHED
+  title: Agent Skills orchestrate engines
+  decision: Skills teach intent routing, invocation, completion inspection, interpretation, and handoff; they do not implement
+    domain intelligence.
+- id: FAM-009
+  status: ACCEPTED
+  title: Durable result per capability
+  decision: Every material capability produces an inspectable, provenance-aware durable result artifact.
+- id: FAM-010
+  status: PROVISIONAL
+  title: Shared result envelope v0
+  decision: A small common envelope carries capability identity, subject, permission, completion, provenance, and payload
+    references; domain payloads remain capability-specific.
+- id: FAM-011
+  status: PROVISIONAL
+  title: Standalone capability manifest v0
+  decision: A shared discovery manifest is defined for experimentation and is not yet a stable universal standard.
+- id: FAM-012
+  status: PROVISIONAL
+  title: Shared permission vocabulary
+  decision: The family uses a common permission vocabulary while allowing capability-specific refinements through explicit
+    extension.
+- id: FAM-013
+  status: PROVISIONAL
+  title: Shared lifecycle convention
+  decision: Discover, plan, permission review, execute/analyze, evidence, completion, durable result, inspect/compare is a
+    reference lifecycle rather than a mandatory identical workflow.
+- id: FAM-014
+  status: PROVISIONAL
+  title: Capability classes
+  decision: Four descriptive classes are used for seed comparison but are not yet a stabilized taxonomy.
+- id: FAM-015
+  status: ESTABLISHED
+  title: External specialist tool preference
+  decision: Capabilities integrate mature specialist tools through explicit adapters when ownership would not create differentiated
+    value.
+- id: FAM-016
+  status: ACCEPTED
+  title: Out-of-process or OCI adapter boundary
+  decision: Specialist adapters should normally run out of process or in OCI rather than as arbitrary in-process plugins.
+- id: FAM-017
+  status: ESTABLISHED
+  title: AI is optional evidence and interpretation
+  decision: AI may reason over evidence but does not become project authority, execution authority, or the sole engine.
+- id: FAM-018
+  status: ESTABLISHED
+  title: Imported evidence preserves provenance
+  decision: Cross-capability evidence retains source capability/version/result/completion/class/limitations and does not silently
+    become native evidence.
+- id: FAM-019
+  status: ESTABLISHED
+  title: No mandatory capability dependency cycles
+  decision: Family relationships are optional evidence or aggregation unless a capability constitution explicitly establishes
+    a hard dependency.
+- id: FAM-020
+  status: ESTABLISHED
+  title: UCA is reference implementation, not universal mold
+  decision: UCA proves the first pattern but its code-audit semantics are not assumed universal.
+- id: FAM-021
+  status: ESTABLISHED
+  title: No universal capability framework yet
+  decision: Shared runtime/framework/SDK extraction is deferred until at least three real capabilities demonstrate stable
+    common needs.
+- id: FAM-022
+  status: ACCEPTED
+  title: Verification Assurance is capability two
+  decision: Verification tests whether the outer lifecycle and execution evidence model survive beyond UCA.
+- id: FAM-023
+  status: ACCEPTED
+  title: Specification Conformance is capability three
+  decision: Conformance tests aggregation, traceability, authority conflict, and imported evidence after UCA and Verification.
+- id: FAM-024
+  status: ACCEPTED
+  title: Release Assurance is a late aggregator
+  decision: Release Assurance is built after upstream result interoperability has real evidence.
+- id: FAM-025
+  status: ACCEPTED
+  title: Generated platform skill adapters
+  decision: Canonical skill sources generate thin platform packages with drift and behavior tests.
+- id: FAM-026
+  status: ESTABLISHED
+  title: No interface authority escalation
+  decision: Transport choice cannot silently grant stronger permissions or authority.
+- id: FAM-027
+  status: ACCEPTED
+  title: Production-shaped products in dependency order
+  decision: Each capability targets a mature v1; Minimum Complete Architecture is an integration checkpoint rather than the
+    product ambition.
+- id: FAM-028
+  status: DEFERRED
+  title: Shared family SDK
+  decision: Manifest/result/completion/provenance helpers may be extracted only after demonstrated duplication.
+- id: FAM-029
+  status: DEFERRED
+  title: Hosted capability service or marketplace
+  decision: No central service, registry, or marketplace is required by the family architecture.
+- id: FAM-030
+  status: REJECTED
+  title: Octon capability monolith
+  decision: Octon Mini will not absorb specialist analysis implementations.
+- id: FAM-031
+  status: REJECTED
+  title: Capability mega-engine
+  decision: No single capability should absorb all testing, runtime, supply chain, browser, infrastructure, migration, and
+    release intelligence.
+- id: FAM-032
+  status: REJECTED
+  title: Skill-only capabilities
+  decision: A prompt or skill cannot substitute for an independently usable engine and durable result.
+- id: FAM-033
+  status: REJECTED
+  title: Automatic downstream action
+  decision: Capability conclusions do not automatically create issues, mutate projects, deploy, publish, apply infrastructure,
+    or migrate databases.
+- id: FAM-034
+  status: ESTABLISHED
+  title: Canonical character identities
+  decision: The ten capabilities use Verity, Titra, Ortha, Genea, Echo, Harmia, Iris, Atlas, Janus, and Sibyl as their canonical
+    character identities without aliases or authority expansion.
+  canonical_character_identities:
+    universal-code-audit: Verity
+    verification-assurance: Titra
+    specification-conformance: Ortha
+    supply-chain-intelligence: Genea
+    runtime-investigation: Echo
+    api-contract-assurance: Harmia
+    ui-browser-assurance: Iris
+    database-migration-assurance: Janus
+    infrastructure-assurance: Atlas
+    release-assurance: Sibyl
+- id: FAM-035
+  status: ESTABLISHED
+  title: Plectarium relationship and portfolio source ownership
+  decision: Plectarium is the suite brand and part of the Octon ecosystem without
+    becoming an Octon-prefixed product, runtime dependency, authority transfer,
+    eleventh capability, or owner of family and capability semantics. Suite,
+    family, capability, workspace, and harness source ownership remain separate.
+- id: FAM-036
+  status: ESTABLISHED
+  title: Namespaced family identity and character repository mapping
+  decision: The canonical family_id is standalone-capability-family; provisional
+    manifest and result identities carry it alongside descriptive capability_id
+    and capability version, and each capability repository uses its exact lowercase
+    canonical character name. Downstream consumers pin the published family commit
+    and packet-manifest digest instead of forking family contracts.
+  family_id: standalone-capability-family
+  repository_mappings:
+    universal-code-audit: verity
+    verification-assurance: titra
+    specification-conformance: ortha
+    supply-chain-intelligence: genea
+    runtime-investigation: echo
+    api-contract-assurance: harmia
+    ui-browser-assurance: iris
+    database-migration-assurance: janus
+    infrastructure-assurance: atlas
+    release-assurance: sibyl

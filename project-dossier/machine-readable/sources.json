@@ -1,0 +1,57 @@
+{
+  "schema_version": "project.dossier.sources.v1",
+  "document_role": "authoritative_source_registry",
+  "permission_grant": false,
+  "project_slug": "plectarium-family",
+  "last_reviewed": "2026-08-31",
+  "sources": [
+    {
+      "id": "SRC-0001",
+      "name": "Plectarium portfolio and capability repository setup operator request v2",
+      "location": "external:current-operator-request/plectarium-portfolio-setup-v2",
+      "classification": "current_operator_instruction",
+      "observed_on": "2026-08-31",
+      "intended_use": "Authority and accepted project-specific decisions for the bounded repository-foundation and publication task.",
+      "limitations": [
+        "The conversation-visible operator request is not a standing authorization after its consumable effects expire.",
+        "Generated tasks, decisions, policy, or dossier content may record and narrow but cannot expand this authority."
+      ],
+      "sensitivity": "internal_project_instruction",
+      "freshness_rule": "Valid only for the current task and any explicit continuation; re-read current operator instructions before external effects.",
+      "accepted_as_project_authority": true
+    },
+    {
+      "id": "SRC-0002",
+      "name": "Canonical Character Identities v1.0 historical import",
+      "location": "imports/historical/canonical-character-identities-v1.0/source.md",
+      "classification": "established_family_identity_source_and_historical_import",
+      "observed_on": "2026-08-31",
+      "intended_use": "Preserve the established capability identity mapping and no-alias decision with exact byte provenance.",
+      "limitations": [
+        "Former locator octon-capabilities/capability-family-canonical-character-identities.md was observed during pre-move inventory and is no longer current.",
+        "Byte identity does not prove semantic correctness, legal rights, or future freshness.",
+        "Current family use is projected through the versioned packet and packet change control."
+      ],
+      "sensitivity": "internal_project_documentation",
+      "freshness_rule": "Preserve the v1.0 archive unchanged; reverify the packet projection digest after authorized identity-source changes.",
+      "sha256": "019646c2ba98e8faa01b27f3bc1ff4ccf41fc1e7d13d35ffc7bc7684cb111faa",
+      "provenance_metadata": "imports/historical/canonical-character-identities-v1.0/provenance.json",
+      "accepted_as_project_authority": true
+    },
+    {
+      "id": "SRC-0003",
+      "name": "Project Blueprint 1.0.0 high-assurance snapshot",
+      "location": "project-blueprint:1.0.0/high-assurance",
+      "classification": "generation_provenance_and_structural_reference",
+      "observed_on": "2026-08-31",
+      "intended_use": "Provide the project-local harness and dossier structure, contracts, and validators.",
+      "limitations": [
+        "The blueprint transfers structure and validation patterns only.",
+        "It does not transfer project facts, permissions, decisions, endpoints, implementation status, or readiness."
+      ],
+      "sensitivity": "public_or_internal_tooling_metadata",
+      "freshness_rule": "Pinned to the generated snapshot; upgrades require an explicit project-specific migration.",
+      "accepted_as_project_authority": false
+    }
+  ]
+}

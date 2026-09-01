@@ -1,0 +1,57 @@
+{
+  "schema_version": "standalone-capability.result-envelope.v0",
+  "status": "PROVISIONAL",
+  "result_id": "fixture-result-0001",
+  "capability": {
+    "family_id": "standalone-capability-family",
+    "capability_id": "verification-assurance",
+    "version": "0.0.0-fixture"
+  },
+  "operation": "inspect",
+  "subject": {
+    "identity": "fixture:subject:0001"
+  },
+  "scope": {
+    "description": "Static schema-conformance fixture only."
+  },
+  "permissions": {
+    "schema_version": "standalone-capability.permission-set.v0",
+    "requested": [],
+    "accepted": [],
+    "denied": [],
+    "authority_effect": "none"
+  },
+  "completion": {
+    "schema_version": "standalone-capability.completion.v0",
+    "status": "complete_with_limitations",
+    "nodes": [
+      {
+        "id": "fixture-validation",
+        "status": "succeeded",
+        "required": true
+      }
+    ],
+    "limitations": [
+      "Fixture only; no capability analysis occurred."
+    ]
+  },
+  "evidence_inventory": [],
+  "payloads": [
+    {
+      "role": "fixture",
+      "path": "payloads/fixture.json",
+      "schema": "example.invalid/fixture.schema.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "media_type": "application/json"
+    }
+  ],
+  "limitations": [
+    "Fixture only; no capability analysis occurred."
+  ],
+  "provenance": {
+    "kind": "family-packet-conformance-fixture"
+  },
+  "checksums": {
+    "payloads/fixture.json": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+}

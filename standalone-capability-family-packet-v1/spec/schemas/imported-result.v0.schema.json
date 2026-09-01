@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/standalone-capability/imported-result.v0.schema.json",
+  "title": "Imported Capability Result v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "compatibility",
+    "preserved_completion",
+    "preserved_limitations",
+    "transformation"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "standalone-capability.imported-result.v0"
+    },
+    "source": {
+      "$ref": "result-reference.v0.schema.json"
+    },
+    "compatibility": {
+      "enum": [
+        "compatible",
+        "compatible_with_mapping",
+        "incompatible",
+        "unknown"
+      ]
+    },
+    "compatibility_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preserved_completion": {
+      "type": "string"
+    },
+    "preserved_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_class_mapping": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "transformation": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "derived_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

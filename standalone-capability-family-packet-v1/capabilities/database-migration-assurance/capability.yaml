@@ -1,0 +1,133 @@
+schema_version: standalone-capability-project-seed.v1
+family_id: standalone-capability-family
+family_packet:
+  name: standalone-capability-family-packet-v1
+  version: 1.2.0
+  downstream_provenance_required:
+  - family_git_commit
+  - packet_version
+  - packet_manifest_sha256
+  - seed_paths
+id: database-migration-assurance
+product_name: Database / Migration Assurance
+canonical_descriptive_name: Database Schema and Data Migration Assurance
+canonical_character_identity: Janus
+status: PROJECT SEED
+creation_priority: 8
+working_cli:
+  value: migration-assure
+  status: PROPOSED
+repository:
+  name: janus
+  owner: cooperonlineenterprises
+  url: https://github.com/cooperonlineenterprises/janus.git
+  default_branch: main
+  status: ESTABLISHED
+agent_skills:
+- value: database-migration-assurance
+  status: PROPOSED
+governing_question: Can this schema or data migration be deployed safely under the declared operational conditions?
+purpose: Analyze migration semantics, application-version overlap, locking, rewrite and backfill behavior, data integrity,
+  sequencing, rollback, and operational conditions without possessing production database mutation authority.
+subjects:
+- migration files
+- schema diff
+- database model
+- backfill plan
+- application versions
+- deployment topology
+- representative database
+owns:
+- migration identity
+- schema/data change analysis
+- compatibility-window model
+- controlled dry-run/simulation
+- lock/rewrite evidence
+- rollout-condition conclusions
+- Migration Assurance Bundle
+does_not_own:
+- production migration execution
+- database credentials by default
+- data repair authority
+- deployment sequencing authority
+- application code changes
+primary_evidence:
+- schema diffs
+- destructive changes
+- lock/rewrite estimates
+- compatibility checks
+- dry-run results
+- backfill behavior
+- rollback analysis
+- data-integrity checks
+- traffic and version assumptions
+conclusion_states:
+- safe_within_declared_conditions
+- requires_staged_rollout
+- requires_runtime_validation
+- high_risk
+- unsafe
+- incomplete
+capability_classes:
+- value: execution_evidence_producer
+  status: PROVISIONAL
+- value: controlled_environment_evidence_producer
+  status: PROVISIONAL
+typical_permissions:
+- repository_read
+- project_execution
+- external_process_execution
+- database_read
+- output_write
+- cache_write
+- temporary_write
+- credential_access
+project_execution: Often required in an ephemeral or replica database; commands and data sources must be explicit.
+network: Denied by default; database access requires explicit endpoint and credential authority.
+browser_execution: Not intrinsic.
+production_access: Production database write is prohibited; read-only production metadata is exceptional and explicit.
+external_tool_candidates:
+- Ariga Atlas migration linting
+- Liquibase/Flyway ecosystem imports
+- gh-ost
+- pt-online-schema-change
+- database-native explain/lock tools
+- ORM migration analyzers
+durable_result: Migration Assurance Bundle
+optional_upstream_results:
+- verification-assurance
+- runtime-investigation
+- specification-conformance
+downstream_consumers:
+- release-assurance
+- Octon migration decision
+mature_target: A database-aware migration assurance engine with dialect-specific adapters, staged-rollout modeling, application-version
+  compatibility, dry-run and representative-data evidence, data-loss protections, and no production mutation authority.
+domain_threats:
+- production database mutation
+- credential leakage
+- sensitive data export
+- unrepresentative sample data
+- lock amplification
+- irreversible transformations
+- unsafe rollback assumptions
+evaluation_focus:
+- known unsafe migrations
+- safe near-misses
+- locking/rewrite prediction
+- rolling-version compatibility
+- data-integrity preservation
+- no-production-write proof
+research_agenda:
+- Ariga Atlas
+- Liquibase/Flyway
+- gh-ost
+- Percona Toolkit
+- zero-downtime migration patterns
+- database locking
+- schema compatibility
+- backfill and dual-write strategies
+open_questions:
+- Which database dialects define mature v1?
+- How can lock/rewrite risk be calibrated without production execution?
+- What sanitized data fixtures are sufficient for backfill validation?

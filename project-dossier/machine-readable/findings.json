@@ -1,0 +1,40 @@
+{
+  "schema_version": "project.dossier.findings.v1",
+  "document_role": "authoritative_conformance_finding_registry",
+  "permission_grant": false,
+  "project_slug": "plectarium-family",
+  "last_reviewed": "2026-08-31",
+  "classification_vocabulary": [
+    "conformant",
+    "compatible",
+    "transitional",
+    "nonconformant",
+    "absent",
+    "not_assessed",
+    "not_applicable"
+  ],
+  "findings": [
+    {
+      "id": "FIND-0001",
+      "title": "Local foundation validated; publication remains transitional",
+      "requirement_refs": ["REQ-0001", "REQ-0002", "REQ-0004", "REQ-0005"],
+      "status": "transitional",
+      "assessed_on": "2026-08-31",
+      "subject_version": "pre-git-foundation-tree-2026-08-31",
+      "inspected_evidence": ["EVD-0001", "EVD-0002"],
+      "rationale": "Role, profile, threat model, commands, records, packet, validation, integrity, and review are locally complete; only Git initialization, exact private publication, and final equality evidence remain pending.",
+      "owner_role": "foundation_task_owner"
+    },
+    {
+      "id": "FIND-0002",
+      "title": "Canonical identity archive matches the packet projection",
+      "requirement_refs": ["REQ-0003"],
+      "status": "conformant",
+      "assessed_on": "2026-08-31",
+      "subject_version": "identity-source-sha256-019646c2ba98e8faa01b27f3bc1ff4ccf41fc1e7d13d35ffc7bc7684cb111faa",
+      "inspected_evidence": ["EVD-0001"],
+      "rationale": "The archive and current packet projection are byte-identical, and provenance records preserve the exact former locator and limitations.",
+      "owner_role": "source_curator"
+    }
+  ]
+}
