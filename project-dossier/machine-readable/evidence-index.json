@@ -75,6 +75,20 @@
       "requirement_refs": ["REQ-0001", "REQ-0004", "REQ-0005"],
       "finding_refs": ["FIND-0004", "FIND-0005"],
       "limitations": ["The commit cannot attest its own later push; no later push is authorized."]
+    },
+    {
+      "id": "EVD-1101",
+      "title": "Checkpoint v3 corrective publication candidate",
+      "type": "publication_candidate_and_authority_evidence",
+      "subject_version": "parent git 02d61dc63791d45885d48c280d3ff27ce76e56f7; checkpoint v3 status sha256 303b76893c32f06ccc32fefc037b00b87b5cc7821be8b705b18020dcc128309d",
+      "produced_at": "2026-09-01",
+      "method": "Operator authority inspection, exact-scope independent review, root and packet validation, live remote preflight, and one-push boundary",
+      "scope": "One corrective family commit on main and one normal fast-forward push only",
+      "result": "PASS with direct post-commit verification required",
+      "artifact_path": ".agent/evidence/EVD-0011-checkpoint-v3-publication-candidate.md",
+      "requirement_refs": ["REQ-0001", "REQ-0004", "REQ-0005"],
+      "finding_refs": ["FIND-0006", "FIND-0007"],
+      "limitations": ["The commit cannot attest its own later push; no later family push is authorized."]
     }
   ]
 }

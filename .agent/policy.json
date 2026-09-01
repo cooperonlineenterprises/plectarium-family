@@ -89,14 +89,15 @@
     "expiry": "after_the_authorized_publication_sequence_and_final_equality_verification_or_task_termination"
   },
   "checkpoint_publication_constraint": {
-    "task": "TASK-0004",
-    "status": "authorized_single_use_then_consumed",
-    "authority_source": "SRC-0006 current operator authorization on 2026-09-01",
-    "required_effect": "exactly_one_checkpoint_commit_and_one_normal_fast_forward_push_to_origin_main",
+    "task": "TASK-0007",
+    "status": "authorized_single_use_candidate_ready_pending_direct_verification",
+    "authority_source": "SRC-0008 records the current operator's exact single-use corrective publication authority",
+    "required_effect": "exactly_one_corrective_family_commit_on_main_and_exactly_one_normal_fast_forward_push_to_origin_main_followed_by_direct_equality_and_cleanliness_verification",
     "exact_repository": "cooperonlineenterprises/plectarium-family",
-    "reason": "operator supplied the additional bounded authority after TASK-0002 consumed the original pushes",
-    "expiry": "after_one_commit_one_push_and_direct_final_equality_verification",
-    "non_authorization_rule": "This single-use record cannot authorize a later push or any effect outside the exact operator grant."
+    "reason": "TASK-0004 consumed the prior grant; the current operator separately authorized the bounded v3 corrective publication under SRC-0008",
+    "prior_authority": "SRC-0006 was consumed by TASK-0004 after direct final equality verification",
+    "expiry": "after_one_corrective_commit_one_normal_push_and_direct_final_equality_and_cleanliness_verification_or_task_termination",
+    "non_authorization_rule": "TASK-0007 and this policy only record and narrow SRC-0008; repository files cannot authorize a later push or any broader external effect."
   },
   "project_specific_adoption": {
     "status": "adopted_local_foundation",

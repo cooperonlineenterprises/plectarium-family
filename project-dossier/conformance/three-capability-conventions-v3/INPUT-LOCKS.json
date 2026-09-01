@@ -1,0 +1,77 @@
+{
+  "schema_version": "plectarium-family.three-capability-input-locks.v3",
+  "document_role": "family_owned_lock_erratum",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v3",
+  "supersedes_for_lock_and_sequencing_validity": "three-capability-conventions-v2",
+  "evidence_note": "Direct inspection shows v1 already carries the correct checksum digest; v2 carries the incorrect digest. Both predecessors remain immutable.",
+  "predecessor_hashes": {
+    "v1": {
+      "CONTRACT-SURFACE-MATRIX.json": "e58fcd301dd165943a0ffe189c4150a1ce1628908c1dab6684e56ef11a43a611",
+      "DIVERGENCES.json": "71f2698382996034d03de8cfd10e0ca61d7260df3b93cf6a6dca66b7f665a1f3",
+      "INPUT-LOCKS.json": "b48e03106392f6010faf31a19e28125d698bc07bbdab9ddcabee9f9e70e98f33",
+      "STATUS-REPORT.md": "fd468f7c68114dc8011b45616afa609156389ea8cb67cac2b5ec40ccd83ee09d",
+      "VALIDATION-RECEIPT.json": "b88316735307624bd1955a072cb12f3cbaa3d689238927d65131be05853d307a"
+    },
+    "v2": {
+      "CONTRACT-SURFACE-MATRIX.json": "68d3ff637fa9a3b14bb97ae34cfabd50b9af27b9b4f29bd5d9115ba95881c18d",
+      "DIVERGENCES.json": "d1ef232667078802bc4c8fe9daf14a6210db826fb847490bf21bea4b633bf6b2",
+      "INPUT-LOCKS.json": "7ae4a79cb13cf977dd58861c5ac64b75874ef8d640acb9f3457cf4f4e93cebe2",
+      "STATUS-REPORT.md": "54549f741304b37aece4fd5ef774e0c8ad8073751534ebdc53f41486961367c2",
+      "VALIDATION-RECEIPT.json": "020d9fdb6f714d66d11ff797b43cbb58851d29ae82899f613d905182dcc02b2e"
+    }
+  },
+  "family_authority": {
+    "repository": "https://github.com/cooperonlineenterprises/plectarium-family.git",
+    "commit": "02d61dc63791d45885d48c280d3ff27ce76e56f7",
+    "family_id": "standalone-capability-family",
+    "packet_path": "standalone-capability-family-packet-v1",
+    "packet_version": "1.2.0",
+    "packet_manifest_sha256": "54116db0e4f518ffe793df3d3ebd2b87064f00aab10b373bf1909f9126b24867",
+    "packet_checksums_sha256": "e0134782dff26755d450f2aa2117d4a8d8afebbf53578e51c9dbbb809fabf4ee"
+  },
+  "capabilities": [
+    {
+      "id": "verity",
+      "profile": "legacy_pre_family_1_2",
+      "repository": "https://github.com/cooperonlineenterprises/verity.git",
+      "commit": "271dde603f4c35ba4c0b051365ba66efdba7a370",
+      "packet_path": "verity-codebase-intelligence-build-packet-v1",
+      "packet_manifest_sha256": "66784a5840e6119cb9f46f1d1c98071b0d1dafb9ede0153212e50c654acbfdc8",
+      "packet_checksums_sha256": "7ccbcdfddffbbc4eb4676c3aa5ec2cd74d2eabf8451baec1a0f38e9d3b2480f4"
+    },
+    {
+      "id": "titra",
+      "profile": "family_1_2_packet_specific",
+      "repository": "https://github.com/cooperonlineenterprises/titra.git",
+      "commit": "58cfe8388d267bb4d0c746aff8c7d6dfceb2e8bb",
+      "packet_path": "titra-verification-assurance-build-packet-v1",
+      "packet_manifest_sha256": "3a9b9c5004e67921b1ce0c56a66c93106696759cbcaa15a867cc115d60108e19",
+      "packet_checksums_sha256": "dee7c5b430b1a82bc7cf42949bab72e09d4e63e2b4c44b4fabe995613c524db0"
+    },
+    {
+      "id": "ortha",
+      "profile": "family_1_2_packet_specific",
+      "repository": "https://github.com/cooperonlineenterprises/ortha.git",
+      "commit": "daeaa7ee8e32c64af6337d7e2f8701bb0727e16a",
+      "packet_path": "ortha-specification-conformance-build-packet-v1",
+      "packet_manifest_sha256": "f2a7ada39ec4a00c46d9aa8913e528e7252469cc5156f2344e2502bb6e7d7078",
+      "packet_checksums_sha256": "12cd12c129f396ecc4ec05f0a0e7fb88f49da522dfd7c7191f5729b910779aaa"
+    }
+  ],
+  "sequencing": {
+    "outcome": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+    "second_wave_capabilities": [
+      "genea",
+      "echo",
+      "harmia",
+      "iris",
+      "janus",
+      "atlas"
+    ],
+    "sibyl": "last",
+    "shared_contracts": "provisional_or_unresolved",
+    "sdk_runtime": "deferred"
+  }
+}
+

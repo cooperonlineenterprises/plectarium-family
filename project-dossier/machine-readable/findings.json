@@ -3,7 +3,7 @@
   "document_role": "authoritative_conformance_finding_registry",
   "permission_grant": false,
   "project_slug": "plectarium-family",
-  "last_reviewed": "2026-08-31",
+  "last_reviewed": "2026-09-01",
   "classification_vocabulary": [
     "conformant",
     "compatible",
@@ -58,6 +58,8 @@
       "rationale": "The operator granted one additional checkpoint commit/push; the reviewed v1/v2 candidate is published once normally and final equality/cleanliness are verified directly.",
       "owner_role": "primary_agent"
     },
-    {"id":"FIND-0005","title":"Profile-qualified successor checkpoint permits second-wave packet sequencing","requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"status":"conformant","assessed_on":"2026-08-31","subject_version":"three-capability-conventions-v2","inspected_evidence":["EVD-0006","EVD-0007"],"rationale":"Legacy Verity and packet-specific Titra/Ortha are explicitly profiled; schema IDs are fully qualified; imports use consumer-owned transformation; no shared contract is promoted; six second-wave packets may proceed while Sibyl remains last.","owner_role":"family_contract_maintainer"}
+    {"id":"FIND-0005","title":"Profile-qualified successor checkpoint permits second-wave packet sequencing","requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"status":"conformant","assessed_on":"2026-08-31","subject_version":"three-capability-conventions-v2","inspected_evidence":["EVD-0006","EVD-0007"],"rationale":"Legacy Verity and packet-specific Titra/Ortha are explicitly profiled; schema IDs are fully qualified; imports use consumer-owned transformation; no shared contract is promoted; six second-wave packets may proceed while Sibyl remains last.","owner_role":"family_contract_maintainer"},
+    {"id":"FIND-0006","title":"Checkpoint v3 corrects the family checksum lock","requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"status":"conformant","assessed_on":"2026-09-01","subject_version":"three-capability-conventions-v3","inspected_evidence":["EVD-0009","EVD-0010"],"rationale":"Direct SHA-256 proves the correct family packet checksum digest; v1/v2 are preserved, v3 restores valid profile-qualified sequencing, and no packet/capability changed.","owner_role":"family_contract_maintainer"},
+    {"id":"FIND-0007","title":"Checkpoint v3 corrective publication candidate is bounded and validated","requirement_refs":["REQ-0001","REQ-0004","REQ-0005"],"status":"transitional","assessed_on":"2026-09-01","subject_version":"parent 02d61dc; checkpoint-v3 corrective publication candidate","inspected_evidence":["EVD-0009","EVD-0010","EVD-0011"],"rationale":"The exact candidate is limited to v3 erratum, lifecycle, provenance, handoff, review/evidence, and designated root-integrity records under single-use SRC-0008 authority; one commit, one normal push, and direct final verification remain pending and cannot be preclaimed inside the commit.","owner_role":"primary_agent"}
   ]
 }

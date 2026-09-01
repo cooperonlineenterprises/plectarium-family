@@ -1,5 +1,5 @@
 ---
-{"schema_version":"harness.decision.v1","id":"DEC-0003","status":"accepted","previous_status":"proposed","title":"Use profile-qualified packet comparison for second-wave sequencing","created_at":"2026-08-31","authority_source":"current operator three-capability successor checkpoint instruction","source_refs":["SRC-0005"],"supersedes":"DEC-0002","successor":null}
+{"schema_version":"harness.decision.v1","id":"DEC-0003","status":"accepted","previous_status":"proposed","title":"Use profile-qualified packet comparison for second-wave sequencing","created_at":"2026-08-31","authority_source":"current operator three-capability successor checkpoint instruction","source_refs":["SRC-0005"],"supersedes":"DEC-0002","successor":"DEC-0004"}
 ---
 
 ## Limited successor scope

@@ -3,7 +3,7 @@
   "document_role": "authoritative_repository_foundation_gate_registry",
   "permission_grant": false,
   "project_slug": "plectarium-family",
-  "last_reviewed": "2026-08-31",
+  "last_reviewed": "2026-09-01",
   "readiness": "repository_foundation_complete_with_direct_closure_verification",
   "gates": [
     {
@@ -51,6 +51,8 @@
       "approval_source": "SRC-0006 current operator authorization",
       "limitations": ["The checkpoint commit cannot attest its own later push; final equality is direct handoff evidence.", "No later push is authorized."]
     },
-    {"id":"GATE-0006","title":"Profile-qualified successor checkpoint","status":"passed_with_provisional_divergence","owner_role":"family_contract_maintainer","required_evidence":["EVD-0006","EVD-0007","REV-0004","CHK-0004"],"approval_source":"current operator v2 successor instruction","limitations":["Shared contracts remain provisional/unresolved.","Sibyl remains last.","No SDK/runtime extraction."]}
+    {"id":"GATE-0006","title":"Profile-qualified successor checkpoint","status":"passed_with_provisional_divergence","owner_role":"family_contract_maintainer","required_evidence":["EVD-0006","EVD-0007","REV-0004","CHK-0004"],"approval_source":"current operator v2 successor instruction","limitations":["Shared contracts remain provisional/unresolved.","Sibyl remains last.","No SDK/runtime extraction."]},
+    {"id":"GATE-0007","title":"Checkpoint v3 lock erratum","status":"passed_with_provisional_divergence","owner_role":"family_contract_maintainer","required_evidence":["EVD-0009","EVD-0010","REV-0006","CHK-0006"],"approval_source":"current operator v3 erratum instruction","limitations":["V1/v2 remain immutable.","Shared contracts remain provisional/unresolved.","Corrective publication is tracked separately under GATE-0008."]},
+    {"id":"GATE-0008","title":"Checkpoint v3 corrective publication","status":"ready_pending_commit_push_and_direct_verification","owner_role":"primary_agent","required_evidence":["SRC-0008","EVD-0011","REV-0007","CHK-0007","direct post-push equality and clean worktree"],"approval_source":"SRC-0008 current operator authorization","limitations":["The corrective commit cannot attest its own later push; final completion, equality, and cleanliness must be direct handoff evidence.","No later family push is authorized."]}
   ]
 }

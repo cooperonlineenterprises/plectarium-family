@@ -4,6 +4,87 @@
   "permission_grant": false,
   "project_slug": "plectarium-family",
   "current_dossier_version": "1.0.0",
-  "effective_on": "2026-08-31",
-  "records": []
+  "effective_on": "2026-09-01",
+  "records": [
+    {
+      "authority_source": "DEC-0003 and SRC-0005",
+      "effective_on": "2026-08-31",
+      "id": "SUP-0001",
+      "migration_impact": "Sequencing disposition only; predecessor bytes remain immutable historical evidence and no shared contract is promoted.",
+      "reason": "Checkpoint v2 replaced checkpoint v1's second-wave sequencing disposition with a profile-qualified disposition.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v1/CONTRACT-SURFACE-MATRIX.json",
+      "successor_representation_id": "CVN-0002",
+      "superseded_representation_id": "CNV-0002"
+    },
+    {
+      "authority_source": "DEC-0003 and SRC-0005",
+      "effective_on": "2026-08-31",
+      "id": "SUP-0002",
+      "migration_impact": "Sequencing disposition only; predecessor bytes remain immutable historical evidence and no shared contract is promoted.",
+      "reason": "Checkpoint v2 replaced checkpoint v1's second-wave sequencing divergence disposition.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v1/DIVERGENCES.json",
+      "successor_representation_id": "CVN-0003",
+      "superseded_representation_id": "CNV-0003"
+    },
+    {
+      "authority_source": "DEC-0003 and SRC-0005",
+      "effective_on": "2026-08-31",
+      "id": "SUP-0003",
+      "migration_impact": "Sequencing disposition only; predecessor bytes remain immutable historical evidence and v1's INCOMPLETE result remains true for its own assessment profile.",
+      "reason": "Checkpoint v2 became the current profile-qualified status for second-wave packet sequencing.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v1/STATUS-REPORT.md",
+      "successor_representation_id": "CVN-0004",
+      "superseded_representation_id": "CNV-0004"
+    },
+    {
+      "authority_source": "DEC-0004 and SRC-0007",
+      "effective_on": "2026-09-01",
+      "id": "SUP-0004",
+      "migration_impact": "Family checksum lock and resulting sequencing validity only; predecessor bytes remain immutable historical evidence.",
+      "reason": "Checkpoint v3 corrects the family packet checksum-ledger digest recorded by checkpoint v2.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v2/INPUT-LOCKS.json",
+      "successor_representation_id": "ERR-0001",
+      "superseded_representation_id": "CVN-0001"
+    },
+    {
+      "authority_source": "DEC-0004 and SRC-0007",
+      "effective_on": "2026-09-01",
+      "id": "SUP-0005",
+      "migration_impact": "Family checksum lock and resulting sequencing validity only; predecessor bytes remain immutable historical evidence and no shared contract is promoted.",
+      "reason": "Checkpoint v3 reissues the comparison against the corrected immutable family lock.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v2/CONTRACT-SURFACE-MATRIX.json",
+      "successor_representation_id": "ERR-0002",
+      "superseded_representation_id": "CVN-0002"
+    },
+    {
+      "authority_source": "DEC-0004 and SRC-0007",
+      "effective_on": "2026-09-01",
+      "id": "SUP-0006",
+      "migration_impact": "Family checksum lock and resulting sequencing validity only; predecessor bytes remain immutable historical evidence and all divergences remain provisional or unresolved.",
+      "reason": "Checkpoint v3 reissues the divergence register against the corrected immutable family lock.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v2/DIVERGENCES.json",
+      "successor_representation_id": "ERR-0003",
+      "superseded_representation_id": "CVN-0003"
+    },
+    {
+      "authority_source": "DEC-0004 and SRC-0007",
+      "effective_on": "2026-09-01",
+      "id": "SUP-0007",
+      "migration_impact": "Family checksum lock and resulting sequencing validity only; predecessor bytes remain immutable historical evidence.",
+      "reason": "Checkpoint v3 is the current status report because it proves the corrected family lock.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v2/STATUS-REPORT.md",
+      "successor_representation_id": "ERR-0004",
+      "superseded_representation_id": "CVN-0004"
+    },
+    {
+      "authority_source": "DEC-0004 and SRC-0007",
+      "effective_on": "2026-09-01",
+      "id": "SUP-0008",
+      "migration_impact": "Family checksum lock and resulting sequencing validity only; predecessor bytes remain immutable historical evidence.",
+      "reason": "Checkpoint v3 validation recomputes the corrected family lock and proves predecessor preservation.",
+      "retained_history_path": "project-dossier/conformance/three-capability-conventions-v2/VALIDATION-RECEIPT.json",
+      "successor_representation_id": "ERR-0005",
+      "superseded_representation_id": "CVN-0005"
+    }
+  ]
 }

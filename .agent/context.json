@@ -2,7 +2,7 @@
   "schema_version": "harness.context.v1",
   "permission_grant": false,
   "project_slug": "plectarium-family",
-  "context_status": "adopted_local_family_foundation",
+  "context_status": "adopted_local_family_foundation_checkpoint_v3_corrective_publication_candidate_ready",
   "precedence": [
     "platform_system_sandbox_and_tool_constraints",
     "current_operator_instruction",
@@ -62,11 +62,16 @@
     "harness_repositories": "harness_specific_governance_outside_capability_semantics"
   },
   "current_task_constraints": {
-    "implementation": "repository_foundation_only",
+    "active_task": "TASK-0007_checkpoint_v3_corrective_publication_in_review",
+    "current_decision": "DEC-0004",
+    "current_evidence": ["EVD-0009", "EVD-0010", "EVD-0011"],
+    "current_review": "REV-0007",
+    "current_checkpoint": "CHK-0007",
+    "implementation": "repository_foundation_and_family_checkpoint_records_only",
     "dependency_installation": "prohibited",
     "product_execution": "prohibited",
     "generated_integrity": "refresh_only_after_all_source_and_packet_edits_complete",
-    "external_effects": "TASK-0004 has single-use operator authority for one checkpoint commit and one normal family push only; authority is consumed after direct final equality verification"
+    "external_effects": "SRC-0008 currently authorizes exactly one corrective commit on main and one normal fast-forward push to the exact existing private family origin/main, followed by direct local/tracking/remote equality and clean-worktree verification; completion and consumption are not attestable inside the candidate commit"
   },
   "known_runtime_context": {
     "harness_runtime": "python3_version_3.11_or_newer_standard_library_only",

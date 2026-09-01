@@ -27,3 +27,8 @@
 - [x] Shared SDK/runtime extraction remains deferred and absent.
 - [x] Checkpoint v1/v2 publication used exactly one additional authorized
       commit/push with direct final equality and cleanliness verification.
+- [x] Checkpoint v3 erratum preserves v1/v2 bytes, corrects the family checksum
+      lock, and passes local validation.
+- [ ] Complete the separately authorized checkpoint-v3 corrective commit/push,
+      then verify its later push, equality, and cleanliness as direct final
+      handoff evidence without a second commit.

@@ -3,7 +3,7 @@
   "document_role": "authoritative_source_registry",
   "permission_grant": false,
   "project_slug": "plectarium-family",
-  "last_reviewed": "2026-08-31",
+  "last_reviewed": "2026-09-01",
   "sources": [
     {
       "id": "SRC-0001",
@@ -96,6 +96,8 @@
       "sensitivity": "internal_project_instruction",
       "freshness_rule": "Single-use and consumed after TASK-0004 final equality verification.",
       "accepted_as_project_authority": true
-    }
+    },
+    {"id":"SRC-0007","name":"Three-capability checkpoint v3 checksum-lock erratum instruction","location":"external:current-operator-request/three-capability-conventions-v3","classification":"current_operator_instruction","observed_on":"2026-09-01","intended_use":"Authorize local v3 erratum records while preserving v1/v2 and withholding Git/network/family-packet/capability effects.","limitations":["No commit or push authority.","No shared contract promotion or SDK/runtime extraction."],"sensitivity":"internal_project_instruction","freshness_rule":"Valid for TASK-0006 local work; publication requires new authority under TASK-0007.","accepted_as_project_authority":true},
+    {"id":"SRC-0008","name":"Checkpoint v3 corrective publication authorization","location":"external:current-operator-request/family-checkpoint-v3-corrective-single-push-2026-09-01","classification":"current_operator_instruction","observed_on":"2026-09-01","intended_use":"Authorize staging the validated checkpoint-v3 erratum, lifecycle, provenance, handoff, and generated-integrity records; exactly one corrective commit on main; exactly one normal fast-forward push to the exact existing private family origin/main; and direct final equality and clean-worktree verification.","limitations":["No family packet or capability change is authorized.","No force push, history rewrite, later push, alternate branch/repository, tag, release, package, deployment, integration, secret, or GitHub-setting change is authorized.","Authority expires after one corrective commit, one normal push, and direct final equality and clean-worktree verification."],"sensitivity":"internal_project_instruction","freshness_rule":"Single-use and consumed after TASK-0007 direct final equality and clean-worktree verification.","accepted_as_project_authority":true}
   ]
 }

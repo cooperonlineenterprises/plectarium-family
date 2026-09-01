@@ -1,0 +1,70 @@
+{
+  "schema_version": "plectarium-family.three-capability-validation-receipt.v3",
+  "document_role": "family_owned_lock_erratum_validation_receipt",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v3",
+  "recorded_at": "2026-09-01",
+  "outcome": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+  "family_packet": {
+    "commit": "02d61dc63791d45885d48c280d3ff27ce76e56f7",
+    "manifest_path": "standalone-capability-family-packet-v1/PACKET-MANIFEST.json",
+    "manifest_sha256": "54116db0e4f518ffe793df3d3ebd2b87064f00aab10b373bf1909f9126b24867",
+    "checksums_path": "standalone-capability-family-packet-v1/PACKET-CHECKSUMS.sha256",
+    "checksums_sha256": "e0134782dff26755d450f2aa2117d4a8d8afebbf53578e51c9dbbb809fabf4ee",
+    "byte_identity_verified": true
+  },
+  "predecessor_preservation": {
+    "v1": {
+      "CONTRACT-SURFACE-MATRIX.json": "e58fcd301dd165943a0ffe189c4150a1ce1628908c1dab6684e56ef11a43a611",
+      "DIVERGENCES.json": "71f2698382996034d03de8cfd10e0ca61d7260df3b93cf6a6dca66b7f665a1f3",
+      "INPUT-LOCKS.json": "b48e03106392f6010faf31a19e28125d698bc07bbdab9ddcabee9f9e70e98f33",
+      "STATUS-REPORT.md": "fd468f7c68114dc8011b45616afa609156389ea8cb67cac2b5ec40ccd83ee09d",
+      "VALIDATION-RECEIPT.json": "b88316735307624bd1955a072cb12f3cbaa3d689238927d65131be05853d307a"
+    },
+    "v2": {
+      "CONTRACT-SURFACE-MATRIX.json": "68d3ff637fa9a3b14bb97ae34cfabd50b9af27b9b4f29bd5d9115ba95881c18d",
+      "DIVERGENCES.json": "d1ef232667078802bc4c8fe9daf14a6210db826fb847490bf21bea4b633bf6b2",
+      "INPUT-LOCKS.json": "7ae4a79cb13cf977dd58861c5ac64b75874ef8d640acb9f3457cf4f4e93cebe2",
+      "STATUS-REPORT.md": "54549f741304b37aece4fd5ef774e0c8ad8073751534ebdc53f41486961367c2",
+      "VALIDATION-RECEIPT.json": "020d9fdb6f714d66d11ff797b43cbb58851d29ae82899f613d905182dcc02b2e"
+    }
+  },
+  "capabilities": {
+    "verity": {
+      "commit": "271dde603f4c35ba4c0b051365ba66efdba7a370",
+      "head_equals_origin_main": true,
+      "clean": true
+    },
+    "titra": {
+      "commit": "58cfe8388d267bb4d0c746aff8c7d6dfceb2e8bb",
+      "head_equals_origin_main": true,
+      "clean": true
+    },
+    "ortha": {
+      "commit": "daeaa7ee8e32c64af6337d7e2f8701bb0727e16a",
+      "head_equals_origin_main": true,
+      "clean": true
+    }
+  },
+  "strict_json": {
+    "v1": true,
+    "v2": true,
+    "v3": true,
+    "duplicate_keys_rejected": true
+  },
+  "network_used": false,
+  "external_effects": [],
+  "capability_mutations": [],
+  "family_packet_mutations": [],
+  "family_final_validation": {
+    "status": "passed_after_designated_root_refresh",
+    "harness": "PASS",
+    "tests": "15 of 15 PASS",
+    "packet": "PASS unchanged family packet 1.2.0"
+  },
+  "publication": {
+    "status": "blocked",
+    "required": "exactly one corrective family commit and one normal push after new explicit authority"
+  }
+}
+

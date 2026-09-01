@@ -1,0 +1,86 @@
+{
+  "schema_version": "plectarium-family.three-capability-divergences.v3",
+  "document_role": "family_owned_lock_erratum_divergence_register",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v3",
+  "supersedes_for_lock_and_sequencing_validity": "three-capability-conventions-v2",
+  "outcome": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+  "corrected_issue": {
+    "id": "ERRATUM-001",
+    "title": "V2 family packet checksum digest was incorrect",
+    "status": "corrected_in_v3",
+    "correct_digest": "e0134782dff26755d450f2aa2117d4a8d8afebbf53578e51c9dbbb809fabf4ee"
+  },
+  "divergences": [
+    {
+      "id": "V3-DIV-001",
+      "title": "Verity legacy profile remains non-family-schema-conformant",
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain explicit profile/qualification; no automatic promotion."
+    },
+    {
+      "id": "V3-DIV-002",
+      "title": "Packet-specific manifests remain non-family-v0 profiles",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain explicit profile/qualification; no automatic promotion."
+    },
+    {
+      "id": "V3-DIV-003",
+      "title": "Cross-packet bare relative schema IDs remain prohibited",
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain explicit profile/qualification; no automatic promotion."
+    },
+    {
+      "id": "V3-DIV-004",
+      "title": "Result import compatibility remains unknown until implemented",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain explicit profile/qualification; no automatic promotion."
+    },
+    {
+      "id": "V3-DIV-005",
+      "title": "Permission/evidence mappings remain consumer-specific",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain explicit profile/qualification; no automatic promotion."
+    },
+    {
+      "id": "V3-DIV-006",
+      "title": "Completion refinements remain capability-specific",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain explicit profile/qualification; no automatic promotion."
+    },
+    {
+      "id": "V3-DIV-007",
+      "title": "Writer/runtime mechanisms remain repository-specific",
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "blocks_second_wave_generation": false,
+      "blocks_shared_contract_stabilization": true,
+      "disposition": "Retain explicit profile/qualification; no automatic promotion."
+    }
+  ],
+  "summary": {
+    "second_wave_blockers": 0,
+    "shared_contract_stabilization_blockers": 7,
+    "sibyl_last": "unchanged"
+  },
+  "sdk_runtime": "DEFERRED"
+}
+

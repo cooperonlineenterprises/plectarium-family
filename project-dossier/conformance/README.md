@@ -33,6 +33,13 @@ The authoritative findings are in `../machine-readable/findings.json`.
   claims, permits Genea through Atlas, keeps shared contracts provisional and
   SDK/runtime deferred, and preserves Sibyl last. It supersedes v1 only for
   the packet-generation sequencing disposition.
+- `FIND-0006` is **Conformant**: v3 preserves v1/v2 byte-for-byte,
+  corrects only v2's false family checksum lock, and revalidates
+  `PASS_WITH_PROVISIONAL_DIVERGENCE`.
+- `FIND-0007` is **Transitional** at the bounded corrective-publication
+  boundary: the candidate is validated and `SRC-0008` permits one corrective
+  commit and one normal push only; that push, equality, cleanliness, and
+  authority consumption remain direct final handoff evidence.
 
 The byte finding is scoped and dated. It does not prove authority, semantic
 correctness, legal rights, or future freshness.

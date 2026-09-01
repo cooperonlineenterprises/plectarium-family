@@ -1,0 +1,86 @@
+{
+  "schema_version": "plectarium-family.contract-surface-matrix.v3",
+  "document_role": "family_owned_lock_erratum_matrix",
+  "permission_grant": false,
+  "checkpoint_id": "three-capability-conventions-v3",
+  "supersedes_for_lock_and_sequencing_validity": "three-capability-conventions-v2",
+  "outcome": "PASS_WITH_PROVISIONAL_DIVERGENCE",
+  "rows": [
+    {
+      "id": "V3-001",
+      "key": "family_packet_lock",
+      "element": "Family packet immutable identity",
+      "disposition": "Correct manifest and checksum digest verified at clean family commit 02d61dc",
+      "structural_classification": "exact_alignment",
+      "family_status": "ESTABLISHED",
+      "result": "pass"
+    },
+    {
+      "id": "V3-002",
+      "key": "legacy_profile",
+      "element": "Verity legacy pre-family profile",
+      "disposition": "Exact immutable Verity coordinates; no family-schema conformance claim",
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "result": "pass_with_provisional_divergence"
+    },
+    {
+      "id": "V3-003",
+      "key": "packet_specific_profiles",
+      "element": "Titra and Ortha manifests",
+      "disposition": "Packet-specific profiles; no family-v0 conformance claim",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence"
+    },
+    {
+      "id": "V3-004",
+      "key": "schema_identity",
+      "element": "Cross-packet schema identity",
+      "disposition": "Repository+commit+packet+path+digest; bare cross-packet IDs prohibited",
+      "structural_classification": "compatible_refinement",
+      "family_status": "UNRESOLVED",
+      "result": "pass_with_qualified_identity"
+    },
+    {
+      "id": "V3-005",
+      "key": "result_import",
+      "element": "Reference-to-import transformation",
+      "disposition": "Verified bundle resolution and consumer-owned transformation; compatibility unknown until implemented",
+      "structural_classification": "provisional_experiment",
+      "family_status": "PROVISIONAL",
+      "result": "pass_with_provisional_divergence"
+    },
+    {
+      "id": "V3-006",
+      "key": "completion",
+      "element": "Completion refinements",
+      "disposition": "Five truthful top-level states; capability-specific details",
+      "structural_classification": "intentional_domain_divergence",
+      "family_status": "PROVISIONAL",
+      "result": "pass"
+    },
+    {
+      "id": "V3-007",
+      "key": "sdk_runtime",
+      "element": "Shared SDK/runtime",
+      "disposition": "Absent and deferred",
+      "structural_classification": "exact_alignment",
+      "family_status": "DEFERRED",
+      "result": "pass"
+    },
+    {
+      "id": "V3-008",
+      "key": "sequencing",
+      "element": "Portfolio sequence",
+      "disposition": "Genea through Atlas may proceed; Sibyl remains last",
+      "structural_classification": "compatible_refinement",
+      "family_status": "ACCEPTED",
+      "result": "pass_with_constraints"
+    }
+  ],
+  "non_promotion_rule": "Shared contracts remain provisional/unresolved.",
+  "sdk_rule": "FAM-028 remains deferred.",
+  "sibyl_rule": "Sibyl remains last."
+}
+

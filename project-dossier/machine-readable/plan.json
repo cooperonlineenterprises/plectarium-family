@@ -3,7 +3,7 @@
   "document_role": "authoritative_repository_foundation_plan",
   "permission_grant": false,
   "project_slug": "plectarium-family",
-  "last_reviewed": "2026-08-31",
+  "last_reviewed": "2026-09-01",
   "status_vocabulary": ["planned", "in_progress", "blocked", "completed", "deferred", "cancelled"],
   "plan_items": [
     {
@@ -84,6 +84,8 @@
       "acceptance_criteria": ["new exact one-push authority", "reviewed checkpoint commit", "one normal push", "final equality and clean worktree"],
       "evidence_expected": ["separate operator authority", "post-push equality evidence"]
     },
-    {"id":"PLAN-0005","title":"Create profile-qualified checkpoint successor","objective":"Correct sequencing disposition without changing v1, capabilities, or family packet.","status":"completed","owner_role":"family_contract_maintainer","depends_on":["PLAN-0003"],"requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"finding_refs":["FIND-0003","FIND-0005"],"gate_refs":["GATE-0006"],"task_refs":["TASK-0005"],"evidence_refs":["EVD-0006","EVD-0007"],"acceptance_criteria":["v1 hashes unchanged","profile-qualified comparison","zero second-wave blockers","Sibyl last","no promotion or SDK"],"evidence_expected":["successor artifacts","review","checkpoint"]}
+    {"id":"PLAN-0005","title":"Create profile-qualified checkpoint successor","objective":"Correct sequencing disposition without changing v1, capabilities, or family packet.","status":"completed","owner_role":"family_contract_maintainer","depends_on":["PLAN-0003"],"requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"finding_refs":["FIND-0003","FIND-0005"],"gate_refs":["GATE-0006"],"task_refs":["TASK-0005"],"evidence_refs":["EVD-0006","EVD-0007"],"acceptance_criteria":["v1 hashes unchanged","profile-qualified comparison","zero second-wave blockers","Sibyl last","no promotion or SDK"],"evidence_expected":["successor artifacts","review","checkpoint"]},
+    {"id":"PLAN-0006","title":"Create checkpoint v3 checksum-lock erratum","objective":"Correct the v2 family checksum lock without rewriting predecessors or changing packet/capabilities.","status":"completed","owner_role":"family_contract_maintainer","depends_on":["PLAN-0005"],"requirement_refs":["REQ-0001","REQ-0002","REQ-0004","REQ-0005"],"finding_refs":["FIND-0005","FIND-0006"],"gate_refs":["GATE-0007"],"task_refs":["TASK-0006"],"evidence_refs":["EVD-0009","EVD-0010"],"acceptance_criteria":["correct checksum lock","v1/v2 preservation","capabilities clean","family packet unchanged","root validation pass"],"evidence_expected":["v3 artifacts","review","checkpoint"]},
+    {"id":"PLAN-0007","title":"Publish v3 corrective records under single-use authority","objective":"Create and normally push one corrective family commit under the exact SRC-0008 authority.","status":"in_progress","owner_role":"primary_agent","depends_on":["PLAN-0006"],"requirement_refs":["REQ-0001","REQ-0004","REQ-0005"],"finding_refs":["FIND-0006","FIND-0007"],"gate_refs":["GATE-0007","GATE-0008"],"task_refs":["TASK-0007"],"evidence_refs":["EVD-0010","EVD-0011"],"acceptance_criteria":["SRC-0008 authority","one corrective commit","one normal push","final equality and clean worktree"],"evidence_expected":["validated publication candidate","direct post-commit equality and clean-worktree verification"]}
   ]
 }
