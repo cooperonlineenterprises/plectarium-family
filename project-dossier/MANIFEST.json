@@ -5,7 +5,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/START_HERE.md",
-      "sha256": "687be2d87fad20f366604100d56764cf8f62e2c16ef6c36e10bd4b98e4da6ffc"
+      "sha256": "9f2c8592d08ad14a653a7d257774cf303f18c6b0fe5fb7c7d6614d95b0350cd2"
     },
     {
       "layer": "agent_harness",
@@ -60,7 +60,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/context.json",
-      "sha256": "71486217ffdc6d2ba44ec4a6eb49a6db1fb7d26b89faf538b93d7b34309e9a16"
+      "sha256": "2b3cd9f4f720d8250508101a5316c730a12eef0d5dc7d9442f0a647b2299ea23"
     },
     {
       "layer": "agent_harness",
@@ -95,7 +95,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/events/events.jsonl",
-      "sha256": "2e570e18137bf726049b89ef742b47a083fdf12d5d5e789c4c49eabfa2095686"
+      "sha256": "03ff5acb514bc8132c974623f4234ae3b06c52da95518b3891ac9a3a3f009baf"
     },
     {
       "layer": "agent_harness",
@@ -154,6 +154,16 @@
     },
     {
       "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0012-relocation-baseline.md",
+      "sha256": "6cefdc575176259ac9957f7399b7f645ebd2c09499deb28c5a240491b9cbef2d"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0013-relocation-candidate-validation.md",
+      "sha256": "d33f4c2897618f76887dfa3ef58039aa0e52f02bff2e637d6ea2bb06e9ae2b33"
+    },
+    {
+      "layer": "agent_harness",
       "path": ".agent/evidence/README.md",
       "sha256": "68138e16a1146373c40e760402e3da10f90969c38f2bd6371cf72bbeaa25439a"
     },
@@ -190,12 +200,12 @@
     {
       "layer": "agent_harness",
       "path": ".agent/policy.json",
-      "sha256": "53362380e1b72deb94de718b775237d55aae6b85f8b705cc7b7b029826bda721"
+      "sha256": "ad8c9029a74c530b55f2d0d37140e2423c1282a4917342a7b4eebf5dee173527"
     },
     {
       "layer": "agent_harness",
       "path": ".agent/project.json",
-      "sha256": "934820f02b0ba246c112cb8d272f236d573ede08bc44341d119bc143b4bb1f20"
+      "sha256": "ae052c0656890b5457746258285fab4c6289791bf09bc5bd1fce772cea7fd795"
     },
     {
       "layer": "agent_harness",
@@ -280,12 +290,12 @@
     {
       "layer": "agent_harness",
       "path": ".agent/state/RESUME.md",
-      "sha256": "d62e05002cee569d245f5cc101d52cb8ed372634412dd28951b40372cb609f37"
+      "sha256": "9208c330fc30b973043f7d03886709f57c3193eb77663634fec4682e0adcb327"
     },
     {
       "layer": "agent_harness",
       "path": ".agent/state/current.json",
-      "sha256": "1de98827b644806b4fb730beda401cb14c43bab9a2e2d80190daf4905ae03d6b"
+      "sha256": "71821d0c685ca273cf4b0f6a6e6a96329a26a7fb59f819a6d60176e93239be19"
     },
     {
       "layer": "agent_harness",
@@ -326,6 +336,11 @@
       "layer": "agent_harness",
       "path": ".agent/tasks/TASK-0007-checkpoint-v3-publication.md",
       "sha256": "302be297960d38a71428590c97c521fedc2b5a0e3cf1265ad0d4c168aadb00c1"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0008-project-family-relocation.md",
+      "sha256": "9a152bf30a8176302b900bb09f94f23b29fa9b01a6052afab37959d04734ca01"
     },
     {
       "layer": "agent_harness",
@@ -385,12 +400,12 @@
     {
       "layer": "agent_harness",
       "path": ".agent/tools.json",
-      "sha256": "3e525bfab80cdd574ffd75f836e53fa22a282a27153ee3fa5c851c68683fa424"
+      "sha256": "843bfeccbdf7e0eea9f5b0b0b570b47e06b2e662470dcaa4dc65408bb648b642"
     },
     {
       "layer": "agent_harness",
       "path": ".agent/validators.json",
-      "sha256": "1a64834d01b12df4c0ea2afcbed2b7894b060a777a9df1261dd2483e48850dca"
+      "sha256": "f6597ece64537624be39c6293e1effa38e23b30ec0d90911674bb9b0a919d587"
     },
     {
       "layer": "agent_harness",
@@ -445,7 +460,7 @@
     {
       "layer": "project_source",
       "path": "README.md",
-      "sha256": "62b14fdd37ed1e45b9498a5e9928d1d6e6ab0d0f521a8eb9ca5243586ce0000d"
+      "sha256": "548dd390e2ec6086192eb70e2cea711604f2ba3fc5102951b18c9b6e5069a8ac"
     },
     {
       "layer": "project_source",
@@ -700,7 +715,7 @@
     {
       "layer": "project_dossier",
       "path": "project-dossier/validation/README.md",
-      "sha256": "efb6c53b76ec913856d37c4aa2b64e5343f2b8902e1720f480a5ac509ea6c093"
+      "sha256": "9a0d9d9db79a505905c85aaf04d118b6b438d61aa3c0b39eed61cdc2d727417a"
     },
     {
       "layer": "project_source",
@@ -2028,10 +2043,10 @@
       "sha256": "fd086fa07afff94324026e9dfb33bd512b08947e912435944c5a5305b6d0a521"
     }
   ],
-  "generated_on": "2026-09-01T14:56:39.164698+00:00",
-  "generation_id": "8d99424358a49c499294fd070b738e73",
+  "generated_on": "2026-09-15T23:55:55.853260+00:00",
+  "generation_id": "bf5355f1f0679959ffd08fd471256f10",
   "harness_kernel_version": "1.0.0",
   "profile": "high-assurance",
   "schema_version": "project-dossier.manifest.v1",
-  "source_fingerprint": "10f944d1c8bee932b372e8c97ef49e70995a1f3f9747a0d3365e66edc23c3215"
+  "source_fingerprint": "4ad09c78319f5da6e3104115de48d4b896998be49a638bfc0ed18b7e1614c2fa"
 }
