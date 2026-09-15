@@ -38,7 +38,7 @@ these commands.
 ```text
 python3 -B .agent/scripts/validate.py --check
 python3 -B -m unittest discover -s .agent/tests -p 'test_*.py'
-/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3 -B standalone-capability-family-packet-v1/scripts/validate-packet.py
+"${PLECTARIUM_PACKET_PYTHON:-python3}" -B standalone-capability-family-packet-v1/scripts/validate-packet.py
 ```
 
 For a high-assurance integrity refresh, run only the designated writers after
@@ -46,15 +46,15 @@ all source edits and packet change control are complete, then rerun the
 read-only checks:
 
 ```text
-/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3 -B standalone-capability-family-packet-v1/scripts/validate-packet.py --refresh-projections --write-manifest --refresh-checksums
+"${PLECTARIUM_PACKET_PYTHON:-python3}" -B standalone-capability-family-packet-v1/scripts/validate-packet.py --refresh-projections --write-manifest --refresh-checksums
 python3 -B .agent/scripts/refresh.py --refresh
 python3 -B .agent/scripts/validate.py --check
 ```
 
-The packet validator currently requires PyYAML and `jsonschema`. The recorded
-Python 3.14 runtime already provides them; the unqualified local `python3`
-runtime does not. This host-specific runtime is an adoption-time limitation,
-not a portability guarantee.
+The packet validator requires PyYAML and `jsonschema`. Select an interpreter
+explicitly with `PLECTARIUM_PACKET_PYTHON`; `python3` is the fallback. The
+family home may provide an untracked local binding, while tracked commands
+remain host-neutral.
 
 ## Current readiness
 

@@ -32,9 +32,9 @@
   "commands": {
     "project_test": {
       "status": "configured",
-      "run": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3 -B standalone-capability-family-packet-v1/scripts/validate-packet.py",
+      "run": "\"${PLECTARIUM_PACKET_PYTHON:-python3}\" -B standalone-capability-family-packet-v1/scripts/validate-packet.py",
       "writes": [],
-      "runtime_limitation": "The recorded host runtime has PyYAML and jsonschema; unqualified python3 does not currently satisfy packet dependencies."
+      "runtime_limitation": "The explicitly selected local interpreter must provide PyYAML and jsonschema; tracked configuration contains no workstation path."
     },
     "project_lint": {
       "status": "not_applicable",

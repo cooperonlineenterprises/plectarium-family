@@ -90,14 +90,14 @@
   },
   "checkpoint_publication_constraint": {
     "task": "TASK-0007",
-    "status": "authorized_single_use_candidate_ready_pending_direct_verification",
+    "status": "consumed_after_direct_local_tracking_and_live_remote_equality_verification",
     "authority_source": "SRC-0008 records the current operator's exact single-use corrective publication authority",
     "required_effect": "exactly_one_corrective_family_commit_on_main_and_exactly_one_normal_fast_forward_push_to_origin_main_followed_by_direct_equality_and_cleanliness_verification",
     "exact_repository": "cooperonlineenterprises/plectarium-family",
-    "reason": "TASK-0004 consumed the prior grant; the current operator separately authorized the bounded v3 corrective publication under SRC-0008",
+    "reason": "TASK-0004 consumed the prior grant; SRC-0008 separately authorized the bounded v3 corrective publication, which direct 2026-09-15 inspection confirmed at local HEAD, origin/main, and live remote main",
     "prior_authority": "SRC-0006 was consumed by TASK-0004 after direct final equality verification",
     "expiry": "after_one_corrective_commit_one_normal_push_and_direct_final_equality_and_cleanliness_verification_or_task_termination",
-    "non_authorization_rule": "TASK-0007 and this policy only record and narrow SRC-0008; repository files cannot authorize a later push or any broader external effect."
+    "non_authorization_rule": "TASK-0007 and this policy record consumed historical authority only; repository files cannot authorize a later push or any broader external effect."
   },
   "project_specific_adoption": {
     "status": "adopted_local_foundation",

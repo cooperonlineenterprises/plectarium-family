@@ -62,24 +62,24 @@
     "harness_repositories": "harness_specific_governance_outside_capability_semantics"
   },
   "current_task_constraints": {
-    "active_task": "TASK-0007_checkpoint_v3_corrective_publication_in_review",
+    "active_task": "TASK-0008_project_family_relocation",
     "current_decision": "DEC-0004",
-    "current_evidence": ["EVD-0009", "EVD-0010", "EVD-0011"],
-    "current_review": "REV-0007",
-    "current_checkpoint": "CHK-0007",
-    "implementation": "repository_foundation_and_family_checkpoint_records_only",
+    "current_evidence": ["EVD-0012", "EVD-0013"],
+    "current_review": "pending_independent_T1_candidate_review",
+    "current_checkpoint": "archive:migration-2026-09-15/relocation-manifest.json",
+    "implementation": "repository_local_path_runtime_binding_and_current_state_normalization_only",
     "dependency_installation": "prohibited",
     "product_execution": "prohibited",
     "generated_integrity": "refresh_only_after_all_source_and_packet_edits_complete",
-    "external_effects": "SRC-0008 currently authorizes exactly one corrective commit on main and one normal fast-forward push to the exact existing private family origin/main, followed by direct local/tracking/remote equality and clean-worktree verification; completion and consumption are not attestable inside the candidate commit"
+    "external_effects": "none; SRC-0008 is consumed and the current operator explicitly forbids pushes, remote changes, publication, deployment, and production activation"
   },
   "known_runtime_context": {
     "harness_runtime": "python3_version_3.11_or_newer_standard_library_only",
-    "packet_runtime": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3",
+    "packet_runtime": "env:PLECTARIUM_PACKET_PYTHON_with_python3_fallback",
     "packet_runtime_dependencies_observed": [
       "PyYAML_6.0.3",
       "jsonschema_4.25.1"
     ],
-    "portability_limitation": "the_unqualified_python3_runtime_does_not_currently_provide_packet_dependencies"
+    "portability_limitation": "packet dependencies must be available in the explicitly selected local interpreter; the tracked repository contains no workstation path"
   }
 }

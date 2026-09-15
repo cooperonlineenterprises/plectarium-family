@@ -15,13 +15,13 @@
     "python": "3.13.9"
   },
   "freshness_rule": "Invalid when any non-excluded repository source byte or path changes.",
-  "generated_at": "2026-09-01T14:56:39.164698+00:00",
-  "generation_id": "8d99424358a49c499294fd070b738e73",
+  "generated_at": "2026-09-15T23:55:55.853260+00:00",
+  "generation_id": "bf5355f1f0679959ffd08fd471256f10",
   "git_scope": {
     "available": true,
     "ignored": 0,
-    "tracked_modified": 22,
-    "untracked": 11
+    "tracked_modified": 15,
+    "untracked": 3
   },
   "limitations": [
     "Structural pass does not prove implementation or project readiness.",
@@ -30,7 +30,7 @@
   ],
   "result": "PASS",
   "schema_version": "harness.validation-report.v1",
-  "source_fingerprint": "10f944d1c8bee932b372e8c97ef49e70995a1f3f9747a0d3365e66edc23c3215",
+  "source_fingerprint": "4ad09c78319f5da6e3104115de48d4b896998be49a638bfc0ed18b7e1614c2fa",
   "task_and_decision_links": [],
   "validator_version": "1.0.0"
 }

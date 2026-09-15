@@ -31,10 +31,10 @@
     "python": {
       "availability": "required",
       "harness_runtime": "python3_3.11_or_newer_standard_library_only",
-      "packet_runtime": "/Users/jamesryancooper/.pyenv/versions/3.14.0/bin/python3",
+      "packet_runtime": "env:PLECTARIUM_PACKET_PYTHON_with_python3_fallback",
       "packet_dependencies_observed": ["PyYAML_6.0.3", "jsonschema_4.25.1"],
       "installation_authorized": false,
-      "portability_status": "host_specific_packet_runtime"
+      "portability_status": "host_neutral_tracked_command_with_explicit_local_binding"
     },
     "git": {
       "availability": "optional",

@@ -5,10 +5,10 @@
 > reconciled with project-specific sources, boundaries, commands, and a
 > completed local foundation task. Local adoption is complete under
 > `TASK-0001`; bounded foundation publication is complete under `TASK-0002`;
-> checkpoint v1/v2 publication is complete under `TASK-0004`; and the
-> checkpoint-v3 corrective publication candidate is in review under
-> `TASK-0007`, awaiting the one authorized commit, normal push, and direct
-> final verification.
+> checkpoint v1/v2 publication is complete under `TASK-0004`; direct
+> verification closed the checkpoint-v3 corrective publication under
+> `TASK-0007`; and the local project-family relocation is active under
+> `TASK-0008`. No current push authority exists.
 
 ## Reading order
 
@@ -46,22 +46,19 @@ before using status or planning claims.
   `project-dossier/canonical/`
 - Current adoption state: `.agent/state/current.json`
 - Configured commands and runtime limitations: `.agent/validators.json`
-- Corrective publication task in review:
-  `.agent/tasks/TASK-0007-checkpoint-v3-publication.md`
+- Current local relocation task:
+  `.agent/tasks/TASK-0008-project-family-relocation.md`
 - Current erratum decision: `.agent/decisions/DEC-0004-checkpoint-lock-erratum.md`
-- Current validation and publication-candidate evidence:
+- Preserved checkpoint-v3 validation and publication-candidate evidence:
   `.agent/evidence/EVD-0009-checkpoint-v3-lock-verification.md`,
   `.agent/evidence/EVD-0010-checkpoint-v3-validation.md`, and
   `.agent/evidence/EVD-0011-checkpoint-v3-publication-candidate.md`
-- Current review and checkpoint:
+- Preserved review and checkpoint:
   `.agent/reviews/REV-0007-checkpoint-v3-publication.md` and
   `.agent/checkpoints/CHK-0007-checkpoint-v3-publication.md`
 
 Generated integrity is expected to be stale during authorized source edits.
 Use the harness refresh command only after source work is frozen, then finish
-with the read-only harness check. `SRC-0008` is single-use and currently
-authorizes only the exact `TASK-0007` corrective commit/push sequence plus
-direct final equality and clean-worktree verification. The commit cannot
-attest its own later push; completion and consumption must be reported as
-direct final handoff evidence. Repository records cannot expand that authority
-or authorize any later effect.
+with the read-only harness check. `SRC-0008` is consumed historical authority;
+the current relocation authorizes local, recoverable workspace changes only.
+Repository records cannot authorize a later push or any broader effect.
