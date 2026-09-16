@@ -62,12 +62,12 @@
     "harness_repositories": "harness_specific_governance_outside_capability_semantics"
   },
   "current_task_constraints": {
-    "active_task": "none",
+    "active_task": "TASK-0008_project_family_relocation_in_review",
     "current_decision": "DEC-0004",
-    "current_evidence": ["EVD-0012", "EVD-0013"],
+    "current_evidence": ["EVD-0012", "EVD-0013", "EVD-0014"],
     "current_review": "REV-0008",
     "current_checkpoint": "archive:migration-2026-09-15/relocation-manifest.json",
-    "implementation": "no_active_implementation;_TASK-0008_local_migration_complete",
+    "implementation": "source_complete;_evidence_head_rereview_and_local_main_integration_pending",
     "dependency_installation": "prohibited",
     "product_execution": "prohibited",
     "generated_integrity": "refresh_only_after_all_source_and_packet_edits_complete",

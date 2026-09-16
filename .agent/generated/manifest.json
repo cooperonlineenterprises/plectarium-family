@@ -1,7 +1,7 @@
 {
   "authority": "generated_non_authoritative_point_in_time",
-  "generated_at": "2026-09-16T01:04:35.267245+00:00",
-  "generation_id": "895c1409f79c5ab4c7fa8ad18a9bb3d4",
+  "generated_at": "2026-09-16T01:14:37.644372+00:00",
+  "generation_id": "8e83d6079dd19f6742c0a676110d4005",
   "generator_version": "1.0.0",
   "limitations": [
     "Fingerprint proves declared byte identity, not correctness or authority.",
@@ -40,6 +40,7 @@
     ".agent/evidence/EVD-0011-checkpoint-v3-publication-candidate.md",
     ".agent/evidence/EVD-0012-relocation-baseline.md",
     ".agent/evidence/EVD-0013-relocation-candidate-validation.md",
+    ".agent/evidence/EVD-0014-integration-gate-correction.md",
     ".agent/evidence/README.md",
     ".agent/extensions/README.md",
     ".agent/extensions/registry.json",
@@ -419,5 +420,5 @@
     "standalone-capability-family-packet-v1/spec/terminology.md"
   ],
   "schema_version": "harness.generated-manifest.v1",
-  "source_fingerprint": "b20afd16d911df9a7e4e7ee39698ac3cf1a23ab861041941c0bd3ae2ceba3e50"
+  "source_fingerprint": "92f8dfd8063c1be5884c95ee14cc3ebfc2d7f79c845b939a772aa5b34f05c74a"
 }

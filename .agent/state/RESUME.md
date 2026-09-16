@@ -2,14 +2,15 @@
 
 > Navigation only. Re-read current instructions and inspect repository state.
 
-The local foundation, bounded publications, family-home relocation, and
-tracked command normalization are complete. Historical `TASK-0007` remains
-byte-preserved.
+The local foundation and bounded publications are complete. Family-home
+relocation source and review are complete, while final evidence-head review
+and local-main integration remain under `TASK-0008`. Historical `TASK-0007`
+remains byte-preserved.
 
 - Blueprint: 1.0.0 / `high-assurance`
 - Generated: 2026-08-31
 - Adoption: local foundation complete
-- Active task: none
+- Active task: `TASK-0008` (`review`; integration pending)
 - Accepted decisions: `DEC-0001` through `DEC-0004`
 - Fresh bounded evidence: `EVD-0012`
 - Product implementation: intentionally absent from this repository
@@ -21,7 +22,7 @@ byte-preserved.
 2. Read `.agent/policy.json`, `.agent/context.json`, and
    `.agent/state/current.json`.
 3. Inspect version-control, filesystem, tracking, and remote-ref state.
-4. Read completed `TASK-0008`, `EVD-0012`, `EVD-0013`, and `REV-0008`; read
+4. Read `TASK-0008`, `EVD-0012` through `EVD-0014`, and `REV-0008`; read
    preserved historical `TASK-0007` only when its publication boundary matters.
 5. Read `project-dossier/handoff/START_HERE.md`.
 6. Confirm the final packet and harness checks remain current.
@@ -31,5 +32,5 @@ byte-preserved.
 Keep this page short. Put detail in the owning task, decision, or evidence
 record.
 
-Current next action: await a separately authorized family-contract or
-repository task; no remote action is authorized.
+Current next action: final read-only review, local-main fast-forward, and exact
+integrated validation; no remote action is authorized.
