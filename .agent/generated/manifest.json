@@ -1,7 +1,7 @@
 {
   "authority": "generated_non_authoritative_point_in_time",
-  "generated_at": "2026-09-15T23:55:55.853260+00:00",
-  "generation_id": "bf5355f1f0679959ffd08fd471256f10",
+  "generated_at": "2026-09-16T00:06:33.790081+00:00",
+  "generation_id": "ff3f7e3f7c6c5e75479107e05c525365",
   "generator_version": "1.0.0",
   "limitations": [
     "Fingerprint proves declared byte identity, not correctness or authority.",
@@ -418,5 +418,5 @@
     "standalone-capability-family-packet-v1/spec/terminology.md"
   ],
   "schema_version": "harness.generated-manifest.v1",
-  "source_fingerprint": "4ad09c78319f5da6e3104115de48d4b896998be49a638bfc0ed18b7e1614c2fa"
+  "source_fingerprint": "c43ee98a5f7b9cafc90b4bc4c3341cb7a82d051c3b341cced3f81ad30e02b7e9"
 }

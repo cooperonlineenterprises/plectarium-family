@@ -95,7 +95,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/events/events.jsonl",
-      "sha256": "03ff5acb514bc8132c974623f4234ae3b06c52da95518b3891ac9a3a3f009baf"
+      "sha256": "4b06687b63eb45fdb343d5062a7a33bcc265580b57c2fbe86c92456276c45e53"
     },
     {
       "layer": "agent_harness",
@@ -340,7 +340,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/tasks/TASK-0008-project-family-relocation.md",
-      "sha256": "9a152bf30a8176302b900bb09f94f23b29fa9b01a6052afab37959d04734ca01"
+      "sha256": "ae84b83ef62c7a38d8414e3cb34f63fee98db40aa24c7f672d83a12c568b59fb"
     },
     {
       "layer": "agent_harness",
@@ -2043,10 +2043,10 @@
       "sha256": "fd086fa07afff94324026e9dfb33bd512b08947e912435944c5a5305b6d0a521"
     }
   ],
-  "generated_on": "2026-09-15T23:55:55.853260+00:00",
-  "generation_id": "bf5355f1f0679959ffd08fd471256f10",
+  "generated_on": "2026-09-16T00:06:33.790081+00:00",
+  "generation_id": "ff3f7e3f7c6c5e75479107e05c525365",
   "harness_kernel_version": "1.0.0",
   "profile": "high-assurance",
   "schema_version": "project-dossier.manifest.v1",
-  "source_fingerprint": "4ad09c78319f5da6e3104115de48d4b896998be49a638bfc0ed18b7e1614c2fa"
+  "source_fingerprint": "c43ee98a5f7b9cafc90b4bc4c3341cb7a82d051c3b341cced3f81ad30e02b7e9"
 }

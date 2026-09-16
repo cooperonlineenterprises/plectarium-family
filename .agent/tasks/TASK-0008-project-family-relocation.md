@@ -2,8 +2,8 @@
 {
   "schema_version": "harness.task.v1",
   "id": "TASK-0008",
-  "status": "review",
-  "previous_status": "validating",
+  "status": "validating",
+  "previous_status": "in_progress",
   "title": "Adopt the relocated Plectarium project-family workspace",
   "authority_basis": "Current operator request dated 2026-09-15 for local Plectarium architectural remediation and workspace migration",
   "owner": "primary_agent",
@@ -42,6 +42,5 @@
 
 ## Candidate handoff
 
-The source candidate reached review after `EVD-0013`. Completion remains
-pending an independent T1 review bound to the exact candidate commit and a
-final read-only check of the evidence-bearing head.
+The source candidate is ready for independent T1 review after `EVD-0013`. The
+task enters `review` only after its repository-owned review record exists.
