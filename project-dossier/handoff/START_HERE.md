@@ -7,11 +7,11 @@
 
 - Project Blueprint 1.0.0 `high-assurance` snapshot generated on 2026-08-31
   and locally adopted.
-- Active task: `TASK-0008` in review; source approval and local `main`
-  integration are complete, with final integrated-head review pending.
+- Active task: none. `TASK-0008` migration, local `main` integration, and final
+  integrated review are complete.
 - Accepted repository decisions: `DEC-0001` through `DEC-0004`.
-- Fresh bounded migration evidence: `EVD-0012` through `EVD-0015`;
-  independent source review: `REV-0008`.
+- Fresh bounded migration evidence: `EVD-0012` through `EVD-0016`;
+  final independent review: `REV-0009`.
 - Current conformance: checkpoint v2 preserves its false family checksum lock
   as history; v3 corrects it and preserves provisional-divergence sequencing.
 - Historical external effects: exact private remote creation and bounded
@@ -28,10 +28,10 @@
 1. Read applicable instructions and `.agent/START_HERE.md`.
 2. Inspect repository and source-control state at the canonical
    `repos/plectarium-family` checkout.
-3. Read `TASK-0008`, `EVD-0012` through `EVD-0015`, and `REV-0008`.
+3. Read `TASK-0008`, `EVD-0012` through `EVD-0016`, and `REV-0009`.
 4. Read `project-dossier/AUTHORITY.md` and the machine-readable requirements,
    findings, plan, RAIDQ, sources, and quality gates.
-5. Complete final integrated-head review before closing `TASK-0008`.
+5. Treat `TASK-0008` as complete; start later work only under new authority.
 6. Treat `SRC-0008` and all earlier publication authority as consumed history;
    do not push without a new exact operator authorization.
 7. Keep shared contracts provisional or unresolved and the shared runtime

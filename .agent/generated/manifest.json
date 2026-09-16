@@ -1,7 +1,7 @@
 {
   "authority": "generated_non_authoritative_point_in_time",
-  "generated_at": "2026-09-16T01:48:06.342425+00:00",
-  "generation_id": "016f0a8d9263579ce590c7bcdafc1c0e",
+  "generated_at": "2026-09-16T03:22:14.064793+00:00",
+  "generation_id": "f4f26ca2e54db617f42ed4dddf96fbad",
   "generator_version": "1.0.0",
   "limitations": [
     "Fingerprint proves declared byte identity, not correctness or authority.",
@@ -42,6 +42,7 @@
     ".agent/evidence/EVD-0013-relocation-candidate-validation.md",
     ".agent/evidence/EVD-0014-integration-gate-correction.md",
     ".agent/evidence/EVD-0015-local-main-integration.md",
+    ".agent/evidence/EVD-0016-final-integrated-review.md",
     ".agent/evidence/README.md",
     ".agent/extensions/README.md",
     ".agent/extensions/registry.json",
@@ -60,6 +61,7 @@
     ".agent/reviews/REV-0006-checkpoint-v3.md",
     ".agent/reviews/REV-0007-checkpoint-v3-publication.md",
     ".agent/reviews/REV-0008-project-family-relocation.md",
+    ".agent/reviews/REV-0009-integrated-family-state.md",
     ".agent/schema.json",
     ".agent/schemas/artifact-catalog.schema.json",
     ".agent/schemas/dossier-records.schema.json",
@@ -421,5 +423,5 @@
     "standalone-capability-family-packet-v1/spec/terminology.md"
   ],
   "schema_version": "harness.generated-manifest.v1",
-  "source_fingerprint": "10a637ec5f6fb05876dd7e3505e4eb0784d54837208ee78189b980b0f1a8a46f"
+  "source_fingerprint": "1661c13bcc95ef9d92b71cb4763b05a907e004cb1c7f4fe22ddcf783d130936a"
 }

@@ -8,8 +8,8 @@
 > checkpoint v1/v2 publication is complete under `TASK-0004`; direct
 > verification closed the checkpoint-v3 corrective publication under
 > `TASK-0007`; project-family relocation source and local-main integration are
-> complete under `TASK-0008`, `REV-0008`, and `EVD-0015`. Final integrated-
-> head review remains pending. No current push authority exists.
+> complete under `TASK-0008`, `REV-0009`, and `EVD-0016`. No current push
+> authority exists.
 
 ## Reading order
 
@@ -47,7 +47,7 @@ before using status or planning claims.
   `project-dossier/canonical/`
 - Current adoption state: `.agent/state/current.json`
 - Configured commands and runtime limitations: `.agent/validators.json`
-- Current local integration task:
+- Completed local integration task:
   `.agent/tasks/TASK-0008-project-family-relocation.md`
 - Current erratum decision: `.agent/decisions/DEC-0004-checkpoint-lock-erratum.md`
 - Preserved checkpoint-v3 validation and publication-candidate evidence:
