@@ -7,14 +7,16 @@
 
 - Project Blueprint 1.0.0 `high-assurance` snapshot generated on 2026-08-31
   and locally adopted.
-- Active task: `TASK-0007` (`review`); `TASK-0006` is complete.
+- Active task: none. Project-family relocation `TASK-0008` is complete.
 - Accepted repository decisions: `DEC-0001` through `DEC-0004`.
-- Fresh bounded evidence: `EVD-0001` through `EVD-0011`.
+- Fresh bounded migration evidence: `EVD-0012` and `EVD-0013`; independent
+  review: `REV-0008`.
 - Current conformance: checkpoint v2 preserves its false family checksum lock
   as history; v3 corrects it and preserves provisional-divergence sequencing.
-- External effects observed: exact private remote creation and bounded normal
-  foundation, closure, and v1/v2 checkpoint publication. The v3 corrective
-  commit and push remain pending at this recorded boundary.
+- Historical external effects: exact private remote creation and bounded
+  normal foundation, closure, and checkpoint publication. Current direct
+  evidence confirms the historical v3 publication; no current external effect
+  or authority exists.
 - Product implementation: intentionally absent.
 - Local repository foundation and checkpoint publication are validated; and
   product, security, compliance, release, and production readiness are not
@@ -23,22 +25,15 @@
 ## Resume in this order
 
 1. Read applicable instructions and `.agent/START_HERE.md`.
-2. Inspect repository and source-control state; `family/` was not a Git
-   repository when `EVD-0001` was recorded.
-3. Read completed `TASK-0006`, in-review `TASK-0007`, `DEC-0004`,
-   `EVD-0009` through `EVD-0011`, `REV-0007`, and `CHK-0007`.
+2. Inspect repository and source-control state at the canonical
+   `repos/plectarium-family` checkout.
+3. Read completed `TASK-0008`, `EVD-0012`, `EVD-0013`, and `REV-0008`.
 4. Read `project-dossier/AUTHORITY.md` and the machine-readable requirements,
    findings, plan, RAIDQ, sources, and quality gates.
-5. Reconfirm final local/tracking/remote equality and clean worktree from
-   direct evidence before relying on publication state; the corrective commit
-   cannot attest its own subsequent push.
-6. Create exactly one corrective commit, push it once normally to the exact
-   family `origin/main`, and verify local/tracking/live-remote equality plus a
-   clean worktree; report completion directly without a second evidence commit.
-7. After that direct verification, use v3 profiles for Genea through Atlas;
-   keep shared contracts provisional/unresolved and Sibyl last. Treat
-   `SRC-0008` as consumed and do not perform a later family push.
+5. Treat `SRC-0008` and all earlier publication authority as consumed history;
+   do not push without a new exact operator authorization.
+6. Keep shared contracts provisional or unresolved and the shared runtime
+   deferred until its accepted family trigger is satisfied.
 
-The packet validator uses an already-configured Python 3.14 runtime because
-the unqualified local `python3` lacks its third-party dependencies. Do not
-install anything under this task.
+The packet validator uses the explicit local `PLECTARIUM_PACKET_PYTHON` binding
+with a `python3` fallback. Do not install dependencies implicitly.

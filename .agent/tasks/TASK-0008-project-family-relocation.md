@@ -2,8 +2,8 @@
 {
   "schema_version": "harness.task.v1",
   "id": "TASK-0008",
-  "status": "validating",
-  "previous_status": "in_progress",
+  "status": "completed",
+  "previous_status": "review",
   "title": "Adopt the relocated Plectarium project-family workspace",
   "authority_basis": "Current operator request dated 2026-09-15 for local Plectarium architectural remediation and workspace migration",
   "owner": "primary_agent",
@@ -42,5 +42,7 @@
 
 ## Candidate handoff
 
-The source candidate is ready for independent T1 review after `EVD-0013`. The
-task enters `review` only after its repository-owned review record exists.
+Independent review `REV-0008` approved the exact source candidate. Final
+closure adds only the review record, task/current routing, and designated
+generated integrity; the resulting evidence-bearing head requires a final
+read-only review before integration.
