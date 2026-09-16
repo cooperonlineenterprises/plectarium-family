@@ -64,10 +64,10 @@
   "current_task_constraints": {
     "active_task": "TASK-0008_project_family_relocation_in_review",
     "current_decision": "DEC-0004",
-    "current_evidence": ["EVD-0012", "EVD-0013", "EVD-0014"],
+    "current_evidence": ["EVD-0012", "EVD-0013", "EVD-0014", "EVD-0015"],
     "current_review": "REV-0008",
     "current_checkpoint": "archive:migration-2026-09-15/relocation-manifest.json",
-    "implementation": "source_complete;_evidence_head_rereview_and_local_main_integration_pending",
+    "implementation": "source_and_local_main_integration_complete;_final_integrated_head_review_pending",
     "dependency_installation": "prohibited",
     "product_execution": "prohibited",
     "generated_integrity": "refresh_only_after_all_source_and_packet_edits_complete",

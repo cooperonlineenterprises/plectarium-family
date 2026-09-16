@@ -11,7 +11,7 @@
   "updated_at": "2026-09-15",
   "dependencies": [],
   "supersedes": null,
-  "closure_evidence": ["EVD-0013", "EVD-0014"],
+  "closure_evidence": ["EVD-0013", "EVD-0014", "EVD-0015"],
   "external_effects": "Local non-overwriting filesystem relocation, tracked host-neutral command updates, validation, commits, and review only; no push or other remote effect.",
   "limitations": [
     "This task does not alter the family packet, shared-contract status, capability semantics, product implementation, or readiness.",
@@ -47,3 +47,5 @@
 Independent review `REV-0008` approved the exact source candidate. `EVD-0014`
 reopens the task because the evidence-bearing head and local-main integration
 were still pending when the prior lifecycle view marked completion.
+`EVD-0015` records completed serial local-main integration; final integrated-
+head T1 review remains the completion gate.

@@ -7,9 +7,9 @@
 > `TASK-0001`; bounded foundation publication is complete under `TASK-0002`;
 > checkpoint v1/v2 publication is complete under `TASK-0004`; direct
 > verification closed the checkpoint-v3 corrective publication under
-> `TASK-0007`; the project-family relocation source is approved under
-> `TASK-0008` and `REV-0008`, with evidence-head rereview and local-main
-> integration still pending. No current push authority exists.
+> `TASK-0007`; project-family relocation source and local-main integration are
+> complete under `TASK-0008`, `REV-0008`, and `EVD-0015`. Final integrated-
+> head review remains pending. No current push authority exists.
 
 ## Reading order
 
