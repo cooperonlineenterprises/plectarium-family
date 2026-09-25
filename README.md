@@ -30,6 +30,13 @@ separate concerns:
 - [`project-dossier/`](project-dossier/README.md) separates intended state,
   dated observations, conformance, plans, provenance, validation, and handoff.
 
+## Accepted design-stage identity
+
+[Eupora](EUPORA_IDENTITY.md), pronounced yoo-POR-uh, is the accepted identity
+of the Option Space Model design-stage project: “Eupora develops the possibilities.”
+This local identity note creates no implementation, generation seed, normative
+packet member, or release.
+
 ## Validation
 
 Run from this repository root. No dependency installation is authorized by

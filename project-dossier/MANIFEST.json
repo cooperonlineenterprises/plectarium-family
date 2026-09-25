@@ -60,7 +60,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/context.json",
-      "sha256": "4b2be5d74c9031ed75890f33ed660e79d455180ca6ac7cbb1e4df3047ff2d213"
+      "sha256": "1096097e356f0da91d0818c19627b90db23851a38d90ceb979c6040af9058507"
     },
     {
       "layer": "agent_harness",
@@ -81,6 +81,11 @@
       "layer": "agent_harness",
       "path": ".agent/decisions/DEC-0004-checkpoint-lock-erratum.md",
       "sha256": "72716abe494db298a621fe2dfed1d8117e76b385e2e0e6a6cf7ae97a12ea93da"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/decisions/DEC-0005-eupora-local-identity.md",
+      "sha256": "b9cf152f9af8b533559e9525e6b3e28c1e6b775e86ec3d6dc011ce43006013eb"
     },
     {
       "layer": "agent_harness",
@@ -176,6 +181,16 @@
       "layer": "agent_harness",
       "path": ".agent/evidence/EVD-0016-final-integrated-review.md",
       "sha256": "ac49d9d1919147931b291085427c2036a14947ef7c06e86a88934c699af2c6fd"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0017-eupora-local-rename.md",
+      "sha256": "fe64e01dffd0bfa7eac727e2f1abe27cf4807b763487cb75fb1bec3231a17005"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0019-eupora-registration-cleanup.md",
+      "sha256": "e0207c0705f91b6f8a2dadaf1d9848ab936dce6d70223c84c3c207b34845e1b7"
     },
     {
       "layer": "agent_harness",
@@ -320,7 +335,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/state/current.json",
-      "sha256": "277d081c45fd9799999273f2af054b9631a4911d263bfd3d6a195ca313825913"
+      "sha256": "c249986988392e075920d231d3fe114287a8c0b2ff1116f32984ec9ea57a7aa4"
     },
     {
       "layer": "agent_harness",
@@ -366,6 +381,16 @@
       "layer": "agent_harness",
       "path": ".agent/tasks/TASK-0008-project-family-relocation.md",
       "sha256": "9837425e22a2ba1566d17b2fd014d9246ae6f4d7f8deba2cf16333a0899aa181"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0009-eupora-local-rename.md",
+      "sha256": "56c9a6fef131c1c28092c49e146be5540b90f0baf72f9d7c0a6e0ae2e7adfe88"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0011-eupora-registration-cleanup.md",
+      "sha256": "6b447069821fa192cff6958f2c1fc588067144380c9c3e0b5080b18b0a355d4e"
     },
     {
       "layer": "agent_harness",
@@ -484,8 +509,13 @@
     },
     {
       "layer": "project_source",
+      "path": "EUPORA_IDENTITY.md",
+      "sha256": "897831f662569a2c9fda4b4789474ceb5d3e3c0d73375ed2cca8850c0184a90f"
+    },
+    {
+      "layer": "project_source",
       "path": "README.md",
-      "sha256": "548dd390e2ec6086192eb70e2cea711604f2ba3fc5102951b18c9b6e5069a8ac"
+      "sha256": "b597fe111f93f6b551a4cc3d75ef14f8fc399b543d907aa6dff17a462ccfcbf5"
     },
     {
       "layer": "project_source",
@@ -2068,10 +2098,10 @@
       "sha256": "fd086fa07afff94324026e9dfb33bd512b08947e912435944c5a5305b6d0a521"
     }
   ],
-  "generated_on": "2026-09-16T03:22:14.064793+00:00",
-  "generation_id": "f4f26ca2e54db617f42ed4dddf96fbad",
+  "generated_on": "2026-09-25T17:36:59.209305+00:00",
+  "generation_id": "46ce6d4bba3fcafa8eb45805fff2c97d",
   "harness_kernel_version": "1.0.0",
   "profile": "high-assurance",
   "schema_version": "project-dossier.manifest.v1",
-  "source_fingerprint": "1661c13bcc95ef9d92b71cb4763b05a907e004cb1c7f4fe22ddcf783d130936a"
+  "source_fingerprint": "baa894fff48521a400d075fca70276d9af3a8cd13b7b42633d997cd61f6984bc"
 }

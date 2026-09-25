@@ -1,22 +1,32 @@
 {
   "schema_version": "harness.current-state.v1",
   "project_slug": "plectarium-family",
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-25",
   "authority": "Compact operational view derived from authoritative task, decision, and evidence records. This file does not grant permission.",
   "adoption_status": "adopted_local_foundation",
   "active_tasks": [],
-  "accepted_decisions": ["DEC-0001", "DEC-0002", "DEC-0003", "DEC-0004"],
-  "fresh_evidence": ["EVD-0012", "EVD-0013", "EVD-0014", "EVD-0015", "EVD-0016"],
+  "accepted_decisions": [
+    "DEC-0001",
+    "DEC-0002",
+    "DEC-0003",
+    "DEC-0004",
+    "DEC-0005"
+  ],
+  "fresh_evidence": [
+    "EVD-0019"
+  ],
   "blocked_by": [],
   "pending_gates": [],
-  "next_action": "await a separately authorized family-contract or repository task; do not push",
+  "next_action": "Stop after the authorized local commit and its non-Git receipt. Subsequent implementation MUST start as a new task in the verified saved eupora project. Do not push or begin implementation.",
   "external_effects_authorized": false,
   "external_effect_scope": "none",
-  "external_effects_observed": "read-only 2026-09-15 inspection confirmed the historical checkpoint-v3 corrective publication at local HEAD, origin/main, and live remote main 1a02441e324b2524a95863e2864d640072571993; the current relocation performed no remote effect",
+  "external_effects_observed": "Saved eupora registration independently verified at projects/eupora; exact local commit and post-commit status are recorded in Eupora RENAME_CLEANUP.md. No remote effect.",
   "limitations": [
     "packet_validator_requires_an_explicit_local_interpreter_with_PyYAML_and_jsonschema",
     "checkpoint_commit_cannot_attest_its_own_push_and_final_equality_is_direct_handoff_evidence",
     "closure_commit_cannot_attest_its_own_push_and_final_equality_is_direct_handoff_evidence",
-    "structural_foundation_does_not_establish_product_readiness"
+    "structural_foundation_does_not_establish_product_readiness",
+    "rename_review_was_self_review",
+    "existing_rename_task_cwds_are_stale_future_implementation_requires_new_task_in_updated_eupora_project"
   ]
 }

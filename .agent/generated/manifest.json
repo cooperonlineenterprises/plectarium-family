@@ -1,7 +1,7 @@
 {
   "authority": "generated_non_authoritative_point_in_time",
-  "generated_at": "2026-09-16T03:22:14.064793+00:00",
-  "generation_id": "f4f26ca2e54db617f42ed4dddf96fbad",
+  "generated_at": "2026-09-25T17:36:59.209305+00:00",
+  "generation_id": "46ce6d4bba3fcafa8eb45805fff2c97d",
   "generator_version": "1.0.0",
   "limitations": [
     "Fingerprint proves declared byte identity, not correctness or authority.",
@@ -24,6 +24,7 @@
     ".agent/decisions/DEC-0002-three-capability-no-promotion.md",
     ".agent/decisions/DEC-0003-successor-sequencing-profile.md",
     ".agent/decisions/DEC-0004-checkpoint-lock-erratum.md",
+    ".agent/decisions/DEC-0005-eupora-local-identity.md",
     ".agent/decisions/README.md",
     ".agent/events/README.md",
     ".agent/events/events.jsonl",
@@ -43,6 +44,8 @@
     ".agent/evidence/EVD-0014-integration-gate-correction.md",
     ".agent/evidence/EVD-0015-local-main-integration.md",
     ".agent/evidence/EVD-0016-final-integrated-review.md",
+    ".agent/evidence/EVD-0017-eupora-local-rename.md",
+    ".agent/evidence/EVD-0019-eupora-registration-cleanup.md",
     ".agent/evidence/README.md",
     ".agent/extensions/README.md",
     ".agent/extensions/registry.json",
@@ -81,6 +84,8 @@
     ".agent/tasks/TASK-0006-checkpoint-v3-erratum.md",
     ".agent/tasks/TASK-0007-checkpoint-v3-publication.md",
     ".agent/tasks/TASK-0008-project-family-relocation.md",
+    ".agent/tasks/TASK-0009-eupora-local-rename.md",
+    ".agent/tasks/TASK-0011-eupora-registration-cleanup.md",
     ".agent/templates/artifact.json",
     ".agent/templates/checkpoint.md",
     ".agent/templates/decision.md",
@@ -104,6 +109,7 @@
     ".gitignore",
     ".project-blueprint-origin.json",
     "AGENTS.md",
+    "EUPORA_IDENTITY.md",
     "README.md",
     "imports/historical/README.md",
     "imports/historical/canonical-character-identities-v1.0/README.md",
@@ -423,5 +429,5 @@
     "standalone-capability-family-packet-v1/spec/terminology.md"
   ],
   "schema_version": "harness.generated-manifest.v1",
-  "source_fingerprint": "1661c13bcc95ef9d92b71cb4763b05a907e004cb1c7f4fe22ddcf783d130936a"
+  "source_fingerprint": "baa894fff48521a400d075fca70276d9af3a8cd13b7b42633d997cd61f6984bc"
 }
