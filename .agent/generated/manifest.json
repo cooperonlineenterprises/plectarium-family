@@ -1,7 +1,7 @@
 {
   "authority": "generated_non_authoritative_point_in_time",
-  "generated_at": "2026-09-25T17:36:59.209305+00:00",
-  "generation_id": "46ce6d4bba3fcafa8eb45805fff2c97d",
+  "generated_at": "2026-09-25T19:19:50.608378+00:00",
+  "generation_id": "64cad212301df0e080cd99ec659b183b",
   "generator_version": "1.0.0",
   "limitations": [
     "Fingerprint proves declared byte identity, not correctness or authority.",
@@ -25,6 +25,7 @@
     ".agent/decisions/DEC-0003-successor-sequencing-profile.md",
     ".agent/decisions/DEC-0004-checkpoint-lock-erratum.md",
     ".agent/decisions/DEC-0005-eupora-local-identity.md",
+    ".agent/decisions/DEC-0006-gnomia-local-identity.md",
     ".agent/decisions/README.md",
     ".agent/events/README.md",
     ".agent/events/events.jsonl",
@@ -45,7 +46,10 @@
     ".agent/evidence/EVD-0015-local-main-integration.md",
     ".agent/evidence/EVD-0016-final-integrated-review.md",
     ".agent/evidence/EVD-0017-eupora-local-rename.md",
+    ".agent/evidence/EVD-0018-gnomia-local-rename.md",
     ".agent/evidence/EVD-0019-eupora-registration-cleanup.md",
+    ".agent/evidence/EVD-0020-gnomia-registration-reconciliation.md",
+    ".agent/evidence/EVD-0021-gnomia-rename-closeout.md",
     ".agent/evidence/README.md",
     ".agent/extensions/README.md",
     ".agent/extensions/registry.json",
@@ -85,7 +89,9 @@
     ".agent/tasks/TASK-0007-checkpoint-v3-publication.md",
     ".agent/tasks/TASK-0008-project-family-relocation.md",
     ".agent/tasks/TASK-0009-eupora-local-rename.md",
+    ".agent/tasks/TASK-0010-gnomia-local-rename.md",
     ".agent/tasks/TASK-0011-eupora-registration-cleanup.md",
+    ".agent/tasks/TASK-0012-gnomia-rename-closeout.md",
     ".agent/templates/artifact.json",
     ".agent/templates/checkpoint.md",
     ".agent/templates/decision.md",
@@ -110,6 +116,7 @@
     ".project-blueprint-origin.json",
     "AGENTS.md",
     "EUPORA_IDENTITY.md",
+    "GNOMIA_IDENTITY.md",
     "README.md",
     "imports/historical/README.md",
     "imports/historical/canonical-character-identities-v1.0/README.md",
@@ -429,5 +436,5 @@
     "standalone-capability-family-packet-v1/spec/terminology.md"
   ],
   "schema_version": "harness.generated-manifest.v1",
-  "source_fingerprint": "baa894fff48521a400d075fca70276d9af3a8cd13b7b42633d997cd61f6984bc"
+  "source_fingerprint": "3da41ee9524e14ffc3c07292bb77b791dd7f2b857a7ee674699994e5be0a03c3"
 }

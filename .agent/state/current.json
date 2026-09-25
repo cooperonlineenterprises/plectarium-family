@@ -10,23 +10,31 @@
     "DEC-0002",
     "DEC-0003",
     "DEC-0004",
-    "DEC-0005"
+    "DEC-0005",
+    "DEC-0006"
   ],
   "fresh_evidence": [
-    "EVD-0019"
+    "EVD-0017",
+    "EVD-0019",
+    "EVD-0018",
+    "EVD-0020",
+    "EVD-0021"
   ],
   "blocked_by": [],
   "pending_gates": [],
-  "next_action": "Stop after the authorized local commit and its non-Git receipt. Subsequent implementation MUST start as a new task in the verified saved eupora project. Do not push or begin implementation.",
+  "next_action": "Verify the current one-commit closeout receipts and post-commit status in Gnomia RENAME_CLOSEOUT.md, then stop. Next product work requires a fresh task under the corrected Gnomia saved project. No push, publication, implementation-repository initialization, or product work during closeout.",
   "external_effects_authorized": false,
   "external_effect_scope": "none",
-  "external_effects_observed": "Saved eupora registration independently verified at projects/eupora; exact local commit and post-commit status are recorded in Eupora RENAME_CLEANUP.md. No remote effect.",
+  "external_effects_observed": "Gnomia local rename, identity and saved-project registration are verified. Reviewed local commit source is complete; exact local commit and post-commit status are recorded separately in Gnomia RENAME_CLOSEOUT.md. Earlier Eupora commits remain intact. No remote effect.",
   "limitations": [
     "packet_validator_requires_an_explicit_local_interpreter_with_PyYAML_and_jsonschema",
     "checkpoint_commit_cannot_attest_its_own_push_and_final_equality_is_direct_handoff_evidence",
     "closure_commit_cannot_attest_its_own_push_and_final_equality_is_direct_handoff_evidence",
     "structural_foundation_does_not_establish_product_readiness",
     "rename_review_was_self_review",
-    "existing_rename_task_cwds_are_stale_future_implementation_requires_new_task_in_updated_eupora_project"
+    "existing_rename_task_cwds_are_stale_future_implementation_requires_new_task_in_updated_eupora_project",
+    "existing_gnomia_task_cwds_are_stale_next_product_work_requires_fresh_task_in_corrected_project",
+    "gnomia_rename_review_was_self_review",
+    "post_commit_status_must_be_verified_in_gnomia_non_git_closeout_receipt"
   ]
 }

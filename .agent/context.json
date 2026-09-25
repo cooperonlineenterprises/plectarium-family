@@ -63,17 +63,21 @@
   },
   "current_task_constraints": {
     "active_task": "none",
-    "current_decision": "DEC-0005",
+    "current_decision": "DEC-0006",
     "current_evidence": [
-      "EVD-0019"
+      "EVD-0017",
+      "EVD-0019",
+      "EVD-0018",
+      "EVD-0020",
+      "EVD-0021"
     ],
     "current_review": "REV-0009",
     "current_checkpoint": "archive:migration-2026-09-15/relocation-manifest.json",
-    "implementation": "TASK-0011 registration cleanup and reviewed local commit source complete; no implementation or packet-contract promotion.",
+    "implementation": "Accepted Eupora and Gnomia design-stage identities and verified saved-project registration. TASK-0012 completes Gnomia source closeout for one authorized local commit; exact post-commit receipts are in Gnomia RENAME_CLOSEOUT.md. No product implementation or packet promotion.",
     "dependency_installation": "prohibited",
     "product_execution": "prohibited",
     "generated_integrity": "refresh_only_after_all_source_and_packet_edits_complete",
-    "external_effects": "Exactly one authorized local commit on main recorded in Eupora RENAME_CLEANUP.md; the allowance is consumed on success. No push, publication, or remote mutation."
+    "external_effects": "The current user instruction permits exactly one scoped Gnomia local commit on main under TASK-0012, consumed on success; exact receipt belongs in Gnomia RENAME_CLOSEOUT.md. Eupora TASK-0011 authority is consumed and its prior commit remains intact. No push, publication, remote mutation, repository initialization, or product work."
   },
   "known_runtime_context": {
     "harness_runtime": "python3_version_3.11_or_newer_standard_library_only",

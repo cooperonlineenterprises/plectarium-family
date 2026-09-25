@@ -30,12 +30,15 @@ separate concerns:
 - [`project-dossier/`](project-dossier/README.md) separates intended state,
   dated observations, conformance, plans, provenance, validation, and handoff.
 
-## Accepted design-stage identity
+## Accepted design-stage identities
 
 [Eupora](EUPORA_IDENTITY.md), pronounced yoo-POR-uh, is the accepted identity
 of the Option Space Model design-stage project: “Eupora develops the possibilities.”
-This local identity note creates no implementation, generation seed, normative
-packet member, or release.
+[Gnomia](GNOMIA_IDENTITY.md), pronounced NOH-mee-uh, is the accepted identity
+of the Deliberative Decision Model design-stage project. The supporting
+pairing is “Eupora develops the possibilities. Gnomia discerns what they justify.”
+These local identity notes create no implementation, generation seed,
+normative packet member, or release.
 
 ## Validation
 

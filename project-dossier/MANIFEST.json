@@ -60,7 +60,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/context.json",
-      "sha256": "1096097e356f0da91d0818c19627b90db23851a38d90ceb979c6040af9058507"
+      "sha256": "c5a71c67edbd7d981ec10d0868b88d831939e16d3713c23b50f126938814b6ae"
     },
     {
       "layer": "agent_harness",
@@ -86,6 +86,11 @@
       "layer": "agent_harness",
       "path": ".agent/decisions/DEC-0005-eupora-local-identity.md",
       "sha256": "b9cf152f9af8b533559e9525e6b3e28c1e6b775e86ec3d6dc011ce43006013eb"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/decisions/DEC-0006-gnomia-local-identity.md",
+      "sha256": "3bf098ecd5e1871939e8ce8bb17c6a1c159f2fa48a72db341fe0ed684a4b1781"
     },
     {
       "layer": "agent_harness",
@@ -189,8 +194,23 @@
     },
     {
       "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0018-gnomia-local-rename.md",
+      "sha256": "2c005f6efb9d202b37f28d7e3a241a8b08040c5b319cc3c67d3d1c33ac9e5e2c"
+    },
+    {
+      "layer": "agent_harness",
       "path": ".agent/evidence/EVD-0019-eupora-registration-cleanup.md",
       "sha256": "e0207c0705f91b6f8a2dadaf1d9848ab936dce6d70223c84c3c207b34845e1b7"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0020-gnomia-registration-reconciliation.md",
+      "sha256": "b5480eed3609533c25a931c8b138c586be28b59bacc18e868c5c0a31f6173da5"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/evidence/EVD-0021-gnomia-rename-closeout.md",
+      "sha256": "af0fcaa8359d11ce7a92b57d35c2e72728159eaf00dbc3f41d61ec0c780d76ce"
     },
     {
       "layer": "agent_harness",
@@ -335,7 +355,7 @@
     {
       "layer": "agent_harness",
       "path": ".agent/state/current.json",
-      "sha256": "c249986988392e075920d231d3fe114287a8c0b2ff1116f32984ec9ea57a7aa4"
+      "sha256": "b7e1e75b8977a88c06c79f06112f4d4f5e3a6f749269e7cd7fa68959253e7218"
     },
     {
       "layer": "agent_harness",
@@ -389,8 +409,18 @@
     },
     {
       "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0010-gnomia-local-rename.md",
+      "sha256": "9c87a3d49f489442c3b1288d7719a583263e4e0aaf4bf99023cd60c6c2d5856b"
+    },
+    {
+      "layer": "agent_harness",
       "path": ".agent/tasks/TASK-0011-eupora-registration-cleanup.md",
       "sha256": "6b447069821fa192cff6958f2c1fc588067144380c9c3e0b5080b18b0a355d4e"
+    },
+    {
+      "layer": "agent_harness",
+      "path": ".agent/tasks/TASK-0012-gnomia-rename-closeout.md",
+      "sha256": "32176e21be125045f48d2441716d866f8bcd22f10b0c26b076c803d3de9d6eab"
     },
     {
       "layer": "agent_harness",
@@ -514,8 +544,13 @@
     },
     {
       "layer": "project_source",
+      "path": "GNOMIA_IDENTITY.md",
+      "sha256": "ddb77bc113176a111ccf4e1f437e157838e45d86676d3beb48d3fb8c311d0b70"
+    },
+    {
+      "layer": "project_source",
       "path": "README.md",
-      "sha256": "b597fe111f93f6b551a4cc3d75ef14f8fc399b543d907aa6dff17a462ccfcbf5"
+      "sha256": "6ce86448abb6dab1a3b466c87ac0faa8a47735bd643ed629ca016b6bf3a56b9c"
     },
     {
       "layer": "project_source",
@@ -2098,10 +2133,10 @@
       "sha256": "fd086fa07afff94324026e9dfb33bd512b08947e912435944c5a5305b6d0a521"
     }
   ],
-  "generated_on": "2026-09-25T17:36:59.209305+00:00",
-  "generation_id": "46ce6d4bba3fcafa8eb45805fff2c97d",
+  "generated_on": "2026-09-25T19:19:50.608378+00:00",
+  "generation_id": "64cad212301df0e080cd99ec659b183b",
   "harness_kernel_version": "1.0.0",
   "profile": "high-assurance",
   "schema_version": "project-dossier.manifest.v1",
-  "source_fingerprint": "baa894fff48521a400d075fca70276d9af3a8cd13b7b42633d997cd61f6984bc"
+  "source_fingerprint": "3da41ee9524e14ffc3c07292bb77b791dd7f2b857a7ee674699994e5be0a03c3"
 }
